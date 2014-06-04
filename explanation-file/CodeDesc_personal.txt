@@ -1,0 +1,1171 @@
+**** Updated: May 27, 2014 **** 
+                                    
+PERSONAL PROPERTY CODES             
+                                    
+State Class                         
+------          -----------------   
+Code            Description         
+------          -----------------   
+G1             	Oil and Mineral Gas Reserves                                
+G2             	Real Property Other Mineral Reserves                        
+J1             	Personal Utilities Water System                             
+J2             	Gas Companies                                               
+J3             	Electric Companies                                          
+J4             	Telephone Companies                                         
+J5             	Railroads                                                   
+J6             	Pipelines                                                   
+J7             	Major Cable Television Systems                              
+L1             	Tangible, Commercial                                        
+L2             	Tangible, Industrial                                        
+M3             	Tangible, Mobile Homes                                      
+S1             	Dealer Inventory                                            
+U0             	Unknown                                                     
+                                     
+                                     
+Personal Property                    
+------          --------------------------                                     ------   
+Code   	        Description                                                    Class    
+------          --------------------------                                     ------   
+A              	Business Personal Property                                  	L1        
+B              	Mobile Homes                                                	M3        
+C              	Pipelines                                                   	J6        
+D              	Railroads                                                   	J5        
+E              	Minerals                                                    	G1        
+F              	Vessels                                                     	L1        
+G              	Commercial Aircraft                                         	L1        
+H              	Private Aircraft                                            	L1        
+I              	Leased Equipment                                            	L1        
+J              	Private Water Systems                                       	J1        
+K              	Gas Distribution                                            	J2        
+L              	Light Manufacturing                                         	L2        
+M              	Telephone Company                                           	J4        
+N              	Stored Products (WHSE)                                      	L2        
+O              	Tank Farms (Products Inside Tanks)                          	L2        
+P              	Stored Pipe                                                 	L2        
+Q              	Dealer Inventory                                            	S1        
+R              	Real Property Other Mineral Reserves                        	G2        
+S              	Billboards                                                  	L1        
+T              	Vehicles                                                    	L1        
+V              	General Industrial                                          	L2        
+W              	Electrical Transmission / Distribution Lines                	J3        
+X              	Major CableTV Systems                                       	J7        
+Y              	Radio, Cellular, TV and Cable                               	L2        
+Z              	Multi-Locations                                             	L1        
+                                     
+                                     
+SIC Code                       	   
+------      -----------------                                               -----------------  
+Type   	    Description                                                     Category   
+------      -----------------                                               -----------------  
+0001      	BUSINESS TYPE UNKNOWN                                       	Exception                                         
+0002      	VEHICLE(S) ONLY                                             	Exception                                         
+0002T     	TRAVEL TRAILER(S) ONLY                                      	Exception                                         
+0003      	UNIQUE BUSINESS TYPE                                        	Exception                                         
+0004      	INVENTORY ONLY                                              	Exception                                         
+0004A     	DEALER MOTOR VEHICLE INV                                    	Exception                                         
+0004B     	DEALER BOAT INVENTORY                                       	Exception                                         
+0004E     	HEAVY EQUIPMENT DEALER INV                                  	Exception                                         
+0004F     	AUTO DEALER-FRANCHISE ONLY                                  	Exception                                         
+0004H     	MOBILE HOME DEALER INV                                      	Exception                                         
+0004I     	INVENTORY ONLY - INDUSTRIAL SITE                            	Exception                                         
+0004X     	DEALER MOTOR VEHICLE INV NON FILING                         	Exception                                         
+0005      	M&E &/OR F&F ONLY                                           	Exception                                         
+0005I     	M&E &/OR F&F ONLY - INDUSTRIAL SITE                         	Exception                                         
+0006      	COMPUTER EQUIPMENT                                          	Exception                                         
+0006I     	COMPUTER EQUIPMENT ONLY - INDUSTRIAL SITE                   	Exception                                         
+0007      	EQUIP MOUNTED ON VEHICLES                                   	Exception                                         
+0008      	LEASED ASSETS                                               	Exception                                         
+0008A     	MULTI-LOCATION ASSETS                                       	Exception                                         
+0009E     	PERSONAL PROPERTY NOT USED FOR PRODUCTION OF INCOME         	Exception                                         
+0010A     	POLLUTION CONTROL - GENERAL PERSONAL                        	Exception                                         
+0010F     	POLLUTION CONTROL - VESSELS                                 	Exception                                         
+0010L     	POLLUTION CONTROL - LIGHT MANUFACTURING                     	Exception                                         
+0010V     	POLLUTION CONTROL - INDUSTRIAL PERSONAL                     	Exception                                         
+0010W     	POLLUTION CONTROL - ELECTRICAL TRANSMISSION                 	Exception                                         
+0139      	GRASS FARMS                                                 	Agriculture, Forestry, Fishing                    
+0181      	NURSERY STOCK, GROWING OF                                   	Agriculture, Forestry, Fishing                    
+0191      	FARMS - GENERAL                                             	Agriculture, Forestry, Fishing                    
+0191E     	FARM/RANCHING IMPLEMENTS EXEMPT                             	Agriculture, Forestry, Fishing                    
+0259A     	POULTRY & EGGS NEC                                          	Agriculture, Forestry, Fishing                    
+0742      	VETERINARIANS-PETS                                          	Agriculture, Forestry, Fishing                    
+0752      	ANIMAL SPECIALTY SVC NEC                                    	Agriculture, Forestry, Fishing                    
+0752A     	PET GROOMING                                                	Agriculture, Forestry, Fishing                    
+0752B     	KENNELS                                                     	Agriculture, Forestry, Fishing                    
+0752C     	ANIMAL BREEDERS                                             	Agriculture, Forestry, Fishing                    
+0782      	LAWN & GARDEN SERVICES                                      	Agriculture, Forestry, Fishing                    
+0831      	FOREST PRODUCTS                                             	Agriculture, Forestry, Fishing                    
+0912      	VESSELS - FISHING BOATS FINFISH                             	Agriculture, Forestry, Fishing                    
+0913      	VESSELS - FISHING BOATS SHELLFISH                           	Agriculture, Forestry, Fishing                    
+0919      	MISCELLANEOUS MARINE PRODUCTS                               	Agriculture, Forestry, Fishing                    
+1311      	CRUDE PETR & NAT GAS                                        	Mining                                            
+1381      	DRILLING - OIL & GAS WELLS                                  	Mining                                            
+1381A     	DRILLING - OIL & GAS WELLS MARINE                           	Mining                                            
+1381B     	DRILLING OIL & GAS WELLS                                    	Mining                                            
+1382      	OIL & GAS FIELD EXPLORATION SERVICE                         	Mining                                            
+1382A     	OIL & GAS EXPLORATION SVC.                                  	Mining                                            
+1389      	OIL & GAS FIELD SER, NEC                                    	Mining                                            
+1389A     	OIL & GAS FIELD SVC. NEC                                    	Mining                                            
+1479      	CHEM, FERT, MIN AND SALT MINING, NEC                        	Mining                                            
+1522      	CONSTRUCTION - RESIDENTIAL                                  	Construction                                      
+1541      	GEN CONTRACTORS - INDUST BUILDINGS & WAREHOUSES             	Construction                                      
+1542      	GEN CONTRACTORS - EXCEPT INDUSTRIAL & RESIDENTIAL           	Construction                                      
+1542A     	CONSTRUCTION - COMMERCIAL                                   	Construction                                      
+1611A     	CONSTRUCTION - HWY & ST                                     	Construction                                      
+1611B     	CONSTRUCTION-HWY & STREET SITE ONLY                         	Construction                                      
+1622A     	CONSTRUCTION - BRDG-ELEV                                    	Construction                                      
+1623      	WATER, SEWER, PIPELINE, CONSTRUCTION & REPAIR               	Construction                                      
+1623A     	CONSTRUCTION - UTIL LINES                                   	Construction                                      
+1629      	CONSTRUCTION - HEAVY NEC                                    	Construction                                      
+1711      	CONTRACTOR PLUMBING                                         	Construction                                      
+1711A     	CONTRACTOR MECHANICAL                                       	Construction                                      
+1721      	CONTRACTOR PAINT & PAPER HANGING                            	Construction                                      
+1731      	CONTRACTOR ELECTRICAL                                       	Construction                                      
+1731A     	TELECOMMUNICATION SERVICE                                   	Construction                                      
+1741      	CONTRACTOR MASONRY                                          	Construction                                      
+1742      	CONTRACTOR DRYWALL-INSULA                                   	Construction                                      
+1751      	CONTRACTOR CARPENTRY WORK                                   	Construction                                      
+1752      	CONTRACTOR FLOOR LAYING                                     	Construction                                      
+1761      	CONTRACTOR ROOFING-SIDING SHEET METAL                       	Construction                                      
+1771      	CONTRACTOR CONCRETE WORK                                    	Construction                                      
+1781      	CONTRACTOR WATER WELL                                       	Construction                                      
+1791      	CONTRACTOR STEEL ERECTION                                   	Construction                                      
+1793      	CONTRACTOR GLASS AND GLAZE                                  	Construction                                      
+1799      	SPECIAL TRADE CONTRACTORS                                   	Construction                                      
+1799A     	CONTRACTOR SPECIAL TRADE                                    	Construction                                      
+1799B     	CONTRACTOR FENCE COMPANY                                    	Construction                                      
+1799D     	CONTRACTOR SWIMMING POOL                                    	Construction                                      
+2011      	MEAT PACKING NEC                                            	Manufacturing                                     
+2013      	SAUSAGES & OTHER PREPARED MEAT PRODUCTS                     	Manufacturing                                     
+2022      	NATURAL, PROCESSED AND IMITATION CHEESE                     	Manufacturing                                     
+2024      	ICE CREAM & FROZEN DESSERT                                  	Manufacturing                                     
+2026      	FLUID MILK PROCESSING - INCLUDING YOGURT                    	Manufacturing                                     
+2032      	CANNED SPECIALTIES                                          	Manufacturing                                     
+2033      	CANNED FRUITS, VEG, PRESERVES, JAMS & JELLIES               	Manufacturing                                     
+2035      	PICKLED FRUITS & VEGETABLE SAUCES & SEASONINGS              	Manufacturing                                     
+2038      	FROZEN SPECIALTIES, NEC INDUSTRIAL                          	Manufacturing                                     
+2038A     	FROZEN SPECIALTIES NEC                                      	Manufacturing                                     
+2041      	FLOUR AND OTHER GRAIN MILLPRODUCTS                          	Manufacturing                                     
+2044      	RICE MILLING                                                	Manufacturing                                     
+2048      	ANIMAL FEED MFG, EXCEPT FOR DOGS & CATS                     	Manufacturing                                     
+2051      	BREAD AND OTHER BAKERY PRODUCTS                             	Manufacturing                                     
+2051A     	BREAD & OTHER BAKERY PROD EXCEPT COOKIES & CRACKERS         	Manufacturing                                     
+2052      	COOKIES AND CRACKERS                                        	Manufacturing                                     
+2053      	FROZEN BAKERY PRODUCTS EXCEPT BREAD                         	Manufacturing                                     
+2064      	CANDY MFG                                                   	Manufacturing                                     
+2077      	ANIMAL & MARINE FATS AND OILS, INCLUDING RENDERING          	Manufacturing                                     
+2079      	SHORTENING, TABLE OILS, MARGARINE & OTHER EDIBLE            	Manufacturing                                     
+2082      	MALT BEVERAGE MFG INCLUDING BEER                            	Manufacturing                                     
+2086      	SOFT DRINK MFG, BOTTLED & CANNED CARBONATED BEV             	Manufacturing                                     
+2095      	ROASTED COFFEE MFG INCLUDING INSTANT                        	Manufacturing                                     
+2096      	POTATO & CORN CHIPS AND SIMILAR SNACKS                      	Manufacturing                                     
+2097      	ICE - MANUFACTURED                                          	Manufacturing                                     
+2098      	MACARONI, SPAGHETTI, VERMICELLI & NOODLES                   	Manufacturing                                     
+2099      	FOOD PREPARATIONS NEC                                       	Manufacturing                                     
+2099A     	FOOD PRODUCTS NEC                                           	Manufacturing                                     
+2299      	TEXTILE GOODS,  NEC INCLUDE BURLAP BAGS                     	Manufacturing                                     
+2299A     	TEXTILE GOODS,  NEC                                         	Manufacturing                                     
+2329      	CLOTHING MANUFACTURER                                       	Manufacturing                                     
+2353      	HATS, CAPS & MILLINERY                                      	Manufacturing                                     
+2396A     	SILK SCREENING                                              	Manufacturing                                     
+2399      	FABRICATED TEXTILE PRODUCT                                  	Manufacturing                                     
+2431      	MILLWORK, VENEER, PLYWOOD, & STRUCTURAL WOOD MEMBER         	Manufacturing                                     
+2434      	WOOD KITCHEN CABINET MANUFACTURING                          	Manufacturing                                     
+2434A     	CABINET SHOP - MANUFACTURING                                	Manufacturing                                     
+2439      	STRUCTURAL WOOD MEMBERS, NEC                                	Manufacturing                                     
+2448      	WOOD PALLETS AND SKIDS                                      	Manufacturing                                     
+2452      	PREFAB WOOD BUILDINGS AND COMPONENTS                        	Manufacturing                                     
+2491      	WOOD PRESERVING                                             	Manufacturing                                     
+2499      	WOOD PRODUCT MANUFACTURING, NEC                             	Manufacturing                                     
+2499A     	WOOD PRODUCTS NEC                                           	Manufacturing                                     
+2511      	WOOD HOUSEHOLD FURNITURE, EXCEPT UPHOLSTERED                	Manufacturing                                     
+2515      	MATTRESSES, FOUNDATIONS & CONVERTIBLE BEDS                  	Manufacturing                                     
+2519      	HOUSEHOLD FURNITURE MANUFACTURING                           	Manufacturing                                     
+2521      	WOOD OFFICE FURNITURE                                       	Manufacturing                                     
+2522      	OFFICE FURNITURE                                            	Manufacturing                                     
+2541      	WOOD OFFICE & STORE FIXT                                    	Manufacturing                                     
+2591      	BLINDS SHADES DRAPES HDWE                                   	Manufacturing                                     
+2591A     	DRAPERY HARDWARE, WINDOW BLINDS AND SHADES                  	Manufacturing                                     
+2599      	FURNITURE & FIXTURES NEC                                    	Manufacturing                                     
+2599A     	FURNITURE & FIXTURES, NEC                                   	Manufacturing                                     
+2611      	PULP MILLS                                                  	Manufacturing                                     
+2621A     	PAPER MILLS                                                 	Manufacturing                                     
+2653      	CORRUGATED & SOLID FIBER BOXES                              	Manufacturing                                     
+2653A     	BOXES, CORRUGATED & FIBER                                   	Manufacturing                                     
+2655      	FIBER CANS, TUBES, DRUMS AND SIMILAR PRODUCTS               	Manufacturing                                     
+2671      	PACKAGING PAPER & PLASTIC FILM-COATED & LAMINATED           	Manufacturing                                     
+2672      	PAPER-COATED & LAMINATED, EXCEPT FOR PACKAGING              	Manufacturing                                     
+2676      	SANITARY PAPER PRODUCTS                                     	Manufacturing                                     
+2677      	ENVELOPE MFG, NOT STATIONERY                                	Manufacturing                                     
+2678      	STATIONERY, TABLETS & RELATED PRODUCTS                      	Manufacturing                                     
+2679A     	PAPER PRODUCTS                                              	Manufacturing                                     
+2711      	NEWSPAPERS: PUBLISHING OR PUBLISHING AND PRINTING           	Manufacturing                                     
+2711A     	PUBLISHING - NEWSPAPER COMMUNITY                            	Manufacturing                                     
+2721A     	PUBLISHING - PERIODICALS                                    	Manufacturing                                     
+2732      	PRINTING - BOOK                                             	Manufacturing                                     
+2741      	PUBLISHING, MISCELLANEOUS                                   	Manufacturing                                     
+2752      	COMMERCIAL PRINTING, LITHOGRAPHIC                           	Manufacturing                                     
+2754      	COMMERCIAL PRINTING, GRAVURE                                	Manufacturing                                     
+2759      	COMMERCIAL PRINTING,  NEC                                   	Manufacturing                                     
+2759A     	PRINTING COMPANIES                                          	Manufacturing                                     
+2761      	MANIFOLD BUSINESS FORMS                                     	Manufacturing                                     
+2789      	BOOKBINDING AND RELATED WORK                                	Manufacturing                                     
+2789A     	BOOKBINDING & RELATED WORK                                  	Manufacturing                                     
+2791      	TYPESETTING                                                 	Manufacturing                                     
+2796      	PRINTING PLATEMAKING AND RELATED SERVICES                   	Manufacturing                                     
+2812      	ALKALIES & CHLORINE MFG                                     	Manufacturing                                     
+2813      	INDUSTRIAL GAS MFG                                          	Manufacturing                                     
+2813A     	GAS CYLINDERS AND TANKS                                     	Manufacturing                                     
+2816      	INORGANIC PIGMENT MANUFACTURING                             	Manufacturing                                     
+2819      	INDUS INORGANIC CHEM, NEC                                   	Manufacturing                                     
+2819A     	CHEMICALS - INDUSTRIAL NEC                                  	Manufacturing                                     
+2821      	PLASTICS, SYNTHETIC RESINS & NONVULCAN ELASTOMERS           	Manufacturing                                     
+2821A     	PLASTICS MATERIALS, RESINS                                  	Manufacturing                                     
+2822      	SYNTHETIC RUBBER MANUF (VULCANIZABLE ELASTOMERS)            	Manufacturing                                     
+2833      	MEDICINAL CHEMICALS AND BOTANICAL PRODUCTS                  	Manufacturing                                     
+2834      	DRUG MANUFACTURING                                          	Manufacturing                                     
+2834A     	PHARMACEUTICAL MANUFACTURING                                	Manufacturing                                     
+2841      	SOAP & DETERGENT MANUF EXCEPT SPECIALTY CLEANERS            	Manufacturing                                     
+2842      	SPECIALTY CLEANING, POLISH & SANITATION PREPARATIONS        	Manufacturing                                     
+2844      	COSMETICS & TOILET PREPARATIONS                             	Manufacturing                                     
+2851      	PAINTS, VARNISHES, LACQUER ENAMELS & ALLIED PRODUCTS        	Manufacturing                                     
+2851A     	PAINTS AND ALLIED PRODUCTS                                  	Manufacturing                                     
+2861      	GUM & WOOD CHEMICALS (DISTILLATION PRODUCTS)                	Manufacturing                                     
+2865      	CYCLIC ORGANIC CRUDES & INTERMED, DYES & PIGMENTS           	Manufacturing                                     
+2869      	INDUSTRIAL INORGANIC CHEMICALS, NEC                         	Manufacturing                                     
+2869A     	CHEMICALS AND PESTICIDES                                    	Manufacturing                                     
+2873      	NITROGENOUS FERTILIZER MANUFACTURING                        	Manufacturing                                     
+2874      	PHOSPHATIC FERTILIZER MANUFACTURING                         	Manufacturing                                     
+2875      	FERTILIZERS, MIXING ONLY                                    	Manufacturing                                     
+2891      	ADHESIVES & SEALANTS MANUFACTURING                          	Manufacturing                                     
+2893      	PRINTING INK MANUFACTURING                                  	Manufacturing                                     
+2895      	CARBON BLACK MANUFACTURING                                  	Manufacturing                                     
+2899      	CHEMICALS & CHEMICAL PREPARATIONS, NEC                      	Manufacturing                                     
+2899A     	CHEMICAL PREPARATIONS NEC                                   	Manufacturing                                     
+2911      	PETROLEUM REFINING                                          	Manufacturing                                     
+2951      	ASPHALT PAVING MIXTURES & BLOCKS                            	Manufacturing                                     
+2951A     	ASPHALT PAVING MIXTURES                                     	Manufacturing                                     
+2952      	ASPHALT FELTS & COATINGS MANUFACTURING                      	Manufacturing                                     
+2952A     	ASPHALT FELT & COATINGS                                     	Manufacturing                                     
+2992      	LUBRICATING OILS & GREASES                                  	Manufacturing                                     
+2999      	PETROLEUM AND COAL NEC                                      	Manufacturing                                     
+2999A     	PRODUCTS OF PETROLEUM AND COAL, NEC                         	Manufacturing                                     
+3053      	GASKETS PACKING & SEALING                                   	Manufacturing                                     
+3053A     	GASKET MANUFACTURING                                        	Manufacturing                                     
+3069      	FABRICATED RUBBER PRODUCTS, NEC                             	Manufacturing                                     
+3069A     	RUBBER PRODUCTS                                             	Manufacturing                                     
+3081      	UNSUPPORTED PLASTICS FILM AND SHEET MANUFACTURING           	Manufacturing                                     
+3082      	UNSUPPORTED PLASTICS PROFILE SHAPES MANUF                   	Manufacturing                                     
+3083      	LAMINATED PLASTIC PLATE, SHEET & PROFILE MANUF              	Manufacturing                                     
+3084      	PLASTIC PIPE MANUFACTURING                                  	Manufacturing                                     
+3085      	PLASTIC BOTTLE MANUFACTURING                                	Manufacturing                                     
+3087      	PLASTIC RESIN COMPOUNDING                                   	Manufacturing                                     
+3088      	PLASTIC PLUMBING FIXTURE MANUFACTURING                      	Manufacturing                                     
+3089      	PLASTIC PRODUCTS, NEC                                       	Manufacturing                                     
+3089A     	PLASTIC PRODUCTS NEC                                        	Manufacturing                                     
+3199      	LEATHER GOODS, NEC                                          	Manufacturing                                     
+3211      	FLAT GLASS MANUFACTURING                                    	Manufacturing                                     
+3221      	GLASS CONTAINER MANUFACTURING                               	Manufacturing                                     
+3229      	PRESSED & BLOWN GLASSWARE, NEC                              	Manufacturing                                     
+3229A     	GLASS PRESSED & BLOWN, NEC                                  	Manufacturing                                     
+3231      	GLASS PRODUCTS, MADE OF PURCHASED GLASS                     	Manufacturing                                     
+3231A     	GLASS PRODUCTS MADE OF PURCHASED GLASS                      	Manufacturing                                     
+3241      	HYDRAULIC CEMENT MANUFACTURING                              	Manufacturing                                     
+3241A     	CEMENT, HYDRAULIC                                           	Manufacturing                                     
+3251      	BRICK AND STRUCTURAL CLAY TILE MANUFACTURING                	Manufacturing                                     
+3255      	CLAY REFRACTORIES                                           	Manufacturing                                     
+3259      	CLAY PRODUCTS, STRUCTURAL                                   	Manufacturing                                     
+3259A     	STRUCTURAL CLAY PRODUCTS NEC, INC CLAY SEWER PIPE           	Manufacturing                                     
+3269      	POTTERY PRODUCTS, NEC                                       	Manufacturing                                     
+3269A     	POTTERY PRODUCTS, NEC                                       	Manufacturing                                     
+3271      	CONCRETE BLOCK AND BRICK                                    	Manufacturing                                     
+3271A     	CONCRETE BLOCK & BRICK MANUFACTURING                        	Manufacturing                                     
+3272      	CONCRETE PRODUCTS MANUF EXCEPT BRICK AND BLOCK              	Manufacturing                                     
+3272A     	CONCRETE PRODUCTS, NEC                                      	Manufacturing                                     
+3273      	READI-MIX CONCRETE BATCH PLANTS                             	Manufacturing                                     
+3273A     	CONCRETE READY MIX                                          	Manufacturing                                     
+3275      	GYPSUM PRODUCTS, INCLUDING WALLBOARD AND PLASTER            	Manufacturing                                     
+3281      	CUT STONE AND STONE PRODUC                                  	Manufacturing                                     
+3281A     	CUT STONE & STONE PRODUCTS                                  	Manufacturing                                     
+3291      	ABRASIVE PRODUCTS MANUFACTURING                             	Manufacturing                                     
+3292A     	VINYL TILE MANUFACTURING                                    	Manufacturing                                     
+3295      	BARITE MANUFACTURING                                        	Manufacturing                                     
+3296      	MINERAL WOOL MANUFACTURING                                  	Manufacturing                                     
+3299      	NONMETALLIC MINERAL PRODUCTS, NEC                           	Manufacturing                                     
+3312      	STEEL WORKS, LAST FURNACES, ROLLING & FINISHING MILLS       	Manufacturing                                     
+3313      	ELECTROMETALLURGICAL PRODUCTS, EXCEPT STEEL                 	Manufacturing                                     
+3315      	STEEL WIREDRAWING AND STEEL NAILS & SPIKES MFG              	Manufacturing                                     
+3317      	STEEL PIPE & TUBE MANUFACTURING                             	Manufacturing                                     
+3322      	MALLEABLE IRON FOUNDRIES                                    	Manufacturing                                     
+3324      	STEEL INVESTMENT FOUNDRIES                                  	Manufacturing                                     
+3325      	STEEL FOUNDRIES, NEC                                        	Manufacturing                                     
+3325A     	STEEL MANUFACTURING, NEC                                    	Manufacturing                                     
+3339      	METAL PROCESSING - MANUFACTURING                            	Manufacturing                                     
+3341      	SECONDARY SMELTING & NON- FERROUS METAL REFINING            	Manufacturing                                     
+3351      	ROLLING, DRAWING AND EXTRUDING OF COPPER                    	Manufacturing                                     
+3356      	NONFERR METAL ROLL, ETC EXCLUDE COPPER & ALUMINUM           	Manufacturing                                     
+3357      	DRAWING AND INSULATING OF NONFERROUS WIRE                   	Manufacturing                                     
+3363      	ALUMINUM DIE CASTINGS                                       	Manufacturing                                     
+3364      	NONFERROUS DIE; CASTINGS, EXCEPT ALUMINUM                   	Manufacturing                                     
+3369      	NONFERROUS FOUNDRIES EXCEPT COPPER & ALUMINUM               	Manufacturing                                     
+3398      	METAL HEAT TREATING                                         	Manufacturing                                     
+3399      	PRIMARY METAL PRODUCTS, NEC                                 	Manufacturing                                     
+3411      	METAL CAN MANUFACTURING                                     	Manufacturing                                     
+3412      	METAL SHIPPING BARRELS, DRUMS, KEGS & PAILS                 	Manufacturing                                     
+3429      	HARDWARE, NEC                                               	Manufacturing                                     
+3429A     	MARINE HARDWARE                                             	Manufacturing                                     
+3433      	HEATING EQUIPMENT MANUF EXCLUDE ELEC & WARM AIR             	Manufacturing                                     
+3441      	FABRICATED STRUCTURAL METAL                                 	Manufacturing                                     
+3441A     	METAL - FABRICATED STRUCT.                                  	Manufacturing                                     
+3442      	METAL DOORS, SASH, FRAMES                                   	Manufacturing                                     
+3443      	BOILER AND HEAT EXCHANGER MANUFACTURING                     	Manufacturing                                     
+3444      	SHEET METAL WORK                                            	Manufacturing                                     
+3444A     	SHEET METAL WORK                                            	Manufacturing                                     
+3446      	ARCHITECTURAL AND ORNA- MENTAL METAL WORK                   	Manufacturing                                     
+3448      	PREFABRICATED METALS BUILDINGS & COMPONENTS                 	Manufacturing                                     
+3449      	MISC STRUCTURAL METAL WORK                                  	Manufacturing                                     
+3449A     	METAL WORK NEC                                              	Manufacturing                                     
+3451      	SCREW MACHINE PRODUCTS                                      	Manufacturing                                     
+3452      	BOLT, NUT, SCREW, RIVET AND WASHER MANUFACTURING            	Manufacturing                                     
+3462      	IRON & STEEL FORGING                                        	Manufacturing                                     
+3463      	NONFERROUS FORGINGS                                         	Manufacturing                                     
+3469      	METAL STAMPINGS, NEC                                        	Manufacturing                                     
+3471      	ELECTROPLATING, PLATING, POLISHING, ANODIZING               	Manufacturing                                     
+3471A     	PLATING & POLISHING                                         	Manufacturing                                     
+3479      	COATING, ENGRAVING, AND ALLIED SER, NEC                     	Manufacturing                                     
+3479A     	METAL COAT & ALLIED SVC                                     	Manufacturing                                     
+3491      	INDUSTRIAL VALVE MANUFACTURING                              	Manufacturing                                     
+3492      	FLUID POWER VALVES AND HOSE FITTINGS                        	Manufacturing                                     
+3493      	STEEL SPRINGS, EXCEPT WIRE                                  	Manufacturing                                     
+3493A     	STEEL SPRINGS, EXCEPT WIRE                                  	Manufacturing                                     
+3494      	VALVES & PIPE FITTINGS, NEC                                 	Manufacturing                                     
+3494A     	VALVE MANUFACTURING, NEC                                    	Manufacturing                                     
+3495      	WIRE SPRING MANUFACTURING                                   	Manufacturing                                     
+3496      	MISC FABRICATED WIRE PRODUCTS                               	Manufacturing                                     
+3497      	METAL FOIL AND LEAF                                         	Manufacturing                                     
+3498      	PIPE & PIPE FITTINGS FABRICATION                            	Manufacturing                                     
+3498A     	PIPE MANUFACTURING, NEC                                     	Manufacturing                                     
+3499      	METAL PRODUCTS FABRICATING, NEC                             	Manufacturing                                     
+3499A     	METAL FABRICATION, NEC                                      	Manufacturing                                     
+3499B     	BANKING MACHINERY & EQUIP                                   	Manufacturing                                     
+3511      	STEAM, GAS & HYDRAULIC TURBINES & TURBINE GEN SET           	Manufacturing                                     
+3519      	DIESEL ENGINES FOR STATIONARY SERVICE                       	Manufacturing                                     
+3524      	LAWN & GARDEN EQPT                                          	Manufacturing                                     
+3531      	CONSTRUCTION MACH & EQPT                                    	Manufacturing                                     
+3531B     	MACHINERY CONSTRUCTION                                      	Manufacturing                                     
+3532      	MINING MACHINERY & EQUIP. EXCEPT OIL & GAS FIELD EQUIP      	Manufacturing                                     
+3533      	OIL & GAS FIELD MACH & EQPT                                 	Manufacturing                                     
+3533A     	OIL & GAS FIELD MACHINERY & EQUIP                           	Manufacturing                                     
+3535      	CONVEYORS AND CONVEYING EQUIPMENT MANUFACTURING             	Manufacturing                                     
+3536      	OVERHEAD TRAVELING CRANES,HOISTS & MONORAIL SYSTEMS         	Manufacturing                                     
+3537      	INDUSTRIAL TRUCKS, TRACTORS TRAILERS AND STACKER MFG        	Manufacturing                                     
+3541      	MACHINE TOOLS, METAL CUTTING TYPE - MANUF                   	Manufacturing                                     
+3542      	METAL TOOL-METAL FORMING TYPE - MANUF                       	Manufacturing                                     
+3544      	SPECIAL DIES & TOOLS, DIE SETS, JIGS, FIXTURES & MOLDS      	Manufacturing                                     
+3545      	CUTTING TOOLS, MACHINE TOOLS ACC. & PRECISION MEASURING     	Manufacturing                                     
+3549      	METALWORKING MACHINERY,NEC                                  	Manufacturing                                     
+3549A     	MACHINERY METALWORKING NEC                                  	Manufacturing                                     
+3553      	WOODWORKING MACHINERY MANUFACTURING                         	Manufacturing                                     
+3556      	FOOD PRODUCT MACHINERY MANUFACTURING                        	Manufacturing                                     
+3559      	SPECIAL INDUSTRIAL MACHINERY, NEC                           	Manufacturing                                     
+3559A     	MACHINERY SPECIAL INDUSTRY                                  	Manufacturing                                     
+3559B     	PRINTING EQUIPMENT                                          	Manufacturing                                     
+3561      	PUMP & PUMPING EQPT MANUFACTURING                           	Manufacturing                                     
+3562      	BALL AND ROLLER BEARING MANUFACTURING                       	Manufacturing                                     
+3563      	AIR & GAS COMPRESSOR MANUFACTURING                          	Manufacturing                                     
+3564      	INDUST & COMM FANS, BLOWERS AND AIR PURIFICATION EQUIP      	Manufacturing                                     
+3565      	PACKAGING MACHINERY MANUFACTURING                           	Manufacturing                                     
+3569      	GENERAL INDUSTRIAL MACHINERY & EQUIP, NEC                   	Manufacturing                                     
+3571      	ELECTRONIC COMPUTER MANUFACTURING                           	Manufacturing                                     
+3572      	COMPUTER STORAGE DEVICE MANUFACTURING                       	Manufacturing                                     
+3575      	COMPUTER EQUIPMENT MANUFACTURING- GENERAL                   	Manufacturing                                     
+3575A     	COMPUTER EQUIPMENT MANUFACTURING                            	Manufacturing                                     
+3577      	COMPUTER EQUIP, NEC, I.E., PRINTERS, PLOTTERS, DISPLAYS     	Manufacturing                                     
+3585      	A/C & HEATING EQUIPMENT                                     	Manufacturing                                     
+3585A     	HVAC, COMMERCIAL & INDUST REFRIGERATION EQUIP MANUF         	Manufacturing                                     
+3589      	INDUSTRIAL WATER TREATMENT EQUIPMENT                        	Manufacturing                                     
+3589A     	SERVICE INDUSTRY MACHINES                                   	Manufacturing                                     
+3592      	CARBURETORS, PISTONS, PISTON RINGS & VALVES MANUF           	Manufacturing                                     
+3593      	FLUID POWER CYLINDERS & ACTUATOR MANUF                      	Manufacturing                                     
+3594      	FLUID POWER PUMP & MOTOR MANUFACTURING                      	Manufacturing                                     
+3599      	INDUSTRIAL MACHINERY AND EQUIPMENT, NEC                     	Manufacturing                                     
+3599A     	INDUSTRIAL MACHINERY NEC                                    	Manufacturing                                     
+3599B     	MACHINE SHOP - JOB SHOP                                     	Manufacturing                                     
+3599C     	MACHINE SHOP - AUTOMOTIVE                                   	Manufacturing                                     
+3599D     	MACHINE SHOP - VALVE REPAIR                                 	Manufacturing                                     
+3599E     	MACHINE SHOP - GRINDING                                     	Manufacturing                                     
+3612      	POWER DISTRIBUTION & SPECIALTY TRANSFORMER MANUF            	Manufacturing                                     
+3613      	SWITCHGEAR AND SWITCH- BOARD APPARATUS                      	Manufacturing                                     
+3621      	MOTORS & GENERATORS MANUFACTURING                           	Manufacturing                                     
+3624      	CARBON AND GRAPHITE PRODUCT MANUFACTURING                   	Manufacturing                                     
+3625      	RELAYS AND INDUSTRIAL CONTROL MANUFACTURING                 	Manufacturing                                     
+3631      	HOUSEHOLD COOKING EQUIPMENT - MANUF                         	Manufacturing                                     
+3634      	AIR PURIFIERS, PORTABLE - MANUFACTURING                     	Manufacturing                                     
+3643      	CURRENT-CARRYING WIRING DEVICES MANUFACTURING               	Manufacturing                                     
+3644      	NONCURREN CARRYING WIRING DEVICES                           	Manufacturing                                     
+3645      	RESIDENTIAL ELECTRIC LIGHTING FIXTURE MANUF                 	Manufacturing                                     
+3646      	COMM, INDUST & INSTITUTION ELECTRIC LIGHTING FIXTURES       	Manufacturing                                     
+3648      	LIGHTING EQUIPMENT NEC                                      	Manufacturing                                     
+3648A     	LIGHTING EQUIPMENT NEC                                      	Manufacturing                                     
+3694      	ELECTRICAL EQUIPMENT FOR INTERNAL COMBUSTION ENGINE         	Manufacturing                                     
+3695      	MAGNETIC & OPTICAL RECORD MEDIA MANUFACTURING               	Manufacturing                                     
+3699      	ELECT MACH & EQPT, NEC                                      	Manufacturing                                     
+3699A     	ELECTRICAL EQUIP & SUPPLY                                   	Manufacturing                                     
+3711      	MOTOR VEHICLES & PASSENGERCAR BODY MANUFACTURING            	Manufacturing                                     
+3713      	TRUCK AND BUS BODIES                                        	Manufacturing                                     
+3714      	MOTOR VEHICLE PARTS & ACCESSORY MANUFACTURING               	Manufacturing                                     
+3715      	TRUCK TRAILER MANUFACTURING                                 	Manufacturing                                     
+3724      	AIRCRAFT ENGINES AND ENGINE PART MANUFACTURING              	Manufacturing                                     
+3728      	AIRCRAFT PARTS & AUXILIARY EQUIPMENT, NEC                   	Manufacturing                                     
+3731      	SHIP BUILDING & REPAIRING                                   	Manufacturing                                     
+3732      	BOAT BUILDING & REPAIRING                                   	Manufacturing                                     
+3732A     	BOAT BUILDING & REPAIRING                                   	Manufacturing                                     
+3743      	RAILROAD EQUIPMENT MANUFACTURING                            	Manufacturing                                     
+3799      	TRANSPORTATION EQPT, NEC                                    	Manufacturing                                     
+3812      	AERONAUTICAL & NAUTICAL SEARCH SYSTEMS & INSTRUM.           	Manufacturing                                     
+3821      	LABORATORY APPARATUS AND FURNITURE MANUF                    	Manufacturing                                     
+3822      	ENVIRONMENTAL CONTROLS                                      	Manufacturing                                     
+3822A     	AUTOMATIC HVAC & APPLIANCE CONTROL MANUFACTURING            	Manufacturing                                     
+3823      	INDUSTRIAL DISPLAY, CONTROL & MEASUREMENT INSTRUMENTS       	Manufacturing                                     
+3823A     	INSTRUMENTS-PROCESS CONTRO                                  	Manufacturing                                     
+3824      	TOTALLIZING FLUID METERS & COUNTING DEVICES                 	Manufacturing                                     
+3825      	ELECTRICITY & ELECTRIC SIGTESTING DEVICES                   	Manufacturing                                     
+3826      	LABORATORY ANALYTICAL INSTRUMENT MANUFACTURING              	Manufacturing                                     
+3827      	OPTICAL INSTRUMENTS & LENSES MANUFACTURING                  	Manufacturing                                     
+3829      	MEASURING & CONTROLLING DEVICES, NEC                        	Manufacturing                                     
+3829A     	MEASURING & CONTROL DEVICE                                  	Manufacturing                                     
+3841A     	MEDICAL & SURG. INSTRUMENT                                  	Manufacturing                                     
+3845      	ELECTROMEDICAL EQUIPMENT                                    	Manufacturing                                     
+3851      	OPHTHALMIC GOODS - MNFG                                     	Manufacturing                                     
+3911A     	JEWELRY - MANUFACTURING                                     	Manufacturing                                     
+3949      	SPORTING AND ATHLETIC GOOD                                  	Manufacturing                                     
+3993      	SIGNS & ADVERTISING SPECIA                                  	Manufacturing                                     
+3993A     	SIGNS AND ADVERTISING SPECIALTY MANUFACTURING               	Manufacturing                                     
+3999      	MANUFACTURING INDUSTRIES NEC                                	Manufacturing                                     
+3999A     	MANUFACTURING NEC                                           	Manufacturing                                     
+4011      	RAILROAD, LINE-HAUL OPERATING                               	Transportation, Public Utilities                  
+4013      	RAILROAD SWITCHING AND TERMINAL ESTABLISHMENTS              	Transportation, Public Utilities                  
+4119A     	AMBULANCE SERVICE                                           	Transportation, Public Utilities                  
+4119B     	LIMOUSINE SERVICE                                           	Transportation, Public Utilities                  
+4121      	TAXICAB SERVICE                                             	Transportation, Public Utilities                  
+4141A     	BUS CHARTER SERVICE LOCAL                                   	Transportation, Public Utilities                  
+4142      	BUS CHARTER - NOT LOCAL                                     	Transportation, Public Utilities                  
+4173      	BUS TERMINAL & SERVICE                                      	Transportation, Public Utilities                  
+4212      	LOCAL TRUCKING WITHOUT STORAGE                              	Transportation, Public Utilities                  
+4212A     	TRUCKING-INTRASTATE                                         	Transportation, Public Utilities                  
+4213      	TRUCKING, EXCEPT LOCAL                                      	Transportation, Public Utilities                  
+4213A     	TRUCKING-INTERSTATE                                         	Transportation, Public Utilities                  
+4214      	LOCAL TRUCKING WITH STORAGE                                 	Transportation, Public Utilities                  
+4214A     	TRUCKING-INTRASTATE W/STOR                                  	Transportation, Public Utilities                  
+4215      	COURIER SERVICE                                             	Transportation, Public Utilities                  
+4215A     	COURIER SERVICES, EXCEPT BY AIR                             	Transportation, Public Utilities                  
+4221      	FARM PRODUCT WAREHOUSING AND STORAGE                        	Transportation, Public Utilities                  
+4222      	REFRIGERATED WAREHOUSING AND STORAGE                        	Transportation, Public Utilities                  
+4222A     	WAREHOUSE - REFRIGERATED                                    	Transportation, Public Utilities                  
+4225      	GENERAL WAREHOUSING AND STORAGE                             	Transportation, Public Utilities                  
+4225A     	STORAGE - GENERAL                                           	Transportation, Public Utilities                  
+4225B     	STORAGE - MINI WAREHOUSE                                    	Transportation, Public Utilities                  
+4225C     	STORAGE - RECORDS MANAGEMENT FACILITY                       	Transportation, Public Utilities                  
+4225D     	STORAGE - COLD                                              	Transportation, Public Utilities                  
+4225E     	STORAGE - PERISHABLE FOOD                                   	Transportation, Public Utilities                  
+4225F     	STOARAGE - COFFEE                                           	Transportation, Public Utilities                  
+4225G     	STORAG - PAPER GOODS / PRINTED ITEMS                        	Transportation, Public Utilities                  
+4226      	SPECIAL WAREHOUSING AND STORAGE                             	Transportation, Public Utilities                  
+4226A     	TANK FARMS                                                  	Transportation, Public Utilities                  
+4226B     	WAREHOUSE - SPECIAL                                         	Transportation, Public Utilities                  
+4226C     	DISTRIBUTION WHSE-NEWSPAPE                                  	Transportation, Public Utilities                  
+4226D     	DISTRIBUTION WAREHOUSE NEC                                  	Transportation, Public Utilities                  
+4226P     	PIPESTOCK INVENTORY                                         	Transportation, Public Utilities                  
+4227      	PIPESTOCK                                                   	Transportation, Public Utilities                  
+4231      	MOTOR FREIGHT TERMINAL AND MAINTENANCE FACILITIES           	Transportation, Public Utilities                  
+4311A     	POSTAL SERVICE - PRIVATE                                    	Transportation, Public Utilities                  
+4410      	VESSELS - LOCAL WATER                                       	Transportation, Public Utilities                  
+4412      	DEEP SEA FOREIGN FREIGHT TRANSPORTATION                     	Transportation, Public Utilities                  
+4424      	DEEP SEA DOMESTIC TRANS- PORTATION OF FREIGHT               	Transportation, Public Utilities                  
+4444      	CONTAINERS &/OR CHASSIS                                     	Transportation, Public Utilities                  
+4449      	WATER TRANSPORTATION OF FREIGHT, NEC                        	Transportation, Public Utilities                  
+4491      	MARINE CARGO HANDLING                                       	Transportation, Public Utilities                  
+4491A     	MARINE CARGO HANDLING                                       	Transportation, Public Utilities                  
+4492      	TOWING AND TUGBOAT SERVICE                                  	Transportation, Public Utilities                  
+4493      	MARINAS                                                     	Transportation, Public Utilities                  
+4499      	WATER TRANSPORTATION SVC                                    	Transportation, Public Utilities                  
+4499A     	WATER TRANSPORTATION SERVICES, NEC                          	Transportation, Public Utilities                  
+4512      	AIR TRANSPORTATION, SCHEDULED                               	Transportation, Public Utilities                  
+4512A     	COMMERCIAL AIR CARRIER - EXCEPT AIRCRAFT                    	Transportation, Public Utilities                  
+4512B     	AIR CARGO HANDLING                                          	Transportation, Public Utilities                  
+4512C     	AIRLINES-COMMERCIAL                                         	Transportation, Public Utilities                  
+4513      	COURIER SERVICE - AIR                                       	Transportation, Public Utilities                  
+4513A     	AIR COURIER SERVICES                                        	Transportation, Public Utilities                  
+4521      	AIR TRANSPORTATION, NONCER                                  	Transportation, Public Utilities                  
+4522      	AIR TRANSPORTATION, NON-SCHEDULED                           	Transportation, Public Utilities                  
+4581      	AIRPORTS, TERMINALS & SERV                                  	Transportation, Public Utilities                  
+4612      	CRUDE PETROLEUM PIPELINES                                   	Transportation, Public Utilities                  
+4613      	REFINED PETROLEUM PIPELINE                                  	Transportation, Public Utilities                  
+4619      	PIPELINES, NEC                                              	Transportation, Public Utilities                  
+4724      	TRAVEL AGENCY 0-9999 SQ FT                                  	Transportation, Public Utilities                  
+4731      	FREIGHT & CARGO SHIPPING AGENT                              	Transportation, Public Utilities                  
+4731A     	FREIGHT FORWARDING                                          	Transportation, Public Utilities                  
+4741      	RENTAL OF RAILROAD CARS                                     	Transportation, Public Utilities                  
+4783      	PACKING AND CRATING                                         	Transportation, Public Utilities                  
+4785      	PUBLIC SCALES                                               	Transportation, Public Utilities                  
+4789      	TRANSPORTATION SVC, NEC                                     	Transportation, Public Utilities                  
+4812A     	RADIO COMMUNICATIONS LAND MOBILE RADIO                      	Transportation, Public Utilities                  
+4812B     	WIRELESS TELCO CARRIER                                      	Transportation, Public Utilities                  
+4812C     	PAGING CARRIER                                              	Transportation, Public Utilities                  
+4812D     	MOBILE DATA SERVICES                                        	Transportation, Public Utilities                  
+4812E     	AUTOMATIC VEHICLE LOCATOR SERVICE                           	Transportation, Public Utilities                  
+4812F     	TOWERS AND ANTENNA SITES                                    	Transportation, Public Utilities                  
+4812G     	RADIO COMMUNICATIONS N E C                                  	Transportation, Public Utilities                  
+4812H     	RADIO COMMUNICATIONS, NEC                                   	Transportation, Public Utilities                  
+4813      	LONG DISTANCE - MAJOR CARRIERS                              	Transportation, Public Utilities                  
+4813A     	LONG DISTANCE - CARRIER'S CARRIER                           	Transportation, Public Utilities                  
+4813B     	RESELLERS OF TELEPHONE SERVICE                              	Transportation, Public Utilities                  
+4813C     	VOICE MAIL SERVICES                                         	Transportation, Public Utilities                  
+4813D     	TELECOMMUNICATIONS EQUIP- MENT PROVIDERS                    	Transportation, Public Utilities                  
+4813E     	SATELLITE EARTH STATIONS                                    	Transportation, Public Utilities                  
+4813F     	VSAT                                                        	Transportation, Public Utilities                  
+4813G     	MICROWAVE SITES                                             	Transportation, Public Utilities                  
+4813H     	TELEPHONE COMMUNICATIONS N E C                              	Transportation, Public Utilities                  
+4813I     	CLECS (COMPETITIVE LOCAL EXCHANGE CARRIERS)                 	Transportation, Public Utilities                  
+4813J     	TELEPHONE COMMUNICATIONS VOIP PROVIDERS                     	Transportation, Public Utilities                  
+4822      	DATA AND OTHER MESSAGE COMMUNICATIONS                       	Transportation, Public Utilities                  
+4822A     	INTERNET SERVICE PROVIDER                                   	Transportation, Public Utilities                  
+4822B     	ELECTRONIC DATA STORAGE OFFSITE                             	Transportation, Public Utilities                  
+4832      	RADIO BROADCASTING STATION                                  	Transportation, Public Utilities                  
+4832A     	SATELLITE RADIO SERVICE                                     	Transportation, Public Utilities                  
+4833      	TV BROADCASTING STATION                                     	Transportation, Public Utilities                  
+4841A     	CABLE & OTHER PAY TV SERVICES - CONVENTIONAL                	Transportation, Public Utilities                  
+4841B     	SMATV SYSTEMS                                               	Transportation, Public Utilities                  
+4841C     	SMATV SYSTEM LESS HEAD END                                  	Transportation, Public Utilities                  
+4841D     	CABLE TV - HOTEL/MOTEL SYSTEMS                              	Transportation, Public Utilities                  
+4841E     	CABLE TV - MDS & MMDS SYSTEMS                               	Transportation, Public Utilities                  
+4841F     	CABLE TV - SERVICES NEC                                     	Transportation, Public Utilities                  
+4899      	COMMUNICATION SERVICES NEC                                  	Transportation, Public Utilities                  
+4911      	ELECTRIC SERVICES - TRANSMISSION                            	Transportation, Public Utilities                  
+4911W     	ELECTRIC SERVICES - DISTRIBUTION                            	Transportation, Public Utilities                  
+4922      	NATURAL GAS - TRANSMISSION                                  	Transportation, Public Utilities                  
+4923      	NATURAL GAS - TRANSMISSION AND DISTRIBUTION                 	Transportation, Public Utilities                  
+4924      	NATURAL GAS - DISTRIBUTION                                  	Transportation, Public Utilities                  
+4925      	MIXED, MANUFACTURED OR LIQUIFIED PETROLEUM GAS              	Transportation, Public Utilities                  
+4931      	ELECTRIC AND OTHER SERVICE COMBINED                         	Transportation, Public Utilities                  
+4932      	GAS AND OTHER SERVICES COMBINED                             	Transportation, Public Utilities                  
+4939      	COMBINATION UTILITIES, NEC                                  	Transportation, Public Utilities                  
+4941      	WATER SUPPLY                                                	Transportation, Public Utilities                  
+4941A     	UTILITY DISTRICT OFFICES                                    	Transportation, Public Utilities                  
+4941B     	INDUS WATER DISTRIBUTION                                    	Transportation, Public Utilities                  
+4952      	SEWERAGE SYSTEMS                                            	Transportation, Public Utilities                  
+4953      	REFUSE SYSTEMS                                              	Transportation, Public Utilities                  
+4953A     	REFUSE SYSTEMS                                              	Transportation, Public Utilities                  
+4953B     	INCINERATOR OPERATION                                       	Transportation, Public Utilities                  
+4953H     	HAZARDOUS WASTE DISPOSAL SITE                               	Transportation, Public Utilities                  
+4961      	STEAM AND AIR CONDITIONING SUPPLY                           	Transportation, Public Utilities                  
+5012      	AUTO & OTHER MOTOR VEHICLE                                  	Wholesale                                         
+5012W     	AUTO DEALER-USED WHOLESALE                                  	Wholesale                                         
+5013      	AUTO PARTS NEW-WHOLESALE                                    	Wholesale                                         
+5013A     	MOTOR VEHICLE SUPPLIES                                      	Wholesale                                         
+5014      	TIRES AND TUBES                                             	Wholesale                                         
+5015      	AUTO PARTS USED-WHOLESALE                                   	Wholesale                                         
+5021      	FURNITURE                                                   	Wholesale                                         
+5023      	HOME FURNISHINGS                                            	Wholesale                                         
+5031      	LUMBER & BLDG SUPPLY WHSLE                                  	Wholesale                                         
+5032      	BRICK, SAND, & GRAVEL                                       	Wholesale                                         
+5033      	ROOFING, SIDING, INSULATION.                                	Wholesale                                         
+5039A     	CONSTRUCTION - MATERIALS NEC                                	Wholesale                                         
+5043      	CAMERA/PHOTO SUPPLY-WHSLE                                   	Wholesale                                         
+5044      	OFFICE EQUIPMENT                                            	Wholesale                                         
+5045      	COMPUTER & SOFTWARE                                         	Wholesale                                         
+5046      	RESTAURANT EQUIPMENT                                        	Wholesale                                         
+5046A     	COMMERCIAL EQUIPMENT, NEC                                   	Wholesale                                         
+5047      	MEDICAL & HOSPITAL EQUIP                                    	Wholesale                                         
+5048      	OPHTHALMIC GOODS - WHSLE                                    	Wholesale                                         
+5049      	EQUIPMENT PROFESSIONAL NEC                                  	Wholesale                                         
+5051      	METALS SERVICE CENTERS                                      	Wholesale                                         
+5051A     	WIRE ROPE & RELATED PRODUC                                  	Wholesale                                         
+5051B     	METALS PRODUCTS SERVICE CENTER OFFICES                      	Wholesale                                         
+5052      	COAL AND OTHER MINERAL ORE WHOLESALE DISTRIBUTION           	Wholesale                                         
+5063      	ELECTRICAL APPARATUS AND EQUIPMENT, WIRING SUPPLIES         	Wholesale                                         
+5063A     	ELECTRICAL EQPT & SUPPLIES                                  	Wholesale                                         
+5063B     	LIGHTING FIXTURES - WHOLESALE                               	Wholesale                                         
+5064      	ELECTRICAL APPLIANCES                                       	Wholesale                                         
+5065      	ELECTRONIC PARTS & EQPT NEC                                 	Wholesale                                         
+5065A     	ELECTRONICS WHLSE PARTS & EQUIPMENT                         	Wholesale                                         
+5072      	HARDWARE - WHOLESALE                                        	Wholesale                                         
+5074      	PLUMBING SUPPLIES WHOLESALE                                 	Wholesale                                         
+5075      	A/C & HEATING EQUIP & SUPP                                  	Wholesale                                         
+5078      	REFRIGERATION EQPT & SUPPL                                  	Wholesale                                         
+5082      	EQUIPMENT-HEAVY                                             	Wholesale                                         
+5082A     	EQUIPMENT-HEAVY, PARTS                                      	Wholesale                                         
+5082B     	CONSTRUCTION & MINING M&E EXCEPT PETROLEUM-WHOLESALE        	Wholesale                                         
+5083      	FARM EQUIPMENT SALES                                        	Wholesale                                         
+5084      	INDUSTRIAL M & E, WHOLE- SALE DISTRIBUTION, NEC             	Wholesale                                         
+5084A     	OIL FIELD EQUIP & SUPPLY                                    	Wholesale                                         
+5084B     	WELDING EQUIPMENT                                           	Wholesale                                         
+5084C     	INDUSTRIAL MACH & EQUIP                                     	Wholesale                                         
+5084E     	PUMPS & EQPT WHSLE                                          	Wholesale                                         
+5085      	INDUSTRIAL SUPPLIES DISTRI, NEC                             	Wholesale                                         
+5085A     	INDUSTRIAL SUPPLIES, NEC                                    	Wholesale                                         
+5085B     	RUBBER GOODS-HOSES & RELAT                                  	Wholesale                                         
+5085D     	VALVES - INDUSTRIAL                                         	Wholesale                                         
+5085E     	SEALS GASKETS PKG BEARING                                   	Wholesale                                         
+5085I     	TOOLS - INDUSTRIAL                                          	Wholesale                                         
+5085J     	FASTENERS - NUTS & BOLTS                                    	Wholesale                                         
+5087      	SERVICE ESTABLISHMENT EQPT                                  	Wholesale                                         
+5087A     	RESTAURANT SUPPLY                                           	Wholesale                                         
+5087B     	CASKET & MORTICIAN SUPPLY                                   	Wholesale                                         
+5087C     	BEAUTY & BARBER SUPPLY                                      	Wholesale                                         
+5087D     	JANITORIAL SUPPLY                                           	Wholesale                                         
+5088      	TRANSPORTATION EQPT & SUP                                   	Wholesale                                         
+5088A     	MARINE & TRANSPORTATION SUPPLY                              	Wholesale                                         
+5091      	SPORTING/RECREATIONALGOODS                                  	Wholesale                                         
+5092      	TOYS/HOBBY GOODS & SUPPLIE                                  	Wholesale                                         
+5093      	SCRAP METAL RECLAMATION                                     	Wholesale                                         
+5093A     	AUTO SALVAGE YARDS                                          	Wholesale                                         
+5093B     	RECYCLING-PAPER, ALUMINUM,METAL SCRAP, PLASTIC              	Wholesale                                         
+5093D     	WASTE OIL RECLAMATION                                       	Wholesale                                         
+5094      	JEWELRY - WHSLE                                             	Wholesale                                         
+5094A     	JEWELRY - COSTUME WHSLE                                     	Wholesale                                         
+5099      	DURABLE GOODS, NEC                                          	Wholesale                                         
+5112      	STATIONERY SUPPLIES                                         	Wholesale                                         
+5113A     	PAPER & PAPER PRODUCTS                                      	Wholesale                                         
+5122      	DRUGS-WHOLESALE                                             	Wholesale                                         
+5131      	PIECE GOODS & NOTIONS                                       	Wholesale                                         
+5136      	CLOTHING-WHOLESALE                                          	Wholesale                                         
+5141      	GROCERIES - GENERAL LINE WHOLESALE                          	Wholesale                                         
+5141A     	GROCERIES, GENERAL LINE                                     	Wholesale                                         
+5142      	PACKAGED FROZEN FOODS - WHOLESALE                           	Wholesale                                         
+5143      	WHOLESALE DAIRY PRODUCTS, EXCEPT DRIED OR CANNED            	Wholesale                                         
+5143A     	DAIRY PRODUCTS                                              	Wholesale                                         
+5144      	POULTRY & POULTRY PRODUCTS WHOLESALE DISTRIBUTION           	Wholesale                                         
+5145      	CONFECTIONERY - WHOLESALE                                   	Wholesale                                         
+5146      	FISH AND SEAFOODS                                           	Wholesale                                         
+5147      	MEAT & MEAT PRODUCTS - WHOLESALE, EXCEPT CANNED             	Wholesale                                         
+5147A     	MEAT & MEAT PRODUCTS WHLSE                                  	Wholesale                                         
+5148      	FRESH FRUITS & VEGETABLES                                   	Wholesale                                         
+5149      	GROCERIES NEC                                               	Wholesale                                         
+5149A     	GROCERIES & RELATED PRODUCTS, NEC                           	Wholesale                                         
+5149B     	BEVERAGES-COLA                                              	Wholesale                                         
+5153      	GRAIN AND FIELD BEAN - INCLUDING ELEVATORS                  	Wholesale                                         
+5162      	PLASTICS - WHLSE                                            	Wholesale                                         
+5169      	CHEMICAL & ALLIED PROD, NEC                                 	Wholesale                                         
+5169A     	CHEMICAL & ALLIED PRODUCTS                                  	Wholesale                                         
+5171      	PETROLEUM BULK STATIONS & TERMINALS                         	Wholesale                                         
+5172      	PETROLEUM PRODUCTS WHOLESALE, EXCEPT TERMINALS              	Wholesale                                         
+5172A     	PETROLEUM PRODUCTS NEC                                      	Wholesale                                         
+5181      	BEVERAGES-BEER/ALE WHLSE                                    	Wholesale                                         
+5182      	BEVERAGES-WINE/DISTILLED                                    	Wholesale                                         
+5191      	FEED & FARM SUPPLY STORES                                   	Wholesale                                         
+5192      	BOOKS PERIODICALS NEWSPAPE                                  	Wholesale                                         
+5193      	FLOWERS - WHOLESALE                                         	Wholesale                                         
+5193A     	FLORISTS SUPPLIES                                           	Wholesale                                         
+5194      	TOBACCO & TOBACCO PRODUCTS                                  	Wholesale                                         
+5198      	PAINTS, VARNISHES AND SUPPLIES                              	Wholesale                                         
+5199      	NONDURABLE GOODS NEC                                        	Wholesale                                         
+5199B     	ADVERTISING SPECIALITIES                                    	Wholesale                                         
+5211A     	LUMBER & BLDG MATERIALS                                     	Retail                                            
+5211B     	LUMBER & BLDG DEPT STORES                                   	Retail                                            
+5211C     	BRICK & CONCRETE SUPPLIES                                   	Retail                                            
+5211D     	PORTABLE BUILDING SALES                                     	Retail                                            
+5211E     	DIRT YARDS                                                  	Retail                                            
+5231      	PAINT STORES                                                	Retail                                            
+5231A     	GLASS STORES                                                	Retail                                            
+5231B     	WALLPAPER STORES                                            	Retail                                            
+5251      	HARDWARE STORES-RETAIL                                      	Retail                                            
+5251A     	TOOL DEALERS - MOBILE                                       	Retail                                            
+5261      	NURSERIES-RETAIL                                            	Retail                                            
+5271      	MOBILE HOME DEALERS                                         	Retail                                            
+5311      	DEPARTMENT STORES-RETAIL                                    	Retail                                            
+5311A     	DISCOUNT DEPT STORES                                        	Retail                                            
+5311B     	DIST WHSE DEPARTMENT STORE                                  	Retail                                            
+5331      	VARIETY STORE-RETAIL                                        	Retail                                            
+5331A     	VARIETY 99 CENT/DOLLAR STORES - RETAIL                      	Retail                                            
+5399A     	CATALOG SHOWROOMS                                           	Retail                                            
+5411      	SUPERMARKET-GROCERY STORES                                  	Retail                                            
+5411A     	SUPERMARKET-INDEPENDENT                                     	Retail                                            
+5411D     	CONVEN STORE /NO GAS SOLE OWNER                             	Retail                                            
+5411E     	CONVEN STORE W/GAS SOLE OWNER-CHAIN                         	Retail                                            
+5411H     	CONVEN STORE /NO GAS SEPARATE OWNERS                        	Retail                                            
+5411I     	DIST WHSE - GROCERY STORES                                  	Retail                                            
+5411J     	CONVEN STORE W/GAS SEPARATE OWNERS                          	Retail                                            
+5421      	MEAT MARKETS                                                	Retail                                            
+5421A     	MEAT/FREEZER PROVISIONERS                                   	Retail                                            
+5421B     	FISH MARKETS                                                	Retail                                            
+5431      	PRODUCE MARKET                                              	Retail                                            
+5441      	CANDY & NUT STORES                                          	Retail                                            
+5461      	BAGEL SHOP                                                  	Retail                                            
+5461A     	DONUT SHOP - RETAIL                                         	Retail                                            
+5461B     	BAKERY-RETAIL BAKE & SELL                                   	Retail                                            
+5461C     	BAKERY-RETAIL SELL ONLY                                     	Retail                                            
+5461D     	BAKERY-COOKIES BAKE & SELL                                  	Retail                                            
+5499A     	HEALTH FOOD STORES RETAIL                                   	Retail                                            
+5511      	AUTO DEALER-NEW                                             	Retail                                            
+5521      	AUTO DEALER-USED                                            	Retail                                            
+5521A     	AUTO DEALER-USED CLASSIC                                    	Retail                                            
+5531      	AUTO & HOME SUPPLY STORES                                   	Retail                                            
+5531A     	TIRE SALES - NEW                                            	Retail                                            
+5531B     	AUTO PARTS RETAIL                                           	Retail                                            
+5531C     	TIRE SALES & AUTO REPAIR                                    	Retail                                            
+5531D     	TIRES SALES - USED                                          	Retail                                            
+5531E     	HUB CAP DEALERS                                             	Retail                                            
+5541A     	SERVICE STA-FUEL STATION ONLY (NO CONV. STORE)              	Retail                                            
+5541F     	SERVICE STA-FULLY OWNED                                     	Retail                                            
+5541G     	SERVICE STA-SEPARATE OWNER                                  	Retail                                            
+5541J     	SERVICE STA-SIGN ONLY                                       	Retail                                            
+5551      	BOAT DEALERS                                                	Retail                                            
+5551A     	MARINE SUPPLY                                               	Retail                                            
+5561      	RECREATIONAL VEH DEALER                                     	Retail                                            
+5571      	MOTORCYCLE DEALER                                           	Retail                                            
+5599      	AUTO DEALER-NEC                                             	Retail                                            
+5599A     	TRAILERS RETAIL                                             	Retail                                            
+5599B     	AIRCRAFT DEALERS                                            	Retail                                            
+5599C     	TRUCKS - NEW & USED                                         	Retail                                            
+5599D     	VEHICLE IMPORT STORAGE LOT                                  	Retail                                            
+5611      	CLOTHING MENS & BOYS                                        	Retail                                            
+5621      	CLOTHING WOMENS                                             	Retail                                            
+5621A     	CLOTHING BRIDAL SHOPS                                       	Retail                                            
+5621B     	CLOTHING MATERNITY SHOPS                                    	Retail                                            
+5632      	CLOTHING WOMENS ACCESSORY                                   	Retail                                            
+5632A     	CLOTHING FUR SHOPS                                          	Retail                                            
+5632B     	CLOTHING WOMENS INTIMATE APPAREL                            	Retail                                            
+5641      	CLOTHING CHILDREN/INFANT                                    	Retail                                            
+5651      	CLOTHING FAMILY                                             	Retail                                            
+5651A     	DIST WHSE - CLOTHING                                        	Retail                                            
+5661      	CLOTHING SHOE STORE-FAMILY                                  	Retail                                            
+5662      	CLOTHING SHOE STORE-WOMEN                                   	Retail                                            
+5663      	CLOTHING SHOE STORE-MEN                                     	Retail                                            
+5664      	CLOTHING SHOE STORE- ATHLETIC                               	Retail                                            
+5699      	CLOTHING MISC                                               	Retail                                            
+5699A     	CLOTHING WESTERN WEAR                                       	Retail                                            
+5699B     	CLOTHING UNIFORMS                                           	Retail                                            
+5699D     	CLOTHING T-SHIRTS                                           	Retail                                            
+5699E     	WIG SHOPS                                                   	Retail                                            
+5712      	FURNITURE STORES - RETAIL                                   	Retail                                            
+5712A     	DIST WHSE - FURNITURE STOR                                  	Retail                                            
+5713      	FLOOR COVERING STORES                                       	Retail                                            
+5714      	DRAPERY & UPHOLSTERY STORE                                  	Retail                                            
+5719      	HOME FURNISHINGS - MISC                                     	Retail                                            
+5719A     	HOME FURNISHINGS IMPORTED                                   	Retail                                            
+5719B     	FURNITURE STORES - BEDDING                                  	Retail                                            
+5719C     	CHINA-CRYSTAL SHOPS                                         	Retail                                            
+5719D     	HOUSEWARES & KITCHEN GADGE                                  	Retail                                            
+5719E     	FIREPLACE SHOPS                                             	Retail                                            
+5719F     	LIGHTING FIXTURE STORES                                     	Retail                                            
+5719G     	WINDOW COVERING STORES                                      	Retail                                            
+5719H     	LINEN STORES                                                	Retail                                            
+5722      	APPLIANCE-RETAIL                                            	Retail                                            
+5722A     	APPLIANCE - ELECTRONIC STORE                                	Retail                                            
+5722B     	SEW MACH/VAC CLEAN SALES                                    	Retail                                            
+5722C     	APPLIANCE STORES - USED                                     	Retail                                            
+5731      	TV, STEREO CENTERS                                          	Retail                                            
+5731A     	ELECTRONIC PRODUCTS STORES                                  	Retail                                            
+5731C     	CAR STEREO                                                  	Retail                                            
+5734      	COMPUTER & SOFTWARE STORES                                  	Retail                                            
+5734A     	COMPUTER SOFTWARE PREPACKAGED                               	Retail                                            
+5734R     	COMPUTER RELATED PRODUCTS                                   	Retail                                            
+5735      	TAPE & CD STORES                                            	Retail                                            
+5736      	MUSICAL INSTRUMENT STORES                                   	Retail                                            
+5736A     	PIANO & ORGAN STORES                                        	Retail                                            
+5812A     	RESTAURANTS - CAFETERIAS                                    	Retail                                            
+5812B     	RESTAURANTS - DELICATESSENS                                 	Retail                                            
+5812C     	RESTAURANTS - FAST FOOD CHAINS                              	Retail                                            
+5812D     	RESTAURANTS - ICE CREAM                                     	Retail                                            
+5812E     	RESTAURANTS - THEME                                         	Retail                                            
+5812F     	RESTAURANTS - FINE DINING                                   	Retail                                            
+5812G     	RESTAURANTS - CAFE/DINER                                    	Retail                                            
+5812H     	RESTAURANTS - PIZZA SHOP                                    	Retail                                            
+5812I     	RESTAURANTS - SANDWICH SHOP                                 	Retail                                            
+5812J     	RESTAURANTS - LUNCH WAGON                                   	Retail                                            
+5812K     	RESTAURANTS - INV ONLY                                      	Retail                                            
+5812L     	RESTAURANTS - M&E/F&F ONLY                                  	Retail                                            
+5812M     	RESTAURANTS - COFFEE SHOP                                   	Retail                                            
+5812N     	RESTAURANTS - CONCESSION STAND                              	Retail                                            
+5812P     	RESTAURANTS - CATERERS                                      	Retail                                            
+5812Q     	RESTAURANTS - BBQ                                           	Retail                                            
+5812R     	RESTAURANTS - NEC                                           	Retail                                            
+5812S     	RESTAURANTS - GOURMET COFFEE HOUSE                          	Retail                                            
+5812T     	RESTAURANTS - SMOOTHIE / JUICE SHOP                         	Retail                                            
+5812U     	RESTAURANTS - YOGURT SHOP                                   	Retail                                            
+5813A     	DRINKING PLACES - BEER/WINE                                 	Retail                                            
+5813B     	DRINKING PLACES - SPORTS BAR                                	Retail                                            
+5813C     	DRINKING PLACES - CABARET                                   	Retail                                            
+5813D     	DRINKING PLACES - NIGHT CLUB                                	Retail                                            
+5813E     	DRINKING PLACES - EXECUTIVE                                 	Retail                                            
+5813F     	DRINKING PLACES - PUBS/TAVERNS                              	Retail                                            
+5912      	DRUG STORES - RETAIL                                        	Retail                                            
+5912A     	PHARMACY                                                    	Retail                                            
+5921      	LIQUOR STORES - RETAIL                                      	Retail                                            
+5922A     	BEER & WINE - INV ONLY                                      	Retail                                            
+5932A     	ANTIQUE SHOP                                                	Retail                                            
+5932B     	CLOTHING - USED                                             	Retail                                            
+5932C     	FURNITURE STORES - USED                                     	Retail                                            
+5932D     	JUNK DEALERS                                                	Retail                                            
+5932E     	PAWN SHOP                                                   	Retail                                            
+5932F     	RESALE SHOP                                                 	Retail                                            
+5941A     	BICYCLE SHOP                                                	Retail                                            
+5941B     	GUN SHOP                                                    	Retail                                            
+5941C     	SPORTING GOODS                                              	Retail                                            
+5941D     	SCUBA & DIVING EQUIPMENT                                    	Retail                                            
+5941E     	BAIT & TACKLE SHOPS                                         	Retail                                            
+5941F     	BOWLING EQUIPMENT                                           	Retail                                            
+5941G     	EXERCISE APPARATUS                                          	Retail                                            
+5941H     	GOLF EQUIPMENT                                              	Retail                                            
+5941I     	TENNIS & SKI SHOP                                           	Retail                                            
+5941J     	BILLIARD STORES                                             	Retail                                            
+5942      	BOOKSTORES - NEW                                            	Retail                                            
+5942A     	BOOKSTORES - USED                                           	Retail                                            
+5943      	OFFICE SUPPLY STORE-RETAIL                                  	Retail                                            
+5943A     	OFFICE SUPPLY SUPERSTORE                                    	Retail                                            
+5944      	JEWELRY - RETAIL                                            	Retail                                            
+5944A     	JEWELRY - COSTUME RETAIL                                    	Retail                                            
+5945      	TOY & GAME STORES                                           	Retail                                            
+5945A     	CERAMIC SHOP                                                	Retail                                            
+5945B     	HOBBY SHOP                                                  	Retail                                            
+5945C     	ARTS & CRAFT STORE                                          	Retail                                            
+5945D     	ARTS & CRAFT BOOTH                                          	Retail                                            
+5945E     	VIDEO GAME RETAIL STORES                                    	Retail                                            
+5946      	CAMERA STORES-RETAIL                                        	Retail                                            
+5947      	GIFT/NOVELTY STORES-RETAIL                                  	Retail                                            
+5947A     	CARD - GREETING SHOP                                        	Retail                                            
+5947B     	CARD - BASEBALL                                             	Retail                                            
+5948      	LUGGAGE & LEATHER GOODS                                     	Retail                                            
+5949      	FABRIC STORES-RETAIL                                        	Retail                                            
+5949A     	NEEDLEWORK STORE                                            	Retail                                            
+5961      	MAIL ORDER HOUSE                                            	Retail                                            
+5962      	VENDING MACHINES                                            	Retail                                            
+5963      	DIRECT SELLING ESTABLISHMENT                                	Retail                                            
+5984      	BOTTLED GAS SALES                                           	Retail                                            
+5989      	FUEL DEALERS                                                	Retail                                            
+5992      	FLORISTS - RETAIL                                           	Retail                                            
+5993      	TOBACCO & PIPE SHOP                                         	Retail                                            
+5994      	NEWSSTAND & MAGAZINE STORE                                  	Retail                                            
+5994A     	NEWSSTAND & MAGAZINE STORE/ADULT ENTERTAINMENT              	Retail                                            
+5995      	OPTICAL GOODS STORES                                        	Retail                                            
+5995A     	OPTICAL GOODS W/OPTOMETRIT                                  	Retail                                            
+5999A     	RETAIL STORES NEC                                           	Retail                                            
+5999B     	ART SUPPLIES                                                	Retail                                            
+5999C     	COSMETIC STORES                                             	Retail                                            
+5999D     	FRAME & PICTURE SHOPS                                       	Retail                                            
+5999E     	COIN & STAMP DEALERS                                        	Retail                                            
+5999F     	GRAVE MARKERS                                               	Retail                                            
+5999G     	HEARING AIDS                                                	Retail                                            
+5999H     	HOT TUBS & SPAS                                             	Retail                                            
+5999I     	MOBILE PHONE & PAGER STORE                                  	Retail                                            
+5999J     	OFFICE MACHINERY & EQUIP                                    	Retail                                            
+5999K     	PETS & PET SUPPLIES                                         	Retail                                            
+5999L     	TELEPHONE STORES                                            	Retail                                            
+5999M     	TROPHY SHOPS                                                	Retail                                            
+5999N     	FLAGS, BANNERS, PROMO GOOD                                  	Retail                                            
+5999P     	MED EQPT HOME CARE PRODUCT                                  	Retail                                            
+5999Q     	FLEA MARKET                                                 	Retail                                            
+5999R     	SWIMMING POOL STORES                                        	Retail                                            
+5999S     	FOOD SPECIALTY STORES                                       	Retail                                            
+5999T     	MOBILE PHONE SALES & SVCS                                   	Retail                                            
+5999W     	COSMETIC BATH & BODY PRODUCTS STORE                         	Retail                                            
+6011      	BANK, FINANCIAL INST.                                       	Finance, Insurance, Real Estate                   
+6011A     	BANKS IN STORES                                             	Finance, Insurance, Real Estate                   
+6011B     	BANKS-ATM MACHINES STAND ALONE                              	Finance, Insurance, Real Estate                   
+6035      	SAVINGS INSTITUTION                                         	Finance, Insurance, Real Estate                   
+6061      	CREDIT UNION                                                	Finance, Insurance, Real Estate                   
+6099B     	CHECK CASHING SERVICE                                       	Finance, Insurance, Real Estate                   
+6141      	FINANCE CO 0-9999 SQ FT                                     	Finance, Insurance, Real Estate                   
+6162      	MORTGAGE CO 0-9999 SQ FT                                    	Finance, Insurance, Real Estate                   
+6211      	SECURITIES BROKER 0-9999 SQ FT                              	Finance, Insurance, Real Estate                   
+6411A     	INSURANCE 0-999 SQ FT                                       	Finance, Insurance, Real Estate                   
+6411B     	INSURANCE 1000-2499 SQ FT                                   	Finance, Insurance, Real Estate                   
+6411C     	INSURANCE 2500-4999 SQ FT                                   	Finance, Insurance, Real Estate                   
+6411D     	INSURANCE 5000-9999 SQ FT                                   	Finance, Insurance, Real Estate                   
+6512      	LESSORS OF PIERS, DOCKS & ASSOC BLDGS & FACILITIES          	Finance, Insurance, Real Estate                   
+6513      	APARTMENTS                                                  	Finance, Insurance, Real Estate                   
+6515      	MOBILE HOME PARK OPERATORS                                  	Finance, Insurance, Real Estate                   
+6531      	REAL ESTATE AGENTS                                          	Finance, Insurance, Real Estate                   
+6531A     	MODEL HOMES AND SALES OFFC                                  	Finance, Insurance, Real Estate                   
+6531B     	LEASING OFFICE FOR INDUSTRIAL PARKS                         	Finance, Insurance, Real Estate                   
+6541      	TITLE CO 0-9999 SQ FT                                       	Finance, Insurance, Real Estate                   
+6541A     	TITLE CO WITH PLANT                                         	Finance, Insurance, Real Estate                   
+6552      	LAND DEV CO 0-9999 SQ FT                                    	Finance, Insurance, Real Estate                   
+6553      	CEMETERY                                                    	Finance, Insurance, Real Estate                   
+6732      	CHARITABLE ORGANIZATIONS EXEMPT ONLY                        	Finance, Insurance, Real Estate                   
+7011      	HOTEL                                                       	Services                                          
+7011A     	MOTEL                                                       	Services                                          
+7011B     	BED & BREAKFAST INN                                         	Services                                          
+7033      	TRAILER PARKS AND CAMPSITE                                  	Services                                          
+7211      	LAUNDRIES - POWERED                                         	Services                                          
+7212      	DRY CLEANER-PICKUP STATION                                  	Services                                          
+7213      	LINEN SUPPLY                                                	Services                                          
+7215      	WASHATERIAS                                                 	Services                                          
+7215B     	WASHATERIAS IN APT COMPLEX                                  	Services                                          
+7216      	DRY CLEANING-FULL PLANTS                                    	Services                                          
+7217      	CARPET & UPHOLSTRY CLEANER                                  	Services                                          
+7219      	ALTERATIONS & TAILOR SERV                                   	Services                                          
+7221      	PHOTO & PORTRAIT STUDIOS                                    	Services                                          
+7221A     	PHOTOGRAPHY - AERIAL                                        	Services                                          
+7221B     	PHOTOGRAPHY - FREELANCE                                     	Services                                          
+7231      	BEAUTY, HAIR STYLING SALON                                  	Services                                          
+7241      	BARBER SHOPS                                                	Services                                          
+7251      	REPAIR - SHOE SHOP                                          	Services                                          
+7261      	FUNERAL HOME                                                	Services                                          
+7291      	INCOME TAX SERVICE 0-9999 SQ FT                             	Services                                          
+7299      	PERSONAL SERVICE - MISC                                     	Services                                          
+7299A     	APARTMENT LOCATORS                                          	Services                                          
+7299B     	RENTAL - CLOTHING                                           	Services                                          
+7299C     	ELECTROLYSIS SALONS                                         	Services                                          
+7299D     	MASSAGE THERAPY                                             	Services                                          
+7299E     	NAIL SALONS                                                 	Services                                          
+7299F     	TANNING SALONS                                              	Services                                          
+7299G     	WEDDING CHAPEL SERVICES                                     	Services                                          
+7299H     	TATTOO SHOPS                                                	Services                                          
+7299I     	AUTO TITLE & TAG SERVICE                                    	Services                                          
+7299J     	SKIN CARE / FACIAL SERVICE                                  	Services                                          
+7311      	ADVERTISING AGENCIES                                        	Services                                          
+7312      	ADVERTISING OUTDOOR                                         	Services                                          
+7312A     	BILLBOARDS                                                  	Services                                          
+7322      	COLLECTION AGENCIES 0-9999 SQ FT                            	Services                                          
+7323      	CREDIT REPORTING SERVICE                                    	Services                                          
+7331      	DIRECT MAIL ADVERTISING SERVICE                             	Services                                          
+7331A     	MAILING SERVICE                                             	Services                                          
+7334      	PHOTOCOPYING SERVICE                                        	Services                                          
+7334A     	BLUEPRINT & MAP SERVICE                                     	Services                                          
+7335      	COMMERCIAL PHOTOGRAPHY                                      	Services                                          
+7336      	GRAPHIC ART & DESIGN                                        	Services                                          
+7336A     	COMMERCIAL ART & GRAPHIC DESIGN SERVICE                     	Services                                          
+7338      	SECRETARIAL/BUSINESS SVC 0-9999 SQ FT                       	Services                                          
+7342      	EXTERMINATOR, PEST CONTROL                                  	Services                                          
+7349      	JANITORIAL & CLEANING SERV                                  	Services                                          
+7352      	RENTAL - MEDICAL EQUIPMENT                                  	Services                                          
+7353      	RENTAL - HEAVY CONSTR EQ                                    	Services                                          
+7359      	RENTAL - EQUIPMENT NEC                                      	Services                                          
+7359B     	RENTAL - ELECTRONICS, APPLIANCE, FURNITURE                  	Services                                          
+7361      	EMPLOYMENT AGENCY 0-9999 SQ FT                              	Services                                          
+7363A     	MODELING STUDIOS / ADULT ENTERTAINMENT                      	Services                                          
+7363B     	MODELING AGENCY                                             	Services                                          
+7371      	COMPUTER PROGRAMMING SERV                                   	Services                                          
+7373      	COMPUTER INTEGRATED SYSTEM DESIGN                           	Services                                          
+7374      	DATA PROCESSING SERVICES                                    	Services                                          
+7377      	COMPUTER RENTAL & LEASING                                   	Services                                          
+7377A     	COMPUTER RENTAL & LEASING                                   	Services                                          
+7378      	COMPUTER MAINT & REPAIR                                     	Services                                          
+7378A     	COMPUTER MAINTENANCE AND REPAIR                             	Services                                          
+7379      	COMPUTER RELATED SVCS, NEC                                  	Services                                          
+7379B     	COMPUTER RELATED SERVICES NEC                               	Services                                          
+7381      	SECURITY & PRIVATE INVEST                                   	Services                                          
+7382      	SECURITY SYSTEMS SERVICES BURGLAR & FIRE                    	Services                                          
+7382A     	SECURITY SYSTEMS SERVICES ALARM MONITORING                  	Services                                          
+7383      	NEWS SYNDICATES                                             	Services                                          
+7384      	PHOTOFINISHING LABS                                         	Services                                          
+7384A     	PHOTOFINISHING DROP BOOTHS                                  	Services                                          
+7389      	BUSINESS SERVICES - MISC                                    	Services                                          
+7389A     	AUCTION SERVICES                                            	Services                                          
+7389C     	INTERIOR DECORATORS                                         	Services                                          
+7389D     	POOL CARE SERVICE                                           	Services                                          
+7389E     	TELEPHONE ANSWERING SVC 0-9999 SQ FT                        	Services                                          
+7389G     	SIGN PAINTING                                               	Services                                          
+7389I     	AUCTION SVC-INS/AUTO                                        	Services                                          
+7389J     	INTERIOR DESIGN SHOWROOM                                    	Services                                          
+7389K     	PACKAGING & LABELING BUSINESS SERVICES, NEC                 	Services                                          
+7389L     	FIREFIGHTING, INCLUDING OIL WELL, NON-GOVT                  	Services                                          
+7513      	RENTAL - TRUCK                                              	Services                                          
+7514      	RENTAL - AUTO OFFICE ONLY                                   	Services                                          
+7514A     	RENTAL - AUTO                                               	Services                                          
+7519      	RENTAL - TRAILER                                            	Services                                          
+7521      	AUTO PARKING                                                	Services                                          
+7532      	AUTO PAINT & BODY                                           	Services                                          
+7532A     	AUTO TRIM SHOPS                                             	Services                                          
+7532B     	AUTO CUSTOMIZING                                            	Services                                          
+7532C     	AUTO RUST PROOFING                                          	Services                                          
+7533      	AUTO REPAIR-BRAKE/MUFFLER                                   	Services                                          
+7534      	TIRE RETREADING AND REPAIR                                  	Services                                          
+7536      	AUTO GLASS                                                  	Services                                          
+7537      	AUTO TRANSMISSION SHOPS                                     	Services                                          
+7538      	AUTO REPAIR-GENERAL                                         	Services                                          
+7538A     	AUTO REPAIR-RADIATOR                                        	Services                                          
+7539      	AUTO REPAIR-NEC                                             	Services                                          
+7542A     	CAR WASH - MANUAL                                           	Services                                          
+7542B     	CAR WASH - SUPER                                            	Services                                          
+7542C     	AUTO DETAIL SHOP                                            	Services                                          
+7549      	AUTO SERVICES, NEC                                          	Services                                          
+7549A     	WRECKER SERVICE                                             	Services                                          
+7549B     	AUTOMOTIVE SERVICES, EXCEPT REPAIR & CARWASHES              	Services                                          
+7549D     	AUTO INSPECTION SERVICE                                     	Services                                          
+7549E     	AUTO WINDOW TINTING                                         	Services                                          
+7549F     	AUTO REPAIR-QUICK LUBE                                      	Services                                          
+7622      	REPAIR - TV & RADIO                                         	Services                                          
+7623      	A/C & HEATING SERVICE                                       	Services                                          
+7629      	REPAIR - ELECTRICAL                                         	Services                                          
+7629A     	REPAIR - APPLIANCE                                          	Services                                          
+7629B     	REPAIR - OFFICE MACH/EQUIP                                  	Services                                          
+7631      	REPAIR JEWELRY/WATCH/CLOCK                                  	Services                                          
+7641      	REPAIR-FURN & REUPHOLSTERY                                  	Services                                          
+7692A     	WELDING REPAIR & SERV                                       	Services                                          
+7694      	ARMATURE REWINDING SHOPS                                    	Services                                          
+7699      	REPAIR SERVICE, NEC                                         	Services                                          
+7699A     	REPAIR ENGINE EXCEPT AUTO                                   	Services                                          
+7699B     	GUNSMITH                                                    	Services                                          
+7699C     	REPAIR LAWNMOWER SALES-SVC                                  	Services                                          
+7699D     	LOCKSMITH & KEY SHOPS                                       	Services                                          
+7699E     	TAXIDERMY                                                   	Services                                          
+7699G     	INDUSTRIAL WASTEWATER TANKCLEANING SERVICE                  	Services                                          
+7812      	MOVIE & VIDEO PRODUCTION                                    	Services                                          
+7819      	SERVICES ALLIED TO MOTION PICTURE PRODUCTION                	Services                                          
+7822      	MOVIE & TAPE DISTRIBUTION                                   	Services                                          
+7832      	THEATRE - INDOOR                                            	Services                                          
+7841      	VIDEO TAPE RENTALS & SALES                                  	Services                                          
+7911      	DANCE HALLS-STUDIOS-SCHOOL                                  	Services                                          
+7911A     	DANCE HALLS - BANQUET OR RECEPTION                          	Services                                          
+7922      	THEATER - EXCEPT MOTION                                     	Services                                          
+7933      	BOWLING ALLEYS                                              	Services                                          
+7941      	CLUBS-PROFESSIONAL SPORTS                                   	Services                                          
+7948      	RACE TRACK                                                  	Services                                          
+7948A     	RACING, HORSES/AUTOS INCLUDING TRACK OPERATION              	Services                                          
+7991      	CLUBS-PHYSICAL FITNESS GYM                                  	Services                                          
+7991A     	AEROBIC CENTERS                                             	Services                                          
+7992      	PUBLIC GOLF COURSES                                         	Services                                          
+7993      	GAME ROOMS                                                  	Services                                          
+7993A     	AMUSEMENT MACHINES                                          	Services                                          
+7996      	AMUSEMENT PARKS                                             	Services                                          
+7996A     	AMUSEMENT PARKS                                             	Services                                          
+7997      	CLUBS-PRIVATE SPORTS                                        	Services                                          
+7997A     	CLUBS-COUNTRY                                               	Services                                          
+7999      	AMUSEMENT & RECREATION NEC                                  	Services                                          
+7999A     	GOLF DRIVING RANGE & MINIT                                  	Services                                          
+7999B     	ROLLER & ICE SKATING                                        	Services                                          
+7999C     	MARTIAL ARTS STUDIOS                                        	Services                                          
+7999D     	POOL HALLS                                                  	Services                                          
+7999E     	GO CARTS & RACE TRACKS                                      	Services                                          
+7999F     	TICKET BROKERS                                              	Services                                          
+7999G     	SHOOTING RANGES                                             	Services                                          
+7999H     	BINGO PARLORS                                               	Services                                          
+7999I     	GYMNASTIC SCHOOLS                                           	Services                                          
+8011      	DOCTOR                                                      	Services                                          
+8011A     	DOCTOR - PSYCHIATRIST                                       	Services                                          
+8011B     	DOCTOR - CLINICS                                            	Services                                          
+8011C     	DOCTOR - OPHTHALMOLOGIST                                    	Services                                          
+8021      	DENTIST                                                     	Services                                          
+8021A     	DENTIST - ORTHODONTIST                                      	Services                                          
+8041      	DOCTOR - CHIROPRACTOR                                       	Services                                          
+8042      	DOCTOR - OPTOMETRIST                                        	Services                                          
+8043      	DOCTOR - PODIATRIST                                         	Services                                          
+8049      	HEALTH PRACTITIONER, NEC                                    	Services                                          
+8049A     	ACUPUNCTURIST                                               	Services                                          
+8049B     	PSYCHOLOGIST 0-9999 SQ FT                                   	Services                                          
+8051      	NURSING HOME SKILLED CARE                                   	Services                                          
+8052      	NURSING HOME INTERMEDIATE CARE                              	Services                                          
+8052A     	RETIREMENT APTS-ASSISTED                                    	Services                                          
+8052B     	RETIREMENT APTS/W FOOD SVC                                  	Services                                          
+8059      	NURSING - PERSONAL CARE FACILITIES                          	Services                                          
+8062      	HOSPITAL GENERAL                                            	Services                                          
+8062A     	HOSPITAL OUTPATIENT                                         	Services                                          
+8062B     	HOSPITAL PHYSICAL THERAPY                                   	Services                                          
+8062E     	MEDICAL CENTER DEVELOPMENT                                  	Services                                          
+8063      	HOSPITAL PSYCHIATRIC                                        	Services                                          
+8071      	LABORATORIES MEDICAL                                        	Services                                          
+8072      	LABORATORIES DENTAL                                         	Services                                          
+8092A     	KIDNEY DIALYSIS CENTERS                                     	Services                                          
+8093      	CLINICS-GENERAL MEDICAL                                     	Services                                          
+8093A     	CLINICS-WEIGH-SMOKE-ALCOH                                   	Services                                          
+8093B     	CLINICS-PHYSICAL THERAPY                                    	Services                                          
+8099      	HEALTH & ALLIED SERVICES                                    	Services                                          
+8099A     	BLOOD BANK CENTER                                           	Services                                          
+8099B     	LABORATORIES MEDICAL X-RAY                                  	Services                                          
+8111      	ATTORNEYS, LEGAL SERVICES                                   	Services                                          
+8211      	SCHOOL - ELEMENTARY/SECOND                                  	Services                                          
+8211E     	SCHOOL - NON-PROFIT                                         	Services                                          
+8221      	COLLEGES, UNIVERSITIES & PROFESSIONAL SCHOOLS               	Services                                          
+8231      	LIBRARIES                                                   	Services                                          
+8243      	SCHOOL - DATA PROCESSING                                    	Services                                          
+8244B     	SCHOOL - BUS & SECRETARIAL                                  	Services                                          
+8249      	SCHOOL - TRADE/VOCATIONAL                                   	Services                                          
+8299      	SCHOOL - EDUCATIONAL NEC                                    	Services                                          
+8299A     	SCHOOL - DRIVING                                            	Services                                          
+8299B     	SCHOOL - MUSIC                                              	Services                                          
+8299C     	TRADE SCHOOLS                                               	Services                                          
+8322      	SOCIAL SERVICE INDV/FAMILY                                  	Services                                          
+8322A     	COUNSELING CENTERS 0-9999 SQ FT                             	Services                                          
+8322B     	COUNSELING CENTERS - 10000+ SQ FT                           	Services                                          
+8322E     	YOUTH DEVELOPMENT ORGANIZA                                  	Services                                          
+8351      	DAYCARE CENTER                                              	Services                                          
+8362      	HALFWAY HOUSES                                              	Services                                          
+8399      	SOCIAL SERVICES, NEC                                        	Services                                          
+8412      	MUSEUMS                                                     	Services                                          
+8412A     	ART GALLERY                                                 	Services                                          
+8412B     	ARTISTS                                                     	Services                                          
+8412C     	CONSIGNED ART INVENTORY                                     	Services                                          
+8621      	PROFESSIONAL ORGANIZATIONS                                  	Services                                          
+8621E     	PROFESSIONAL ORGANIZATION /W EXEMPT PERS PROPERTY           	Services                                          
+8631      	LABOR UNIONS                                                	Services                                          
+8641      	CLUBS-CIVIC-SOCIAL-ASSOC                                    	Services                                          
+8641A     	HOMEOWNERS ASSOCIATIONS                                     	Services                                          
+8641C     	CLUBS-COMMUNITY SERVICE EXEMPT ONLY                         	Services                                          
+8641E     	VETERANS ORGANIZATIONS EXEMPT ONLY                          	Services                                          
+8661      	RELIGIOUS ORGANIZATIONS - TAXABLE                           	Services                                          
+8661E     	RELIGIOUS ORGANIZATIONS - EXEMPT ONLY                       	Services                                          
+8699A     	MEMBERSHIP ORGANIZATIONS                                    	Services                                          
+8699B     	ATHLETIC ASSOCIATIONS                                       	Services                                          
+8711      	ENGINEERING SERVICES                                        	Services                                          
+8711A     	ENGINEERING SERVICES                                        	Services                                          
+8711B     	ENGINEERING MARINE SVC                                      	Services                                          
+8712      	ARCHITECTURAL/DRAFTING SER                                  	Services                                          
+8712A     	ENGINEERING CONSULTANTS                                     	Services                                          
+8713      	SURVEYING SERVICES                                          	Services                                          
+8721A     	ACCOUNTING & BOOKKEEPING 0-999 SQ FT                        	Services                                          
+8721B     	ACCOUNTING & BOOKKEEPING 1000-2499 SQ FT                    	Services                                          
+8721C     	ACCOUNTING & BOOKKEEPING 2500-4999 SQ FT                    	Services                                          
+8721D     	ACCOUNTING & BOOKKEEPING 5000-9999 SQ FT                    	Services                                          
+8731      	COMMERCIAL PHYSICAL AND BIOLOGICAL RESEARCH                 	Services                                          
+8731A     	RESEARCH & DEVELOPMENT                                      	Services                                          
+8733K     	RESEARCH SCIENTIFIC CORP EXEMPT ONLY                        	Services                                          
+8734      	TESTING LABORATORIES                                        	Services                                          
+8734A     	LABORATORIES TESTING                                        	Services                                          
+8741      	MANAGEMENT SERVICES                                         	Services                                          
+8937      	EXECUTIVE SUITE TENANTS                                     	Services                                          
+8938      	EXECUTIVE SUITE OPERATORS                                   	Services                                          
+8939A     	OFFICE-GENERAL 0-999 SQ FT                                  	Services                                          
+8939B     	OFFICE-GENERAL 1000-2499 SQ FT                              	Services                                          
+8939C     	OFFICE-GENERAL 2500-4999 SQ FT                              	Services                                          
+8939D     	OFFICE-GENERAL 5000-9999 SQ FT                              	Services                                          
+8939E     	BUSINESS IN RESIDENCE                                       	Services                                          
+8939N     	OFFICE-WAREHOUSE OFFICE AT PPT N                            	Services                                          
+8939P     	OFFICE-PIPESTOCK OFFICE AT PPT P                            	Services                                          
+8940      	OFFICE - GENERAL 10000+ SQ FT                               	Services                                          
+8940A     	OFFICE-GENERAL NEC                                          	Services                                          
+8940B     	CORPORATE OFFICE 10000+ SQ FT                               	Services                                          
+8999      	SERVICES, NEC                                               	Services                                          
+8999A     	MANUFACTURERS REPS                                          	Services                                          
+9111      	GOVERNMENT OFFICES EXCEPT FINANCE                           	Government, Other Services                        
+9199F     	GOVERNMENT - FEDERAL                                        	Government, Other Services                        
+9199L     	GOVERNMENT - LOCAL                                          	Government, Other Services                        
+9199S     	GOVERNMENT - STATE                                          	Government, Other Services                        
+9223      	CORRECTIONAL INSTITUTIONS                                   	Government, Other Services                        
+9641      	REGULATION OF AGRICULTURAL USDA                             	Government, Other Services                        
+9661      	SPACE RESEARCH AND TECHNOLOGY - GOVERNMENT                  	Government, Other Services                        
+9721A     	GOVT. - FOREIGN CONSULATES                                  	Government, Other Services                        
+9999E     	BUSINESS NEC EXEMPT UNDER SEC 11.14                         	Government, Other Services                        
+                                     
+                                     
+Jurisdiction Type                    
+------          -----------------    
+Code            Description    
+------          -----------------    
+A              	Water District Defined Area                                 
+C              	City                                                        
+D              	Drainage District                                           
+E              	Emergency Services D                                        
+F              	Fire District                                               
+I              	Independent School D                                        
+J              	Junior/Community Col                                        
+M              	Management District                                         
+N              	Industrial Dist                                             
+T              	County                                                      
+W              	Water Supply/Utility                                        
+X              	Inactive                                                    
+Z              	TIRZ / TIFS                                                 
+A              	Water District Defined Area                                 
+C              	City                                                        
+D              	Drainage District                                           
+E              	Emergency Services D                                        
+F              	Fire District                                               
+I              	Independent School D                                        
+J              	Junior/Community Col                                        
+M              	Management District                                         
+N              	Industrial Dist                                             
+T              	County                                                      
+W              	Water Supply/Utility                                        
+X              	Inactive                                                    
+Z              	TIRZ / TIFS                                                 

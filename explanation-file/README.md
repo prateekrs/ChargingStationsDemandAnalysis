@@ -1,0 +1,2 @@
+- CodeDesc_personal.txt - found at http://pdata.hcad.org/Desc/CodeDesc_real.txt
+- Desc_personal.txt - found at http://pdata.hcad.org/Desc/CodeDesc_personal.txt
