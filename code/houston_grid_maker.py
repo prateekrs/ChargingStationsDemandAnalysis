@@ -96,6 +96,7 @@ class GridMaker(object):
 			num_buildings = len(value['num_buildings'])
 			self.grid_dct[key] = {'tot_num_buildings': num_buildings}
 
+
 	def adjust_grid(self):
 		possible_grids = make_possible_grids(self.xgrid, self.ygrid)
 		for key in possible_grids:
@@ -129,20 +130,8 @@ class GridMaker(object):
 			header += "NODATA_value -9999"
 
 			#remove hard coding.
-
 			np.savetxt('coverage_file_example.asc', grid_array, header=header, fmt="%1.2f", comments='')
 			print('Saved grid.')
-		
-
-
-
-
-
-
-
-		
-
-
 
 
 def main(sys_args):
@@ -158,13 +147,6 @@ def main(sys_args):
 	grid.adjust_grid()
 
 	grid.raster_maker()
-
-
-
-
-
-
-
 
 
 	print('Done.')	

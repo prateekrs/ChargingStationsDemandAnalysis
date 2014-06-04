@@ -28,3 +28,11 @@ The geoJSON files for all the building is this format
 ```
 
 More features can be added to the properties tag.
+
+
+TODOs for houston_grid_maker.py:
+- [ ] add counts for each type of business
+- [ ] remove hardcoding in each for file saving
+- [ ] 
+- [ ] 
+- [ ] 
