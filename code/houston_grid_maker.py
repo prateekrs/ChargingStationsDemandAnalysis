@@ -5,6 +5,7 @@ import geojson
 
 import numpy as np
 
+features = geojson.load(open('/Users/mattstringer/research/Houston_analysis/houston.json', 'r'))
 
 USAGE = textwrap.dedent("""\
 	Create a dense data matrix from raw mixed features.""")
@@ -25,8 +26,11 @@ def _build_parser(prog):
 
     return parser
 
+def get_directories(path):
+    cwd = os.path.dirname(os.path.abspath(__file__))
+    dir_location = os.path.join(os.path.split(cwd)[0], path)
+    return dir_location
 
-features = geojson.load(open('/Users/mattstringer/research/Houston_analysis/houston.json', 'r'))
 
 def make_grid(grid_size):
 	tot_minx=float("inf")
@@ -130,7 +134,12 @@ class GridMaker(object):
 			header += "NODATA_value -9999"
 
 			#remove hard coding.
-			np.savetxt('coverage_file_example.asc', grid_array, header=header, fmt="%1.2f", comments='')
+
+			file_name = get_directories('data/raster_files/houston') + item + ".asc"
+
+			print filename
+
+			np.savetxt(filename, grid_array, header=header, fmt="%1.2f", comments='')
 			print('Saved grid.')
 
 

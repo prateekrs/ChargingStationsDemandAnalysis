@@ -1,3 +1,11 @@
+
+Date Prep
+==========
+
+
+
+
+
 The geoJSON files for all the building is this format
 
 ```javascript
@@ -27,12 +35,21 @@ The geoJSON files for all the building is this format
 }, 
 ```
 
+
+
+```bash
+$ python "${Houston_analysis}/code/houston_grid_maker.py" \
+    --county_name "county in study" \
+    --square_size integer
+```
+
+
 More features can be added to the properties tag.
 
 
 TODOs for houston_grid_maker.py:
 - [ ] add counts for each type of business
 - [ ] remove hardcoding in each for file saving
-- [ ] 
+- [ ] Document how to run the file.
 - [ ] 
 - [ ] 
