@@ -135,11 +135,9 @@ class GridMaker(object):
 
 			#remove hard coding.
 
-			file_name = get_directories('data/raster_files/houston') + item + ".asc"
+			file_name = get_directories('data/raster_files/houston/') + item + ".asc"
 
-			print filename
-
-			np.savetxt(filename, grid_array, header=header, fmt="%1.2f", comments='')
+			np.savetxt(file_name, grid_array, header=header, fmt="%1.2f", comments='')
 			print('Saved grid.')
 
 
