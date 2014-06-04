@@ -1,11 +1,11 @@
 import argparse
 import textwrap
 import sys, os
-import geojson
+import json
 
 import numpy as np
 
-features = geojson.load(open('/Users/mattstringer/research/Houston_analysis/houston.json', 'r'))
+features = json.load(open('/Users/mattstringer/research/Houston_analysis/houston.json', 'r'))
 
 USAGE = textwrap.dedent("""\
 	Create a dense data matrix from raw mixed features.""")
