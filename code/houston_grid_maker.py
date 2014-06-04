@@ -5,7 +5,7 @@ import json
 
 import numpy as np
 
-features = json.load(open('/Users/mattstringer/research/Houston_analysis/houston.json', 'r'))
+features = None
 
 USAGE = textwrap.dedent("""\
 	Create a dense data matrix from raw mixed features.""")
@@ -23,6 +23,12 @@ def _build_parser(prog):
             required=True,
             type=int,
             help='county grid size - enter as an integer')
+
+    parser.add_argument(
+            '--json_file',
+            required=True,
+            type=str,
+            help= 'location of file')
 
     return parser
 
@@ -147,6 +153,10 @@ def main(sys_args):
 
 	county_name = args.county_name
 	square_size = float(args.square_size)
+
+	features = json.load(open(args.json_file, 'r'))
+
+	# features = json.load(open('/Users/mattstringer/research/Houston_analysis/houston.json', 'r'))
 
 	grid = GridMaker(square_size, county_name)
 	grid.check_grid()
