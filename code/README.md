@@ -40,7 +40,8 @@ The geoJSON files for all the building is this format
 ```bash
 $ python "${Houston_analysis}/code/houston_grid_maker.py" \
     --county_name "county in study" \
-    --square_size integer
+    --square_size integer \
+    --json_file "absolute path to file"
 ```
 
 

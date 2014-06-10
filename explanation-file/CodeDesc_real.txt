@@ -1,0 +1,2019 @@
+**** Updated: May 27, 2014 **** 
+                       
+REAL PROPERTY CODES    
+                       
+State Class	         
+------          ------	    -----------------    
+Code            2nd Cd	    Description    
+------          ------	    -----------------    
+1D             	D1        	Real, Qualified Agricultural Land                           
+1D1            	D1        	Real, Qualified Agricultural Land                           
+A1             	A1        	Real, Residential, Single-Family                            
+A2             	A2        	Real, Residential, Mobile Homes                             
+A3             	A1        	Real, Residential, Auxiliary Buildings                      
+A4             	A1        	Real, Residential, 1/2 Duplex                               
+B1             	B1        	Real, Residential, Multi-Family                             
+B2             	B2        	Real, Residential, Two-Family                               
+B3             	B3        	Real, Residential, Three-Family                             
+B4             	B4        	Real, Residential, Four- or More-Family                     
+C1             	C1        	Real, Vacant Lots/Tracts (In City)                          
+C2             	C2        	Real, Vacant Commercial                                     
+C3             	C3        	Real, Vacant Lots/Tracts (Not in City)                      
+D2             	D2        	Real, Unqualified Agricultural Land                         
+E1             	E1        	Real, Farm & Ranch Improved                                 
+F1             	F1        	Real, Commercial                                            
+F2             	F2        	Real, Industrial                                            
+HH             	PT        	Subdivision Header                                          
+J1             	J1        	Real & Tangible Personal, Utility Water Systems             
+J2             	J2        	Gas Companies                                               
+J3             	J3        	Electric Companies                                          
+J4             	J4        	Telephone Companies                                         
+J5             	J5        	Railroads                                                   
+J6             	J6        	Pipelines                                                   
+M3             	M3        	Personal Prop. Mobile Home                                  
+O1             	O1        	Inventory Vacant                                            
+O2             	O2        	Inventory Improved                                          
+TMBR           	D1        	Real, Qualified Agricultural Land                           
+U0             	U0        	Unknown                                                     
+X1             	XV        	Other Exempt (Government)                                   
+X2             	XV        	Other Exempt (Charitable)                                   
+X3             	XV        	Other Exempt (Religious)                                    
+X4             	XV        	Other Exempt (Cemetery)                                     
+X7             	XV        	Other Exempt (Historical)                                   
+XA             	XA ÿ      	Public Property for Housing Indigent Persons                
+XB             	XB        	Income Producing Personal Property (<$500)                  
+XC             	XC        	Mineral Interest (<$500)                                    
+XD             	XD ÿ      	Improving Property for Housing w/ Volunteer Labor           
+XE             	XE ÿ      	Community Housing Development Organizations                 
+XF             	XF ÿ      	Assisting Ambulatory Health Care Centers                    
+XG             	XG ÿ      	Primarily Performing Charitable Functions                   
+XH             	XH ÿ      	Developing Model Colonia Subdivisions                       
+XI             	XI ÿ      	Youth Spiritual, Mental and Physical Development            
+XJ             	XJ ÿ      	Private Schools                                             
+XL             	XL ÿ      	Economic Development Services to Local Community            
+XM             	XM ÿ      	Marine Cargo Containers                                     
+XN             	XN        	Motor Vehicles Leased for Personal Use                      
+XO             	XO        	Moter Vehicles for Income Production and Personal Use       
+XP             	XP ÿ      	Offshore Drilling Equipment Not In Use                      
+XQ             	XQ ÿ      	Intracoastal Waterway Dredge Disposal Site                  
+XR             	XR ÿ      	Nonprofit Water or Wastewater Corporations                  
+XS             	XS        	Raw Cocoa and Green Coffee Held in Harris County            
+XT             	XT ÿ      	Limitation on Taxes in Certain Municipalities               
+XU             	XU ÿ      	Miscellaneous Exemptions                                    
+XV             	XV ÿ      	Other Exempt (Incl Public, Religious, Charitable)           
+Z0             	C1        	Condo - Without Improvements                                
+Z1             	A1        	Condo - Apartment Conversion                                
+Z2             	A1        	Condo - Fee Simple Townhouse                                
+Z3             	A1        	Condo - Townhouse (2+ stories)                              
+Z4             	A1        	Condo - Apartment Style                                     
+Z5             	A1        	Condo - High Rise                                           
+                                     
+                                     
+Land UseCode	                   
+------          -----------------    
+Code            Description    
+------          -----------------    
+1000           	Res Vacant Table Value                                      
+1001           	Res Improved Table Value                                    
+1002           	Res Vacant Table Value (Res. Use)                           
+1003           	Res Improved Table Value  (Res. Use)                        
+1006           	Condo Land                                                  
+1105           	Governmental ROW Easements                                  
+1106           	High Voltage Power Line Easement                            
+1107           	Submerged Land- Erosion, Subsidence                         
+1108           	Non-Usable Land in Flood Control Easement                   
+1109           	Usable Land in Flood Control Easement                       
+2000           	Res Vacant Override                                         
+2001           	Res Improved Override                                       
+2002           	Res Vacant Override (Res. Use)                              
+2003           	Res Improved Override (Res. Use)                            
+2004           	Res Open Space/Retention Land                               
+3100           	Residential Imps Only Land                                  
+3200           	Commercial Imps Only Land                                   
+3300           	Industrial Imps Only Land                                   
+4108           	Comm. Mobile Home                                           
+4200           	Apartment Vacant Land                                       
+4201           	Res. Structure on Apartment Land                            
+4209           	Apartment Struct. 4-20 Units                                
+4211           	Apartment Garden (1 to 3 Stories)                           
+4212           	Apartment High Rise (4+ Stories)                            
+4213           	Mobile Home Park                                            
+4221           	Subsidized Housing                                          
+4222           	Apartment Tax Credit Properties                             
+4299           	Apartment New Construction                                  
+4300           	General Commercial Vacant                                   
+4301           	Res. Struct. Or Conversion                                  
+4310           	Unsound Commercial Structure                                
+4313           	Dormitory                                                   
+4314           	Hotel/Motel, Hi-Rise 4+ Stories                             
+4315           	Hotel/Motel, Low-Rise 1 to 3 Stories                        
+4316           	Nursing Home                                                
+4317           	Retirement Home                                             
+4318           	Boarding & Rooming House                                    
+4319           	Commercial Bldg. - Mixed Res.                               
+4320           	Extended Stay Hotel/Motel                                   
+4321           	Restaurant                                                  
+4323           	Food Stand (Below Restr. Constr.)                           
+4324           	Conv. Mart w/Gas Pump                                       
+4325           	Fast Food                                                   
+4326           	Ice House                                                   
+4327           	Bar/Lounge                                                  
+4328           	Night Club/Dinner Theater                                   
+4329           	Used Car Lot                                                
+4330           	Specialized Auto Use                                        
+4331           	Auto Dealer Full Service                                    
+4332           	Auto Service Garage                                         
+4333           	Service Station (Full)                                      
+4334           	Service Station (Self)                                      
+4335           	Truck Stop                                                  
+4336           	Car Wash (Manual)                                           
+4337           	Car Wash (Automatic)                                        
+4338           	Parking Garage                                              
+4339           	Parking Miscellaneous                                       
+4340           	Retail Power Center                                         
+4341           	Regional Shopping Mall                                      
+4342           	Community Shopping Center                                   
+4343           	Neighborhood Shopping Center                                
+4344           	Strip Shopping Center                                       
+4345           	Discount Department                                         
+4346           	Department Store                                            
+4347           	Supermarket                                                 
+4348           	Convenience Food Market                                     
+4349           	Medical Office                                              
+4350           	Drive Through Bank                                          
+4351           	Bank                                                        
+4352           	Surgical Centers                                            
+4353           	Office Bldgs. Low-Rise (1 to 4 Stories)                     
+4354           	Office Bldgs. Hi-Rise (5+ Stories)                          
+4355           	Office Condominiums                                         
+4356           	Retail Condominium                                          
+4357           	Medical Condominium                                         
+4358           	Warehouse Condominum                                        
+4359           	Office Flex Buildings                                       
+4361           	Funeral Home                                                
+4362           	Veterinary Clinic                                           
+4363           	Legitimate Theater                                          
+4364           	Motion Picture Theater (Widescreen)                         
+4365           	Cinema/Theater (Multi-Screen)                               
+4366           	Radio, TV, or Motion Picture Studio                         
+4367           	Social/Fraternal Hall                                       
+4368           	Hangar                                                      
+4369           	Day Care Center                                             
+4370           	Greenhouse/Florist                                          
+4371           	Downtown ROW                                                
+4373           	Retail Single-Occupancy                                     
+4374           	Retail Multi-Occupancy                                      
+4375           	Retail Miscellaneous                                        
+4376           	Drugstore (Freestanding)                                    
+4377           	Boat & RV Storage                                           
+4381           	Bowling Alley                                               
+4382           	Skating Rink                                                
+4383           	Health Spa                                                  
+4384           	Swimming - Indoor Pool                                      
+4385           	Tennis Club - Indoor                                        
+4386           	Racket Club - Indoor                                        
+4387           	Country Club ( w/o Golf Course)                             
+4388           	Club House                                                  
+4389           	Country Club ( w/Golf Course)                               
+4390           	Amusement Park                                              
+4391           	Cold Storage Facility                                       
+4392           	Lumber Storage                                              
+4393           	Auxiliary Improvement                                       
+4394           	Service Center Warehouse                                    
+4395           	Truck Terminal                                              
+4396           	Mini-Warehouse                                              
+4397           	Office - Warehouse                                          
+4398           	Warehouse                                                   
+4399           	Warehouse-Metallic                                          
+4400           	Vacant Industrial Land                                      
+4401           	Manufacturing/Processing                                    
+4402           	Auto Salvage Yard                                           
+4403           	Light Industrial, Non-metalic                               
+4405           	Research and Development                                    
+4410           	Products Recovered from Natural Gas                         
+4411           	Food & Kindred Products                                     
+4412           	Apparel & Finished Textiles                                 
+4413           	Lumber and Wood Products                                    
+4414           	Furniture and Fixtures                                      
+4415           	Paper and Allied Products                                   
+4416           	Chemical and Allied Products                                
+4417           	Petroleum Refining / Industry                               
+4418           	Rubber and Miscellaneous                                    
+4419           	Concrete Products                                           
+4420           	Primary Metal Industry                                      
+4421           	Metal Fabricating                                           
+4422           	Machinery & Transportation Equipment                        
+4423           	Maritime Shipping                                           
+4424           	Miscellaneous Manufacturing                                 
+4444           	Dwelling on Industrial Land                                 
+4445           	Miscellaneous Aux. Structure                                
+4460           	Industrial Improved Land                                    
+4470           	Industrial Buffer Zone                                      
+4499           	Commercial New Construction                                 
+4500           	Retention Pond                                              
+4510           	Sand Pit                                                    
+4520           	Wetlands                                                    
+4530           	Solid Waste Disposal                                        
+4540           	Hazardous Waste Contaminated Site                           
+4541           	Hazardous Waste Decontaminated Site                         
+4542           	Private Streets                                             
+4543           	Directors Lots                                              
+4544           	Drill Site                                                  
+4550           	Driving Range                                               
+4560           	Commercial Improved Land                                    
+4600           	Vacant Exempt Land                                          
+4610           	Recreational/Health                                         
+4611           	Library                                                     
+4612           	School                                                      
+4613           	College or University                                       
+4614           	Post Office                                                 
+4620           	Religious                                                   
+4630           	Auditorium                                                  
+4640           	Hospitals                                                   
+4660           	Police or Fire Station                                      
+4670           	Correctional                                                
+4680           	Cultural Facility                                           
+4685           	Miscellaneous Government                                    
+4690           	Rail/Bus/Air Terminal                                       
+4700           	Telephone Vacant Land                                       
+4702           	Telephone Distr. System                                     
+4705           	Telephone Improved Operating                                
+4706           	Telephone Improved Non-Operating                            
+4710           	Telephone Equipment                                         
+4712           	Telephone Transmitte                                        
+4713           	Radio Communications                                        
+4715           	Telephone Work Center                                       
+4720           	Radio/TV Transmitter                                        
+4730           	Utility District, Vacant                                    
+4733           	Utility District, Pumping                                   
+4735           	Utility District, Other Operating                           
+4737           	Utility District, Other Non-Operating                       
+4740           	Gas Company, Vacant                                         
+4742           	Gas Company, Distribution                                   
+4743           	Gas Company, Plant/Manufacturing                            
+4745           	Gas Company, Pumping                                        
+4747           	Gas Company, Improved Operating                             
+4749           	Gas Company, Improved Non-Operating                         
+4750           	Electric Company, Vacant                                    
+4752           	Electric Company, Distribution                              
+4753           	Electric Company, Generating Plant                          
+4755           	Electric Company, Substation                                
+4756           	Electric Company, Work Center                               
+4757           	Electric Company, Improved Operating                        
+4759           	Electric Company, Improved Non-Operating                    
+4760           	Railroad, Vacant Land                                       
+4762           	Railroad, (ROW)                                             
+4765           	Railroad, Improved Operating                                
+4769           	Railroad, Operating Leased Imp                              
+4770           	Pipeline, Vacant Land                                       
+4772           	Pipeline, Distribution                                      
+4773           	Pipeline, Pumping Station                                   
+4775           	Pipeline, Storage                                           
+4777           	Pipeline, Improved Operating                                
+4779           	Pipeline, Improved Non-Operating                            
+4799           	Utility, New Construction                                   
+4900           	Possessory Interest                                         
+4930           	County Parks and Golf Courses                               
+4940           	Medical Center/Hospital                                     
+4960           	Port of Houston                                             
+4961           	Industrial Miscellaneous                                    
+4970           	Possessory Interest                                         
+7000           	UDI Vacant Land                                             
+7001           	UDI Improved Land                                           
+7100           	Comm. Tabled Land w-Residential Imps                        
+7200           	Comm. Tabled Apartment Land                                 
+7210           	Comm. Tabled Mobile Home Parks                              
+7300           	Comm. Tabled Vacant Land                                    
+7400           	Comm. Tabled Warehouse Land                                 
+7500           	Comm. Tabled Retail Land                                    
+7540           	Comm. Tabled Restrictive Use Parcels                        
+7600           	Comm. Tabled Office Land                                    
+7700           	Comm. Tabled Specialty Land                                 
+8000           	Comm. Tabled General Land Code                              
+9003           	Harris Irrigated Cropland                                   
+9007           	Harris Dry Cropland                                         
+9011           	Harris Native Pasture                                       
+9015           	Harris Improved Pasture                                     
+9019           	Harris Nursery                                              
+9023           	Harris Greenhouse                                           
+9027           	Harris Turf Grass                                           
+9031           	Harris Catfish Farm                                         
+9035           	Harris Exotic Animal                                        
+9039           	Harris Wildlife Management                                  
+9043           	Harris TMB I-Pine                                           
+9047           	Harris TMB II-Mixed                                         
+9051           	Harris TMB III-Hardwood                                     
+9055           	Harris 2 Yr Rotation                                        
+9059           	Harris 3 Yr Rotation                                        
+9063           	Harris Hay                                                  
+9067           	Harris Tree Nursery                                         
+9071           	Harris Truck Farm                                           
+9075           	Harris Orchard                                              
+9079           	Harris Restricted Use Timber (Mixed II)                     
+9083           	Harris Beekeeping                                           
+9100           	Agriculture Residual Land                                   
+9200           	Special Value Land                                          
+9910           	Mkt Value of Ag Land                                        
+9920           	Mkt Value of SV Land                                        
+9930           	Mkt Value of NV Land                                        
+9998           	Nominal Value Improved                                      
+9999           	Nominal Value Vacant                                        
+                                     
+                                     
+Building Type Code (Improv_tp)	   
+------          -----------------    
+Type    	      Description          
+------          -----------------    
+1001           	Residential Single Family                                   
+1002           	Residential Duplex                                          
+1003           	Residential Triplex                                         
+1004           	Residential Fourplex                                        
+1005           	Mixed Residential / Commercial                              
+1006           	Residential Condo                                           
+1007           	Residential Townhome                                        
+1008           	Residential Mobile Homes                                    
+1025           	Farm Single Family Dwelling                                 
+4108           	Commercial Mobile Home                                      
+4201           	Residential Structure                                       
+4209           	Apartment Struct. 4-20 Units                                
+4211           	Apartment Garden (1 to 3 Stories)                           
+4212           	Apartment High Rise (4+ Stories)                            
+4213           	Mobile Home Park                                            
+4221           	Subsidized Housing                                          
+4222           	Apartment - Tax Credit                                      
+4299           	Apartment Structure                                         
+4301           	Res. Struct. Or Conversion                                  
+4310           	Unsound Commercial Structure                                
+4313           	Dormitory                                                   
+4314           	Hotel/Motel, Hi-Rise 4+ Stories                             
+4315           	Hotel/Motel, Low-Rise 1 to 3 Stories                        
+4316           	Nursing Home                                                
+4317           	Retirement Home                                             
+4318           	Boarding & Rooming House                                    
+4319           	Commercial Bldg. - Mixed Res.                               
+4320           	Extended Stay Hotels/Motels                                 
+4321           	Restaurant                                                  
+4323           	Food Stand (Below Restr. Constr.)                           
+4324           	Conv. Mart w/Gas Pump                                       
+4325           	Fast Food                                                   
+4326           	Ice House                                                   
+4327           	Bar/Lounge                                                  
+4328           	Night Club/Dinner Theater                                   
+4329           	Used Car Lot                                                
+4330           	Specialized Auto Use                                        
+4331           	Auto Dealer Full Service                                    
+4332           	Auto Service Garage                                         
+4333           	Service Station (Full)                                      
+4334           	Service Station (Self)                                      
+4335           	Truck Stop                                                  
+4336           	Car Wash (Manual)                                           
+4337           	Car Wash (Automatic)                                        
+4338           	Parking Garage                                              
+4339           	Parking Misc.                                               
+4340           	Retail Power Center                                         
+4341           	Regional Shopping Mall                                      
+4342           	Community Shopping Center                                   
+4343           	Neighborhood Shopping Center                                
+4344           	Strip Shopping Center                                       
+4345           	Discount Department                                         
+4346           	Department Store                                            
+4347           	Supermarket                                                 
+4348           	Convenience Food Market                                     
+4349           	Medical Office                                              
+4350           	Drive Through Bank                                          
+4351           	Bank                                                        
+4352           	Surgery Center                                              
+4353           	Office Bldgs. Low-Rise (1 to 4 Stories)                     
+4354           	Office Bldgs. Hi-Rise (5+ Stories)                          
+4355           	Office Condominiums                                         
+4356           	Retail Condominium                                          
+4357           	Medical Condominium                                         
+4358           	Warehouse Condominum                                        
+4359           	Office - Flex Building                                      
+4361           	Funeral Home                                                
+4362           	Veterinary Clinic                                           
+4363           	Legitimate Theater                                          
+4364           	Motion Picture Theater (Widescreen)                         
+4365           	Cinema/Theater (Multi-Screen)                               
+4366           	Radio, TV, or Motion Picture Studio                         
+4367           	Social/Fraternal Hall                                       
+4368           	Hangar                                                      
+4369           	Day Care Center                                             
+4370           	Greenhouse/Florist                                          
+4371           	Downtown Row                                                
+4373           	Retail Single-Occupancy                                     
+4374           	Retail Multi-Occupancy                                      
+4375           	Retail Miscellaneous                                        
+4376           	Drugstore (Freestanding)                                    
+4377           	Boat & RV Storage                                           
+4381           	Bowling Alley                                               
+4382           	Skating Rink                                                
+4383           	Health Spa                                                  
+4384           	Swimming - Indoor Pool                                      
+4385           	Tennis Club - Indoor                                        
+4386           	Racket Club - Indoor                                        
+4387           	Country Club ( w/o Golf Course)                             
+4388           	Club House                                                  
+4389           	Country Club ( w/Golf Course)                               
+4390           	Amusement Park                                              
+4391           	Cold Storage Facility                                       
+4392           	Lumber Storage                                              
+4393           	Auxiliary Improvement                                       
+4394           	Service Center Warehouse                                    
+4395           	Truck Terminal                                              
+4396           	Mini-Warehouse                                              
+4397           	Office - Warehouse                                          
+4398           	Warehouse                                                   
+4399           	Warehouse-Metallic                                          
+4401           	Manufacturing/Processing                                    
+4402           	Auto Salvage Yard                                           
+4403           	Light Industrial Non-metalic                                
+4405           	Research and Development                                    
+4410           	Products Recovered from Natural Gas                         
+4411           	Food & Kindred Products                                     
+4412           	Apparel & Finished Textiles                                 
+4413           	Lumber and Wood Products                                    
+4414           	Furniture and Fixtures                                      
+4415           	Paper and Allied Products                                   
+4416           	Chemical and Allied Products                                
+4417           	Petroleum Refining / Industry                               
+4418           	Rubber and Miscellaneous                                    
+4419           	Concrete Products                                           
+4420           	Primary Metal Industry                                      
+4421           	Metal Fabricating                                           
+4422           	Machinery & Transportation Equipment                        
+4423           	Maritime Shipping                                           
+4424           	Miscellaneous Manufacturing                                 
+4444           	Dwelling on Industrial Land                                 
+4445           	Miscellaneous Aux. Structure                                
+4460           	Industrial Improved Land                                    
+4499           	Commercial New Construction                                 
+4560           	Commercial Improved Land                                    
+4610           	Recreational/Health                                         
+4611           	Library                                                     
+4612           	School                                                      
+4613           	Colleges & Universities                                     
+4614           	Post Office                                                 
+4620           	Religious                                                   
+4630           	Auditorium                                                  
+4640           	Hospitals                                                   
+4660           	Police or Fire Station                                      
+4670           	Correctional                                                
+4680           	Cultural Facility                                           
+4685           	Miscellaneous Government Building                           
+4690           	Rail/Bus/Air Terminal                                       
+4702           	Telephone Distr. System                                     
+4705           	Telephone Improved Operating                                
+4706           	Telephone Improved Non-Operating                            
+4710           	Telephone Equipment                                         
+4712           	Telephone Transmitte                                        
+4713           	Radio Communications                                        
+4715           	Telephone Work Center                                       
+4720           	Radio/TV Transmitter                                        
+4733           	Utility District, Pumping                                   
+4735           	Utility District, Other Operating                           
+4737           	Utility District, Other Non-Operating                       
+4742           	Gas Company, Distribution                                   
+4743           	Gas Company, Plant/Manufacturing                            
+4745           	Gas Company, Pumping                                        
+4747           	Gas Company, Improved Operating                             
+4749           	Gas Company, Improved Non-Operating                         
+4752           	Electric Company, Distribution                              
+4753           	Electric Company, Generating Plant                          
+4755           	Electric Company, Substation                                
+4756           	Electric Company, Work Center                               
+4757           	Electric Company, Improved Operating                        
+4759           	Electric Company, Improved Non-Operating                    
+4762           	Railroad, (ROW)                                             
+4765           	Railroad, Improved Operating                                
+4769           	Railroad, Operating Leased Imp                              
+4772           	Pipeline, Distribution                                      
+4773           	Pipeline, Pumping Station                                   
+4775           	Pipeline, Storage                                           
+4777           	Pipeline, Improved Operating                                
+4779           	Pipeline, Improved Non-Operating                            
+4799           	Utility, New Construction                                   
+4900           	Possessory Interest                                         
+4930           	County Parks and Golf Courses                               
+4940           	Medical Center/Hospital                                     
+4960           	Port of Houston                                             
+4961           	Industrial Misc.                                            
+4970           	Possessory Interest                                         
+6001           	Exempt Residential Improvement                              
+                                     
+                                     
+Building Style               	   
+------          -----------------    
+Code            Description          
+------          -----------------    
+101            	Residential 1 Family                                        
+102            	Residential 2 Family                                        
+103            	Residential 3 Family                                        
+104            	Residential 4 Family or More                                
+105            	Mixed Res/Com, Res Structure                                
+106            	Condominium (Common Element)                                
+107            	Townhome (with Common Element)                              
+108            	Single Wide Residential Mobile Home                         
+109            	Double Wide Residential Mobile Home                         
+110            	Unsound Residential Structure                               
+125            	Farm with Dwelling                                          
+126            	Farm with Auxiliary Building                                
+610            	Gymnasium (School)                                          
+611            	Library, Public                                             
+612            	Commons (Schools)                                           
+613            	College (Entire)                                            
+614            	Post Office, Main                                           
+620            	Church                                                      
+630            	Auditorium                                                  
+640            	Hospital                                                    
+660            	Fire Station (Staff)                                        
+680            	Museum                                                      
+685            	Governmental Building                                       
+690            	Passenger Terminal                                          
+8100           	Bank Barn, General Purpose                                  
+8101           	Bank Barn, Special Purpose                                  
+8102           	Barn, General Purpose                                       
+8103           	Barn, Special Purpose                                       
+8104           	Commodity Warehouse                                         
+8105           	Confinement Barn                                            
+8106           	Controlled Atmosphere Storage                               
+8107           	Corn Crib, Spaced Board                                     
+8108           	Corn Crib, Wire                                             
+8109           	Hog Breeding                                                
+8110           	Hog Farrowing                                               
+8111           	Hog Finishing                                               
+8112           	Hog Nursery                                                 
+8113           	Loafing Shed                                                
+8114           	Milkhouse Shed                                              
+8115           	Poultry House, Cage Op, Scr, 1 Sty                          
+8116           	Poultry House, Cage Op, Scr, 2 Sty                          
+8117           	Poultry House, Floor Op, Breeder                            
+8118           	Poultry House, Floor Op, Broiler                            
+8119           	Turkey Barn                                                 
+8120           	Sheep Shed                                                  
+8121           	Tobacco Barn, Air Curing                                    
+8122           	Tobacco Barn, Flue Curing                                   
+8123           	Seed Processing Storage                                     
+8124           	Lean-to, Farm Utility                                       
+8125           	Poultry House, Cage Op, Scr, 1 Sty El                       
+8126           	Poultry House, Cage Op, Scr 2 Sty El                        
+8127           	Winery Shop                                                 
+8131           	Corn Crib, Bin                                              
+8132           	Individual Livestock Shelter                                
+8133           	Prefabricated Storage Shed                                  
+8134           	Greenhouse, Modified Hoop, Small                            
+8135           	Greenhouse, Hoop, Arch-Rib, Small                           
+8136           	Greenhouse, Straight-Wall, Small                            
+8137           	Greenhouse, Modified Hoop, Large                            
+8138           	Greenhouse, Hoop, Arch-Rib, Large                           
+8139           	Greenhouse, Straight-Wall, Large                            
+8140           	Greenhouse, Modified Hoop, Medium                           
+8141           	Greenhouse, Hoop, Arch-Rib, Medium                          
+8142           	Greenhouse, Straight-Wall, Medium                           
+8150           	Single Wide Commercial Mobile Home                          
+8151           	Double Wide Commercial Mobile Home                          
+8152           	Residential Garage - Detached                               
+8153           	Residential Garage - Attached                               
+8154           	Residential Garage - Built-in                               
+8155           	Hunting Shelter                                             
+8156           	Alternative School                                          
+8157           	Maintenance Storage Building                                
+8158           	Special Education Classroom                                 
+8160           	Machinery & Equipment                                       
+8161           	Personal Property                                           
+8162           	Outbuildings                                                
+8163           	Site Improvements                                           
+8170           	Institutional Greenhouse, Small                             
+8171           	Institutional Greenhouse, Medium                            
+8172           	Institutional Greenhouse, Large                             
+8173           	Church Educational Wing                                     
+8174           	Pavillion                                                   
+8175           	Skating Rink (Ice)                                          
+8176           	Skating Rinc (Roller                                        
+8177           	Townhouse, High-rise - End Unit                             
+8178           	Townhouse, High-rise - Inside Unit                          
+8179           	Townhouse, High-rise - Detached                             
+8180           	Feed Handling and Mixing                                    
+8181           	Secure Storage Shed, Prefabricated                          
+8182           	Calving Barn Shed                                           
+8183           	Golf Starter Booth                                          
+8184           	Arena Shelter                                               
+8185           	Truck Wash                                                  
+8300           	Apartment                                                   
+8301           	Armory                                                      
+8302           	Auditorium                                                  
+8303           	Automobile Showroom                                         
+8304           	Bank                                                        
+8305           	Barn                                                        
+8306           	Bowling Alley                                               
+8308           	Church w/ Sunday School                                     
+8309           	Church                                                      
+8310           	City Club                                                   
+8311           	Clubhouse                                                   
+8313           	Convalescent Hospital                                       
+8314           	Country Club                                                
+8315           	Creamery                                                    
+8316           	Dairy                                                       
+8317           	Dairy Sales Building                                        
+8318           	Department Store                                            
+8319           	Discount Store                                              
+8320           	Dispensary                                                  
+8321           	Dormitory                                                   
+8322           	Fire Station (Staff)                                        
+8323           	Fraternal Building                                          
+8324           	Fraternity House                                            
+8325           	Service Garage (Obsolete)                                   
+8326           	Storage Garage                                              
+8327           	Governmental Building                                       
+8328           	Storage Hangar                                              
+8329           	Hangar, Maint & Office                                      
+8330           	Home For The Elderly                                        
+8331           	Hospital                                                    
+8332           	Hotel (Obsolete)                                            
+8334           	Industrial Mftg. (Obsolete)                                 
+8335           	Jail - Correctional Facility                                
+8336           	Laundromat                                                  
+8337           	Library, Public                                             
+8338           	Loft                                                        
+8339           	Lumber Storage Shed, Horz.                                  
+8340           	Market                                                      
+8341           	Medical Office                                              
+8342           	Mortuary                                                    
+8343           	Motel                                                       
+8344           	Office Building                                             
+8345           	Parking Structure                                           
+8346           	Post Office (Obsolete)                                      
+8347           	Poultry House (Obsolete)                                    
+8348           	Rectory                                                     
+8349           	Fast Food Restaurant                                        
+8350           	Restaurant                                                  
+8351           	Single-Family Residence                                     
+8352           	Multiple Res (Low Rise)                                     
+8353           	Retail Store                                                
+8354           	Townhouse Inside Unit                                       
+8355           	Fine Arts & Crafts Building                                 
+8356           	Classroom                                                   
+8357           	Commons (Schools)                                           
+8358           	Gymnasium (School)                                          
+8359           	Lecture Classroom (School)                                  
+8360           	Library, Media Center                                       
+8361           	Manual Arts Bldg (School)                                   
+8362           	Multi-Purpose Bldg (School)                                 
+8363           	Physical Education Building                                 
+8364           	Science Classroom                                           
+8365           	Elementary School (Entire)                                  
+8366           	Junior High School (Entire)                                 
+8367           	Arts & Crafts Bldg (Coll)                                   
+8368           	Classroom (College)                                         
+8369           	Commons (College)                                           
+8370           	Gymnasium (College)                                         
+8371           	Lecture Hall (College)                                      
+8372           	Library, College                                            
+8373           	Technical Trades Bldg.                                      
+8374           	Multi-Purp Bldg (College)                                   
+8375           	Phys Ed Bldg (College)                                      
+8376           	Science Building (College)                                  
+8377           	College (Entire)                                            
+8378           	Stable                                                      
+8379           	Theater - Live Stage                                        
+8380           	Theater - Cinema                                            
+8381           	Veterinary Hospital                                         
+8383           	Tobacco Barn                                                
+8384           	Barber Shop                                                 
+8386           	Mini-Warehouse                                              
+8387           	Transit Warehouse                                           
+8388           	Underground Prkg Structure                                  
+8389           	Equip. Storage Bldg. (Obs.)                                 
+8390           	Lumber Storage Bldg., Vert.                                 
+8391           	Material Storage Building                                   
+8392           	Industrial Engineering                                      
+8393           	Labor Dormitory                                             
+8394           	Transient Labor Cabin                                       
+8395           	Potato Storage                                              
+8396           	Hog Barn                                                    
+8397           	Sheep Barn                                                  
+8398           	Fruit Packing Barn                                          
+8399           	Cattle Shed (Obsolete)                                      
+8400           	Hay Shed (Obsolete)                                         
+8401           	Townhouse, End Unit                                         
+8403           	Shower Building                                             
+8404           	Utility Building (Obsolete)                                 
+8405           	Skating Rink                                                
+8406           	Storage Warehouse                                           
+8407           	Distribution Warehouse                                      
+8408           	Service Station                                             
+8409           	T-Hangar                                                    
+8410           	Automotive Center                                           
+8412           	Neighborhood Shopping Ctr                                   
+8413           	Community Shopping Center                                   
+8414           	Regional Shopping Center                                    
+8416           	Indoor Tennis Club                                          
+8417           	Handball-Racquetball Club                                   
+8418           	Health Club                                                 
+8419           	Convenience Market                                          
+8420           	Bulk Fertilizer Storage                                     
+8421           	Grain Storage                                               
+8422           	Theater (Obsolete)                                          
+8423           	Mini-Lube Garage                                            
+8424           	Group Care Home                                             
+8426           	Day Care Center                                             
+8427           	Fire Station (Volunteer)                                    
+8428           	Horse Arena                                                 
+8429           	Hog Shed, Modified                                          
+8430           	Hog Shed                                                    
+8431           	Outpatient Surgical Center                                  
+8432           	Restroom Building                                           
+8434           	Car Wash - Self Serve                                       
+8435           	Car Wash - Drive Thru                                       
+8436           	Car Wash - Automatic                                        
+8440           	Milkhouse                                                   
+8441           	Cocktail Lounge                                             
+8442           	Bar/Tavern                                                  
+8443           	Central Bank                                                
+8444           	Dental Office/Clinic                                        
+8445           	Log Home                                                    
+8446           	Supermarket                                                 
+8447           	Cold Storage Facility                                       
+8448           	Cold Storage, Farm                                          
+8450           	Cotton Gin                                                  
+8451           	Multiple Res. (Sen. Citizen)                                
+8453           	Industrial Flex Building                                    
+8454           	Shell, Industrial                                           
+8455           	Auto Dealership, Complete                                   
+8456           	Tool Shed                                                   
+8458           	Discount Warehouse Store                                    
+8459           	Mixed Retail w/ Resid. Units                                
+8460           	Shell, Neigh. Shop. Ctr.                                    
+8461           	Shell, Community Shop. Ctr.                                 
+8462           	Shell, Regional Shop. Ctr.                                  
+8465           	Food Booth - Prefabricated                                  
+8466           	Boat Storage Shed                                           
+8467           	Boat Storage Building                                       
+8468           	Material Storage Shed                                       
+8469           	Freestall Barn                                              
+8470           	Equipment (Shop) Building                                   
+8471           	Lt. Commercial Utility Build.                               
+8472           	Equipment Shed                                              
+8473           	Material Shelter                                            
+8474           	Poultry House, Cage Op., 1 Story                            
+8475           	Poultry House, Floor Op. (Obsolete)                         
+8476           	Farm Implement Building                                     
+8477           	Farm Utility Building                                       
+8478           	Farm Implement Shed                                         
+8479           	Farm Utility Storage Shed                                   
+8480           	Vegetable Storage                                           
+8481           	Museum                                                      
+8482           	Convention Center                                           
+8483           	Fitness Center                                              
+8484           	High School (Entire)                                        
+8485           	Natatorium                                                  
+8486           	Fieldhouse                                                  
+8487           	Vocational School                                           
+8488           	Bookstore (School)                                          
+8489           	Jail - Police Station                                       
+8490           	Kennels                                                     
+8491           	Community Service Building                                  
+8492           	Shell, Office                                               
+8493           	Flathouse                                                   
+8494           	Industrials, Light Mftg.                                    
+8495           	Industrials, Heavy Mftg.                                    
+8496           	Laboratory                                                  
+8497           	Computer Center                                             
+8498           	Broadcasting Facility                                       
+8499           	Dry Cleaners-Laundry                                        
+8508           	Car Wash - Canopy                                           
+8511           	Drug Store                                                  
+8512           	Luxury Boutique                                             
+8513           	Regional Discount Shopping Center                           
+8514           	Community Center                                            
+8515           	Casino                                                      
+8516           	Fellowship Hall                                             
+8517           	Narthex/Foyer                                               
+8518           	Greenhouse, Lath Shade House                                
+8519           	Greenhouse, Shade Shelter                                   
+8520           	Greenhouse, Modified Hoop (Obsolete)                        
+8521           	Greenhouse, Hoop, Arch-Rib (Obsolete)                       
+8522           	Greenhouse, Straight-Wall (Obsolete)                        
+8523           	Golf Cart Storage Building                                  
+8524           	Corn Crib                                                   
+8525           	Mini Warehouse, High-Rise                                   
+8526           	Service Garage Shed                                         
+8527           	Municipal Service Garage                                    
+8528           	Service Repair Garage                                       
+8529           	Snack Bar                                                   
+8530           	Cafeteria                                                   
+8531           	Mini-Mart Convenience Store                                 
+8532           	Florist Shop                                                
+8533           	Warehouse Food Store                                        
+8534           	Warehouse Showroom Store                                    
+8537           	Lodge                                                       
+8538           	Guest Cottage                                               
+8539           	Bed and Breakfast Inn                                       
+8540           	Motel Room, 2 Sty., Dbl. Row                                
+8541           	Motel Room, 2 Sty., Sgl. Row                                
+8542           	Motel Room, 1 Sty., Dbl. Row                                
+8543           	Motel Room, 1 Sty., Sgl. Row                                
+8544           	Motel, Office-Apartment                                     
+8546           	Senior Citizen Townhouse, End Unit                          
+8547           	Senior Citizen Townhouse, Inside Unit                       
+8548           	Urban Row House, Detached                                   
+8549           	Urban Row House, End Unit                                   
+8550           	Urban Row House, Inside Unit                                
+8551           	Rooming House                                               
+8552           	Recreational Enclosure                                      
+8554           	Shed Office Structure                                       
+8555           	Lt. Commercial Arch-rib, Quon                               
+8556           	Bulk Oil Storage                                            
+8557           	Farm Utility Arch-rib, Quon.                                
+8558           	Farm Implement Arch-rib, Quon                               
+8559           	Stable, High-value                                          
+8560           	Equestrian Lean-To                                          
+8561           	Feeder Barn                                                 
+8562           	Farm Commodity Storage Shed                                 
+8563           	Bag Fertilizer Storage                                      
+8564           	Dehydrator Building                                         
+8565           	Farm Utility Shelter                                        
+8566           	Farm Sun Shade Shelter                                      
+8567           	Poultry House - Cage, 2 Sty.                                
+8568           	Poultry House-Cage, 2 Sty.,El                               
+8569           	Poultry House - Cage, 3 Sty.                                
+8570           	Poultry House-Cage, 1 Sty, El                               
+8571           	Passenger Terminal                                          
+8573           	Arcade Building                                             
+8574           	Visitor Center                                              
+8575           	Dining Atrium                                               
+8576           	Atrium                                                      
+8577           	Parking Level                                               
+8578           	Mini-Bank                                                   
+8580           	Truck Stop                                                  
+8581           	Post Office, Main                                           
+8582           	Post Office, Branch                                         
+8583           	Mail Processing Facility                                    
+8584           	Mega Warehouse                                              
+8585           	Mechanical Penthouse                                        
+8586           	Roadside Market                                             
+8587           	Shell, Multiple Residence                                   
+8588           	Extended Stay Motel                                         
+8589           	Elderly Assist. Multi. Res.                                 
+8594           	Hotel, Full Service                                         
+8595           	Hotel, Limited Service                                      
+8596           	Shell, Apartment                                            
+8597           	Mixed Retail w/ Office Units                                
+8598           	Relocatable Classroom                                       
+8599           	Relocatable Office                                          
+8600           	Administrative Office                                       
+8700           	Mall Anchor Department Store                                
+8710           	Retirement Community Complex                                
+8718           	Banquet Hall                                                
+8719           	Modular Restaurant                                          
+8720           	Mega Warehouse Discount Store                               
+8774           	Shell, Townhouse, End Unit                                  
+8775           	Shell, Townhouse, Inside Unit                               
+8984           	Luxury Apartment                                            
+8985           	Senior Center                                               
+8986           	Int. Space, Townhouse, Inside Unit                          
+8987           	Int. Space, Multiple Resid.                                 
+8988           	Int. Space, Townhouse, End Unit                             
+8989           	Int. Space, Apartment                                       
+8990           	Int. Space, Neigh. Shop Ctr                                 
+8991           	Int. Space, Commun. Shop Ctr                                
+8992           	Int. Space, Region. Shop Ctr                                
+8993           	Interior Space, Office                                      
+8994           	Int. Space, Industrial                                      
+                                        
+                                        
+Building Data (Elements and Fixtures) 
+------          -----------------       
+Code            Description             
+------          -----------------       
+AC1            	A/C:  Central                                               
+AC2            	A/C:  Unit                                                  
+ADJ            	Quality Adjustment                                          
+AP0            	Apt:  Effcncy Unit                                          
+AP1            	Apt:  1-Bedroom Unit                                        
+AP2            	Apt:  2-Bedroom Unit                                        
+AP3            	Apt:  3-Bedroom Unit                                        
+AP4            	Apt:  4-Bedroom Unit                                        
+ATR            	Atrium                                                      
+BAL            	Bowling Alley Lanes                                         
+BC1            	Bank:  Drive-Thru                                           
+BE1            	Bank:  Vault No Door                                        
+BE2            	Bank:  Vault Records                                        
+BT1            	Basement:  Top                                              
+CAD            	Cost and Design                                             
+CDU            	Cond / Desir / Util                                         
+CFU            	Functional Utility                                          
+CLG            	Cooling Type                                                
+CM1            	Mall:  Covered                                              
+CON            	Construction Type                                           
+CW1            	Craneway 2 ton                                              
+CW2            	Craneway 10 ton                                             
+CW3            	Craneway 25 ton                                             
+CW4            	Craneway 5 ton                                              
+CWB            	Carwash Bays                                                
+EL1            	Elev:  Elect / Frght                                        
+EL2            	Elev:  Elect / Pass                                         
+EL3            	Elev:  Hydro / Frght                                        
+EL4            	Elev:  Hydro / Pass                                         
+EL5            	Escalator:  32'                                             
+EL6            	Escalator:  48'                                             
+EO             	Economic Obsolescence                                       
+ESTR           	Energy Star Certification                                   
+FL1            	Fireplace:  Open (1)                                        
+FL2            	Fireplace:  Open (2)                                        
+FL3            	Fireplace:  Open (3)                                        
+FN             	Functional Utility                                          
+FNC            	Functional Utility                                          
+FND            	Foundation Type                                             
+FNR            	Funtional Utility                                           
+FPD            	Fireplace: Direct Vent                                      
+FPM            	Fireplace: Metal Prefab                                     
+FPO            	Fireplace:  Adl Open                                        
+FPW            	Fireplace: Masonry Firebrick                                
+FRC            	Franchise Code                                              
+FXA            	Fixtures:  Addl                                             
+FXT            	Fixtures:  Total                                            
+GRD            	Grade Adjustment                                            
+HAC            	Heating / AC                                                
+HTG            	Heating Type                                                
+INT            	Interior Finish Percent                                     
+LEED           	LEED Certification Level                                    
+LLR            	Lower Level Rec                                             
+MA             	Market Adjustment                                           
+MAS            	Masonry Trim                                                
+MDB            	Medical Beds                                                
+MEZ            	Mezzanine                                                   
+MI             	Market Index Adjustment                                     
+MR1            	Roof:  Monitor                                              
+MR2            	Roof:  High Bay                                             
+MS1            	Miscellaneous                                               
+MTS            	Moview Theatre Screens                                      
+NRA            	Net Rentable Area                                           
+OD1            	OH Door:  Wood / Mtl                                        
+OD2            	OH Door:  Roll Steel                                        
+OD3            	OH Door:  Motor W/M                                         
+OD4            	OH Door:  Motor RS                                          
+OWR            	Office Warehouse Ratio                                      
+PAR            	Partition Type                                              
+PC             	Physical Condition                                          
+PCC            	Physical Condition                                          
+PCR            	Physical Condition                                          
+PLM            	Plumbing Type                                               
+PRK            	Parking Spaces                                              
+REL            	Elevator Stops                                              
+RMB            	Room:  Bedroom                                              
+RMF            	Room:  Full Bath                                            
+RMH            	Room:  Half Bath                                            
+RMR            	Room:  Rec                                                  
+RMT            	Room:  Total                                                
+RVS            	RV Stalls                                                   
+SC1            	Pool:  Indoor Value                                         
+SF1            	Store Front:  Wood                                          
+SF2            	Store Front:  Metal                                         
+SF3            	Store Front:  Elab                                          
+SIZ            	Size Index                                                  
+SPA            	Sprinkler Area                                              
+SPR            	Sprinkler Type                                              
+SS1            	Sprinkler:  Wet                                             
+SS2            	Sprinkler:  Dry                                             
+STC            	# Stories                                                   
+STY            	Story Height Index                                          
+UFA            	Unfinished Area                                             
+UNT            	Number of Apartment Units                                   
+WHT            	Wall Height                                                 
+XWC            	Exterior Wall                                               
+XWR            	Exterior Wall                                               
+                                     
+                                     
+Extra Features 	                   
+------          -----------------    
+Code            Description          
+------          -----------------    
+CAC1           	Central Air Conditioner                                     
+CAC2           	Unit Air Conditioner                                        
+CAC3           	Mini-Whse HVAC                                              
+CAP1           	Fence, Chain Link                                           
+CAP2           	Fence, Picket                                               
+CAP3           	Fence, Stockade                                             
+CAP4           	Fence, Post & Rail                                          
+CAP5           	Fence, Basket-Weave                                         
+CAP6           	Fence, Brick & Stone                                        
+CAT1           	ATRIUM/VESTIBULE                                            
+CAW1           	Aerial Walkway                                              
+CBB1           	Bank Auxillary Office Area                                  
+CBC1           	Bank Canopy - Drive Thru                                    
+CBD1           	Wood Boat Dock                                              
+CBK1           	Bulk Head                                                   
+CBS1           	Basement,Commercial Stg Non Fire Proofed                    
+CBS2           	Basement,Commercial Storage Fire Proofed                    
+CBS3           	Basement, Residential Storage                               
+CBS4           	Basement,Parking Non Fireproofed                            
+CBS5           	Basement,Parking Fireproofed                                
+CBS6           	Basement, Apt Living Units Non Fireproof                    
+CBS7           	Basement, Apt Living Units Fireproofed                      
+CBS8           	Basement, Retail Non Fireproofed                            
+CBS9           	Basement, Retail  Fireproofed                               
+CBSA           	Basement, Office/Med/Bnk Non Fireproofed                    
+CBSB           	Basement, Office/Med/Bnk Fireproofed                        
+CBSC           	Basement, Hospital Non Fireproofed                          
+CBSD           	Basement, Hospital Fireproofed                              
+CCP4           	CANOPY CARWASH ONLY                                         
+CCP5           	CANOPY ONLY                                                 
+CCP6           	CANOPY ROOF AND SLAB                                        
+CCP7           	CANOPY ROOF SERV STN ECON                                   
+CCP8           	CANOPY ROOF SERV STN AVG                                    
+CCP9           	CANOPY ROOF SERV STN GOOD                                   
+CDL1           	Dock Level Floor                                            
+CEN0           	Enclosed Entry                                              
+CEN1           	Retail Finish                                               
+CEN2           	Office Finish                                               
+CEN3           	Restaurant,Lounge Finish                                    
+CEN4           	Enclosure,  Storage                                         
+CEN5           	Enclosure,  Retail                                          
+CEN6           	Enclosure,  Office                                          
+CEN7           	Enclosure, Living Area                                      
+CEN8           	Enclosure, Cold Storage                                     
+CGCA           	Golf Course Quality A                                       
+CGCB           	Golf Course Quality B                                       
+CGCC           	Golf Course Quality C                                       
+CGCD           	Golf Course Quality D                                       
+CGCE           	Golf Course Quality E                                       
+CGCF           	Golf Course Quality F                                       
+CGCX           	Golf Course Quality X                                       
+CGDR           	Golf Driving Range R                                        
+CGH1           	GREENHOUSE ECONOMY                                          
+CGH2           	GREENHOUSE AVERAGE                                          
+CGH3           	GREENHOUSE GOOD                                             
+CGS3           	Gas Station Attnd.-Bth Stl/Gls on Masonr                    
+CGS4           	Gas Station Attnd.-Bth Stucco/Gls on Frm                    
+CIGV           	Industrial Other Gross Value                                
+CLD1           	Load Dock, Stone or Concrete                                
+CLD2           	Loading Dock, Wood                                          
+CLD3           	Loading Dock, Interior                                      
+CLD4           	Truck - Train Wells                                         
+CLD5           	Dock Leveler                                                
+CLD6           	Loading Ramp, Concrete                                      
+CLT1           	Mercury Light Wheel Mounted                                 
+CLT2           	Light,Incandescent Wheel-Mounted Flood                      
+CLT3           	Light,Florescent Pole & Breaker                             
+CLT4           	Light,Incandescent Pole & Breaker                           
+CLT5           	Mercury Light Pole Mounted w/breaker                        
+CMP1           	Mobile Home Space Very Cheap                                
+CMP2           	Mobile Home Space Cheap                                     
+CMP3           	Mobile Home Space Good Cheap                                
+CMP4           	Mobile Home Space Very Low Cost                             
+CMP5           	Mobile Home Space Low Cost                                  
+CMP6           	Mobile Home Space Average                                   
+CMP7           	Mobile Home Space Above Average                             
+CMP8           	Mobile Home Space Good                                      
+CMP9           	Mobile Home Space Excellent                                 
+CMS1           	Miscellaneous - Flat Value                                  
+COGV           	Commercial Other Gross Value                                
+COM1           	Portable/Modular Office - Eco (P/P only)                    
+COM2           	Portable/Modular Office - Average                           
+COM3           	Portable/Modular Office - Good                              
+CPA1           	Paving - Asphalt                                            
+CPA2           	Paving - Asphalt & Concrete Service Stat                    
+CPB1           	Plumbing Fixtures                                           
+CPC1           	Paving - Light Concrete                                     
+CPC2           	Paving - Heavy Concrete                                     
+CPC3           	Paving - Mat/Slab                                           
+CPH1           	Penthouse, Mechanical Low Cost                              
+CPH2           	Penthouse, Mechanical Average                               
+CPH3           	Penthouse, Mechanical Good                                  
+CPH4           	Penthouse, Apartment Low Cost                               
+CPH5           	Penthouse, Apartment Average                                
+CPH6           	Penthouse, Apartment Good                                   
+CPL1           	Parking Levels Low Quality (C,D,S Class)                    
+CPL2           	Parking Levels Low Quality (A,B Class)                      
+CPL3           	Parking Levels Avg Quality (C,D,S Class)                    
+CPL4           	Parking Levels Avg Quality (A,B Class)                      
+CPL5           	Parking Levels Good Quality (C,D,S Class)                   
+CPL6           	Parking Levels Good Quality (A,B Class)                     
+CPL7           	Parking Levels Excellent Quality (A,B,C,D,S Class)          
+CPL8           	Parking Deck(A,B,C,D)                                       
+CRC1           	Carport - Commercial                                        
+CRG1           	Attached Frame Garage                                       
+CRG2           	Attached Masonary Garage                                    
+CRG3           	Attached Appartment Garage                                  
+CRG4           	Detached Frame Garage                                       
+CRG5           	Detached Masonry Garage                                     
+CRP1           	Porch, Open                                                 
+CRP2           	Porch, Enclosed                                             
+CRP3           	Porch,Open Upper                                            
+CRP4           	Porch,Enclosed Upper                                        
+CRR1           	Railroad Spur                                               
+CRS1           	UTILITY BLDG - FRAME                                        
+CRS2           	UTILITY BLDG - METAL                                        
+CRS3           	UTILITY BLDG - BRICK/STONE                                  
+CRW1           	Craneway (2 ton Capacity)                                   
+CRW2           	Craneway (10 ton Capacity)                                  
+CRW3           	Craineway(25 ton Capacity)                                  
+CRW4           	Craineway(5 ton Capacity)                                   
+CSC1           	Swimming Pool                                               
+CSG1           	Stabilized Gravel Paving                                    
+CSH1           	Shed, Farm Machinery                                        
+CSH2           	Shed, Aluminum                                              
+CSH3           	Shed, Finished Metal                                        
+CSH4           	Shed, Quonset                                               
+CSH5           	Lumber Shed 2 Sides Open                                    
+CSH6           	Lumber Shed 4 Sides Open                                    
+CSM2           	Wood/Metal and Glass Addition Enc Porch                     
+CSM3           	Covered Patio or Carport                                    
+CSM4           	Skirting                                                    
+CSM5           	Wood Deck                                                   
+CSM6           	Attached 1s Frame                                           
+CSM7           	Open Frame Porch                                            
+CSP1           	Solar Photovoltaic Panel                                    
+CSS1           	Wet Sprinkler                                               
+CSS2           	Dry Sprinkler                                               
+CTC1           	Asphalt Tennis Court - Com                                  
+CTC2           	Concrete Tennis Court - Com                                 
+CTC3           	Clay Tennis Court - Com                                     
+CTR1           	Restroom Strct - Frame or Conc. Block                       
+CTR2           	Restroom Strct - Brick or Stone                             
+CTU1           	Pedestrial Tunnel System                                    
+CWS1           	Water System                                                
+CWS2           	Sewer System                                                
+CWS3           	Water & Sewer System                                        
+CZA1           	Mechanical Dispenser                                        
+CZA2           	Electronic Dispenser                                        
+CZC0           	Petroleum Stg Tank -Coated S -Sgl Wall -  300 Gal           
+CZC1           	Petroleum Stg Tank -Coated S -Sgl Wall -  550 Gal           
+CZC2           	Petroleum Stg Tank -Coated S -Sgl Wall -1000 Gal            
+CZC3           	Petroleum Stg Tank -Coated S -Sgl Wall -2000 Gal            
+CZC4           	Petroleum Stg Tank -Coated S -Sgl Wall -3000 Gal            
+CZC5           	Petroleum Stg Tank -Coated S -Sgl Wall -4000 Gal            
+CZC6           	Petroleum Stg Tank -Coated S-Sgl Wall -5000 Gal             
+CZC7           	Petroleum Stg Tank -Coated S -Sgl Wall -6000 Gal            
+CZC8           	Petroleum Stg Tank - Coated S-Sgl Wall -8000 Gal            
+CZC9           	Petroleum Stg Tank -Coated S-Sgl Wall -10,000 Gal           
+CZCA           	Petroleum Stg Tank -Coated S -Sgl Wall -12,000 Gal          
+CZCB           	Petroleum Stg Tank -Coated S -Sgl Wall -15,000 Gal          
+CZCC           	Petroleum Stg Tank -Coated S -Sgl Wall -20,000 Gal          
+CZCD           	Petroleum Stg Tank -Coated S- Sgl Wall -25,000 Gal          
+CZCE           	Petroleum Stg Tank -Coated S -Sgl Wall -30,000 Gal          
+CZCF           	Petroleum Stg Tank -Coated S -Sgl Wall -40,000 Gal          
+CZCH           	Petroleum Stg Tank - Coated S -Dbl Wall -  550 Gal          
+CZCI           	Petroleum Stg Tank - Coated S -DblWall -1000 Gal            
+CZCJ           	Petroleum Stg Tank - Coated S -DblWall -2000 Gal            
+CZCK           	Petroleum Stg Tank - Coated S -Dbl Wall -3000 Gal           
+CZCL           	Petroleum Stg Tank - Coated S -Dbl Wall -4000 Gal           
+CZCM           	Petroleum Stg Tank - Coated S -Dbl Wall -5000 Gal           
+CZCN           	Petroleum Stg Tank - Coated S -Dbl Wall -6000 Gal           
+CZCO           	Petroleum Stg Tank - Coated S-Dbl Wall -8000 Gal            
+CZCP           	Petroleum Stg Tank - Coated S-Dbl Wall -10,000 Gal          
+CZCQ           	Petroleum Stg Tank - Coated S-Dbl Wall -12,000 Gal          
+CZCR           	Petroleum Stg Tank - Coated S-Dbl Wall -15,000 Gal          
+CZCS           	Petroleum Stg Tank - Coated S-DblWall -20,000 Gal           
+CZCT           	Petroleum Stg Tank - Coated S-Dbl Wall -25,000 Gal          
+CZCU           	Petroleum Stg Tank - Coated S-Dbl Wall -30,000 Gal          
+CZCV           	Petroleum Stg Tank - Coated S-Dbl Wall -50,000 Gal          
+CZF1           	Petroleum Stg Tank - F-glass -Sgl Wall -  550 Gal           
+CZF2           	Petroleum Stg Tank - F-glass -Sgl Wall -1000 Gal            
+CZF3           	Petroleum Stg Tank - F-glass -Sgl Wall -2000 Gal            
+CZF4           	Petroleum Stg Tank - F-glass -Sgl Wall -3000 Gal            
+CZF5           	Petroleum Stg Tank - F-glass -Sgl Wall -4000 Gal            
+CZF6           	Petroleum Stg Tank - F-glass -Sgl Wall -5000 Gal            
+CZF7           	Petroleum Stg Tank - F-glass -Sgl Wall -6000 Gal            
+CZF8           	Petroleum Stg Tank - F-glass -Sgl Wall -8000 Gal            
+CZF9           	Petroleum Stg Tank - F-glass -Sgl Wall -10,000 Gal          
+CZFA           	Petroleum Stg Tank - F-glass -Sgl Wall -12,000 Gal          
+CZFB           	Petroleum Stg Tank - F-glass -Sgl Wall -15,000 Gal          
+CZFC           	Petroleum Stg Tank - F-glass -Sgl Wall -20,000 Gal          
+CZFD           	Petroleum Stg Tank - F-glass -Sgl Wall -25,000 Gal          
+CZFE           	Petroleum Stg Tank - F-glass -Sgl Wall -30,000 Gal          
+CZFF           	Petroleum Stg Tank - F-glass -Sgl Wall -50,000 Gal          
+CZFG           	Petroleum Stg Tank - F-glass -Sgl Wall -40,000 Gal          
+CZFH           	Petroleum Stg Tank - F-glass -Dbl Wall -  550 Gal           
+CZFI           	Petroleum Stg Tank - F-glass -DblWall -1000 Gal             
+CZFJ           	Petroleum Stg Tank - F-glass -Dbl Wall -2000 Gal            
+CZFK           	Petroleum Stg Tank - F-glass -Dbl Wall -3000 Gal            
+CZFL           	Petroleum Stg Tank - F-glass -Dbl Wall -4000 Gal            
+CZFM           	Petroleum Stg Tank - F-glass -Dbl Wall -5000 Gal            
+CZFN           	Petroleum Stg Tank - F-glass -Dbl Wall -6000 Gal            
+CZFO           	Petroleum Stg Tank - F-glass -Dbl Wall -8000 Gal            
+CZFP           	Petroleum Stg Tank - F-glass -Dbl Wall -10,000 Gal          
+CZFQ           	Petroleum Stg Tank - F-glass -Dbl Wall -12,000 Gal          
+CZFR           	Petroleum Stg Tank - F-glass -Dbl Wall -15,000 Gal          
+CZFS           	Petroleum Stg Tank - F-glass -DblWall -20,000 Gal           
+CZFT           	Petroleum Stg Tank - F-glass -Dbl Wall -25,000 Gal          
+CZFU           	Petroleum Stg Tank - F-glass -Dbl Wall -30,000 Gal          
+CZFV           	Petroleum Stg Tank - F-glass -Dbl Wall -50,000 Gal          
+CZS0           	Petroleum Stg Tank - Steel -Sgl Wall -  300 Gal             
+CZS1           	Petroleum Stg Tank - Steel -Sgl Wall -  550 Gal             
+CZS2           	Petroleum Stg Tank - Steel -Sgl Wall -1000 Gal              
+CZS3           	Petroleum Stg Tank - Steel -Sgl Wall -2000 Gal              
+CZS4           	Petroleum Stg Tank - Steel -Sgl Wall -3000 Gal              
+CZS5           	Petroleum Stg Tank - Steel -Sgl Wall -4000 Gal              
+CZS6           	Petroleum Stg Tank - Steel -Sgl Wall -5000 Gal              
+CZS7           	Petroleum Stg Tank - Steel -Sgl Wall -6000 Gal              
+CZS8           	Petroleum Stg Tank - Steel -Sgl Wall -8000 Gal              
+CZS9           	Petroleum Stg Tank - Steel -Sgl Wall -10,000 Gal            
+CZSA           	Petroleum Stg Tank - Steel -Sgl Wall -12,000 Gal            
+CZSB           	Petroleum Stg Tank - Steel -Sgl Wall -15,000 Gal            
+CZSC           	Petroleum Stg Tank - Steel -Sgl Wall -20,000 Gal            
+CZSD           	Petroleum Stg Tank - Steel -Sgl Wall -25,000 Gal            
+CZSE           	Petroleum Stg Tank - Steel -Sgl Wall -30,000 Gal            
+CZSF           	Petroleum Stg Tank - Steel -Sgl Wall -50,000 Gal            
+CZSG           	Petroleum Stg Tank - Steel -Dbl Wall -     300 Gal          
+CZSH           	Petroleum Stg Tank - Steel -Dbl Wall -     550 Gal          
+CZSI           	Petroleum Stg Tank - Steel -Dbl Wall -  1,000 Gal           
+CZSJ           	Petroleum Stg Tank - Steel Dbl Wall -   2,000 Gal           
+CZSK           	Petroleum Stg Tank - Steel -Dbl Wall -  3,000 Gal           
+CZSL           	Petroleum Stg Tank - Steel Dbl Wall -   4,000 Gal           
+CZSM           	Petroleum Stg Tank - Steel -Dbl Wall -  5,000 Gal           
+CZSN           	Petroleum Stg Tank - Steel -Dbl Wall -  6,000 Gal           
+CZSO           	Petroleum Stg Tank - Steel -Dbl Wall -  8,000 Gal           
+CZSP           	Petroleum Stg Tank - Steel -Dbl Wall -10,000 Gal            
+CZSQ           	Petroleum Stg Tank - Steel -Dbl Wall -12,000 Gal            
+CZSR           	Petroleum Stg Tank - Steel -Dbl Wall -15,000 Gal            
+CZSS           	Petroleum Stg Tank - Steel -Dbl Wall -20,000 Gal            
+CZST           	Petroleum Stg Tank - Steel -Dbl Wall -25,000 Gal            
+CZSU           	Petroleum Stg Tank - Steel -Dbl Wall -30,000 Gal            
+CZSV           	Petroleum Stg Tank - Steel -Dbl Wall -50,000 Gal            
+ICPL           	Industrial Chemical Plant                                   
+IRGF           	Industrial Refinery General Facility                        
+IRPR           	Industrial Refinery Process                                 
+MZ11           	Apartment                                                   
+MZ12           	Hotel                                                       
+MZ25           	Dwelling Conversion, Office/Sales                           
+MZ27           	Residential                                                 
+MZ31           	Restaurant                                                  
+MZ33           	Discount Store/ Display Mezzanine                           
+MZ34           	Retail Store / Display Mezzanine                            
+MZ35           	Tavern/Bar                                                  
+MZ36           	Bar/Lounge                                                  
+MZ37           	Cafeteria                                                   
+MZ39           	Mall Shop                                                   
+MZ41           	Mini-Warehouse                                              
+MZ43           	Manufacturing                                               
+MZ44           	Light Manufacturing                                         
+MZ45           	Warehouse                                                   
+MZ46           	Auto Showroom/Office                                        
+MZ47           	Auto Parts/Service                                          
+MZ48           	Tennis Club                                                 
+MZ49           	Racquet Ball Court                                          
+MZ51           	Bank/Savings Institution                                    
+MZ52           	Medical/Medical and Dental Center                           
+MZ53           	Office                                                      
+MZ55           	School                                                      
+MZ57           	Library                                                     
+MZ61           	Auditorium/Theater / Open Mezzanine                         
+MZ62           	Cinema Balcony                                              
+MZ63           	Religious Institution                                       
+MZ64           	Social/Fraternal Hall                                       
+MZ65           	Office Lobby . Open Mezzanine                               
+MZ81           	Multi-Use, Living Area                                      
+MZ82           	Multi-Use, Office                                           
+MZ83           	Multi-Use, Sales                                            
+MZ84           	Multi-Use, Storage Low Cost                                 
+MZ85           	Enclosure (Economic Rent Not Generated)                     
+MZ86           	Support Area                                                
+MZ87           	Support Area w/ Rent (Not In Use)                           
+MZ88           	Restroom/Locker Facility                                    
+MZ89           	Health Club                                                 
+MZ90           	Parking Garage                                              
+MZ91           	Low Cost Utility Storage Area                               
+MZ96           	Fast Food                                                   
+MZ97           	Restaurant                                                  
+RAB1           	Bank Barn                                                   
+RAB2           	Flat Barn                                                   
+RAC1           	Wood Corn Crib                                              
+RAC2           	Welded Wire Corn Crib                                       
+RAD1           	Dairy or Horse Barns                                        
+RAG1           	Steel Grain Bin w/o drying bin                              
+RAG2           	Steel Grain Bin with drying bin                             
+RAH1           	1s frame or metal Poultry House                             
+RAH2           	2s frame or metal Poultry House                             
+RAH3           	3s frame or metal Poultry House                             
+RAH4           	1s concrete blockl Poultry House                            
+RAL1           	1s Lean-To                                                  
+RAM3           	Detached Concrete Block Milk House                          
+RAO1           	Potato Storage - underground                                
+RAP1           	4 Side closed Metal Pole Barn                               
+RAP2           	4 Side closed Wood Pole Barn                                
+RAP3           	1 Side Open Metal Pole Barn                                 
+RAP4           	1 Side Open Wood Pole Barn                                  
+RAP5           	4 Sides open Metal Pole Barn                                
+RAP6           	4 Sides open Wood Pole Barn                                 
+RAS1           	Concrete Stave Silo with Roof                               
+RAS4           	Porcelain Silo                                              
+RAS5           	Prefab Steel Silo                                           
+RCI1           	Paving - Light Concrete                                     
+RCI2           	Paving - Heavy Concrete                                     
+RCS0           	Cracked Beam - Crawl Repaired                               
+RCS1           	Cracked Slab                                                
+RCS2           	Cracked Beam - Crawlspace                                   
+RCS9           	Foundation Repaired                                         
+RGH1           	Wood Frame Glass Walls Detached Green Ho                    
+RGH2           	Pipe/Mtl Frame Glass Walls Detached Gree                    
+RGH3           	Wood Frame Plastic Covered Detached Gree                    
+RMP4           	Mobile Home Space Low Cost                                  
+RMP6           	Mobile Home Space Average                                   
+RMP8           	Mobile Home Space Good                                      
+ROGV           	Residential Other Gross Value                               
+ROK1           	Basic Outdoor Kitchen                                       
+ROK2           	Custom Outdoor Kitchen                                      
+RRB1           	Frame or Concrete Block Boathouse                           
+RRB2           	Masonry Boathouse                                           
+RRC1           	Carport - Residential                                       
+RRC2           	Canopy - Residential                                        
+RRC3           	Res Carport with Quarters Above                             
+RRD1           	Light Wood Deck Lt Posts Boat Dock                          
+RRD2           	Med Wood Deck Boat Dock                                     
+RRD3           	Heavy Wood deck Hvy Piling Boat Dock                        
+RRG1           	Frame Detached Garage                                       
+RRG2           	Brick or Stone Detached Garage                              
+RRG3           	Frame Detached Garage w/living area abov                    
+RRG4           	Brick or Stone Detached Garage w/living                     
+RRP1           	Plastic Liner Pool                                          
+RRP2           	Prefab Vinyl Pool                                           
+RRP3           	Reinforced Concrete Pool                                    
+RRP4           	Fiberglass Pool                                             
+RRP5           	Gunite Pool                                                 
+RRP8           	Pool Heater only                                            
+RRP9           	Pool SPA with Heater                                        
+RRS1           	Frame Utility Shed                                          
+RRS2           	Metal Utility Shed                                          
+RRS5           	Utility Building - Frame                                    
+RRS6           	Utility Building - Metal                                    
+RRS7           	Utility Building - Masonry                                  
+RRSL           	Dwelling Foundation Only                                    
+RSM1           	Screened Porch Att to M/H                                   
+RSM2           	Wood/Metal and Glass Addition Enc Porch                     
+RSM3           	Covered Patio or Carport Att to M/H                         
+RSM4           	Skirting Att to M/H                                         
+RSM5           	Wood Deck Att to M/H                                        
+RSM6           	Attached 1s Frame Att to M/H                                
+RSM7           	Open Frame Porch Att to M/H                                 
+RSP1           	Solar Photovoltaic Panel                                    
+RTC1           	Asphalt Tennis Court - Residential                          
+RTC2           	Concrete Tennis Court - Residential                         
+RTC3           	Clay Tennis Court - Residential                             
+CAC1           	Central Air Conditioner                                     
+CAC2           	Unit Air Conditioner                                        
+CAC3           	Mini-Whse HVAC                                              
+CAP1           	Fence, Chain Link                                           
+CAP2           	Fence, Picket                                               
+CAP3           	Fence, Stockade                                             
+CAP4           	Fence, Post & Rail                                          
+CAP5           	Fence, Basket-Weave                                         
+CAP6           	Fence, Brick & Stone                                        
+CAT1           	ATRIUM/VESTIBULE                                            
+CAW1           	Aerial Walkway                                              
+CBB1           	Bank Auxillary Office Area                                  
+CBC1           	Bank Canopy - Drive Thru                                    
+CBD1           	Wood Boat Dock                                              
+CBK1           	Bulk Head                                                   
+CBS1           	Basement,Commercial Stg Non Fire Proofed                    
+CBS2           	Basement,Commercial Storage Fire Proofed                    
+CBS3           	Basement, Residential Storage                               
+CBS4           	Basement,Parking Non Fireproofed                            
+CBS5           	Basement,Parking Fireproofed                                
+CBS6           	Basement, Apt Living Units Non Fireproof                    
+CBS7           	Basement, Apt Living Units Fireproofed                      
+CBS8           	Basement, Retail Non Fireproofed                            
+CBS9           	Basement, Retail  Fireproofed                               
+CBSA           	Basement, Office/Med/Bnk Non Fireproofed                    
+CBSB           	Basement, Office/Med/Bnk Fireproofed                        
+CBSC           	Basement, Hospital Non Fireproofed                          
+CBSD           	Basement, Hospital Fireproofed                              
+CCP4           	CANOPY CARWASH ONLY                                         
+CCP5           	CANOPY ONLY                                                 
+CCP6           	CANOPY ROOF AND SLAB                                        
+CCP7           	CANOPY ROOF SERV STN ECON                                   
+CCP8           	CANOPY ROOF SERV STN AVG                                    
+CCP9           	CANOPY ROOF SERV STN GOOD                                   
+CDL1           	Dock Level Floor                                            
+CEN0           	Enclosed Entry                                              
+CEN1           	Retail Finish                                               
+CEN2           	Office Finish                                               
+CEN3           	Restaurant,Lounge Finish                                    
+CEN4           	Enclosure,  Storage                                         
+CEN5           	Enclosure,  Retail                                          
+CEN6           	Enclosure,  Office                                          
+CEN7           	Enclosure, Living Area                                      
+CEN8           	Enclosure, Cold Storage                                     
+CGCA           	Golf Course Quality A                                       
+CGCB           	Golf Course Quality B                                       
+CGCC           	Golf Course Quality C                                       
+CGCD           	Golf Course Quality D                                       
+CGCE           	Golf Course Quality E                                       
+CGCF           	Golf Course Quality F                                       
+CGCX           	Golf Course Quality X                                       
+CGDR           	Golf Driving Range R                                        
+CGH1           	GREENHOUSE ECONOMY                                          
+CGH2           	GREENHOUSE AVERAGE                                          
+CGH3           	GREENHOUSE GOOD                                             
+CGS3           	Gas Station Attnd.-Bth Stl/Gls on Masonr                    
+CGS4           	Gas Station Attnd.-Bth Stucco/Gls on Frm                    
+CIGV           	Industrial Other Gross Value                                
+CLD1           	Load Dock, Stone or Concrete                                
+CLD2           	Loading Dock, Wood                                          
+CLD3           	Loading Dock, Interior                                      
+CLD4           	Truck - Train Wells                                         
+CLD5           	Dock Leveler                                                
+CLD6           	Loading Ramp, Concrete                                      
+CLT1           	Mercury Light Wheel Mounted                                 
+CLT2           	Light,Incandescent Wheel-Mounted Flood                      
+CLT3           	Light,Florescent Pole & Breaker                             
+CLT4           	Light,Incandescent Pole & Breaker                           
+CLT5           	Mercury Light Pole Mounted w/breaker                        
+CMP1           	Mobile Home Space Very Cheap                                
+CMP2           	Mobile Home Space Cheap                                     
+CMP3           	Mobile Home Space Good Cheap                                
+CMP4           	Mobile Home Space Very Low Cost                             
+CMP5           	Mobile Home Space Low Cost                                  
+CMP6           	Mobile Home Space Average                                   
+CMP7           	Mobile Home Space Above Average                             
+CMP8           	Mobile Home Space Good                                      
+CMP9           	Mobile Home Space Excellent                                 
+CMS1           	Miscellaneous - Flat Value                                  
+COGV           	Commercial Other Gross Value                                
+COM1           	Portable/Modular Office - Eco (P/P only)                    
+COM2           	Portable/Modular Office - Average                           
+COM3           	Portable/Modular Office - Good                              
+CPA1           	Paving - Asphalt                                            
+CPA2           	Paving - Asphalt & Concrete Service Stat                    
+CPB1           	Plumbing Fixtures                                           
+CPC1           	Paving - Light Concrete                                     
+CPC2           	Paving - Heavy Concrete                                     
+CPC3           	Paving - Mat/Slab                                           
+CPH1           	Penthouse, Mechanical Low Cost                              
+CPH2           	Penthouse, Mechanical Average                               
+CPH3           	Penthouse, Mechanical Good                                  
+CPH4           	Penthouse, Apartment Low Cost                               
+CPH5           	Penthouse, Apartment Average                                
+CPH6           	Penthouse, Apartment Good                                   
+CPL1           	Parking Levels Low Quality (C,D,S Class)                    
+CPL2           	Parking Levels Low Quality (A,B Class)                      
+CPL3           	Parking Levels Avg Quality (C,D,S Class)                    
+CPL4           	Parking Levels Avg Quality (A,B Class)                      
+CPL5           	Parking Levels Good Quality (C,D,S Class)                   
+CPL6           	Parking Levels Good Quality (A,B Class)                     
+CPL7           	Parking Levels Excellent Quality (A,B,C,D,S Class)          
+CPL8           	Parking Deck(A,B,C,D)                                       
+CRC1           	Carport - Commercial                                        
+CRG1           	Attached Frame Garage                                       
+CRG2           	Attached Masonary Garage                                    
+CRG3           	Attached Appartment Garage                                  
+CRG4           	Detached Frame Garage                                       
+CRG5           	Detached Masonry Garage                                     
+CRP1           	Porch, Open                                                 
+CRP2           	Porch, Enclosed                                             
+CRP3           	Porch,Open Upper                                            
+CRP4           	Porch,Enclosed Upper                                        
+CRR1           	Railroad Spur                                               
+CRS1           	UTILITY BLDG - FRAME                                        
+CRS2           	UTILITY BLDG - METAL                                        
+CRS3           	UTILITY BLDG - BRICK/STONE                                  
+CRW1           	Craneway (2 ton Capacity)                                   
+CRW2           	Craneway (10 ton Capacity)                                  
+CRW3           	Craineway(25 ton Capacity)                                  
+CRW4           	Craineway(5 ton Capacity)                                   
+CSC1           	Swimming Pool                                               
+CSG1           	Stabilized Gravel Paving                                    
+CSH1           	Shed, Farm Machinery                                        
+CSH2           	Shed, Aluminum                                              
+CSH3           	Shed, Finished Metal                                        
+CSH4           	Shed, Quonset                                               
+CSH5           	Lumber Shed 2 Sides Open                                    
+CSH6           	Lumber Shed 4 Sides Open                                    
+CSM2           	Wood/Metal and Glass Addition Enc Porch                     
+CSM3           	Covered Patio or Carport                                    
+CSM4           	Skirting                                                    
+CSM5           	Wood Deck                                                   
+CSM6           	Attached 1s Frame                                           
+CSM7           	Open Frame Porch                                            
+CSP1           	Solar Photovoltaic Panel                                    
+CSS1           	Wet Sprinkler                                               
+CSS2           	Dry Sprinkler                                               
+CTC1           	Asphalt Tennis Court - Com                                  
+CTC2           	Concrete Tennis Court - Com                                 
+CTC3           	Clay Tennis Court - Com                                     
+CTR1           	Restroom Strct - Frame or Conc. Block                       
+CTR2           	Restroom Strct - Brick or Stone                             
+CTU1           	Pedestrial Tunnel System                                    
+CWS1           	Water System                                                
+CWS2           	Sewer System                                                
+CWS3           	Water & Sewer System                                        
+CZA1           	Mechanical Dispenser                                        
+CZA2           	Electronic Dispenser                                        
+CZC0           	Petroleum Stg Tank -Coated S -Sgl Wall -  300 Gal           
+CZC1           	Petroleum Stg Tank -Coated S -Sgl Wall -  550 Gal           
+CZC2           	Petroleum Stg Tank -Coated S -Sgl Wall -1000 Gal            
+CZC3           	Petroleum Stg Tank -Coated S -Sgl Wall -2000 Gal            
+CZC4           	Petroleum Stg Tank -Coated S -Sgl Wall -3000 Gal            
+CZC5           	Petroleum Stg Tank -Coated S -Sgl Wall -4000 Gal            
+CZC6           	Petroleum Stg Tank -Coated S-Sgl Wall -5000 Gal             
+CZC7           	Petroleum Stg Tank -Coated S -Sgl Wall -6000 Gal            
+CZC8           	Petroleum Stg Tank - Coated S-Sgl Wall -8000 Gal            
+CZC9           	Petroleum Stg Tank -Coated S-Sgl Wall -10,000 Gal           
+CZCA           	Petroleum Stg Tank -Coated S -Sgl Wall -12,000 Gal          
+CZCB           	Petroleum Stg Tank -Coated S -Sgl Wall -15,000 Gal          
+CZCC           	Petroleum Stg Tank -Coated S -Sgl Wall -20,000 Gal          
+CZCD           	Petroleum Stg Tank -Coated S- Sgl Wall -25,000 Gal          
+CZCE           	Petroleum Stg Tank -Coated S -Sgl Wall -30,000 Gal          
+CZCF           	Petroleum Stg Tank -Coated S -Sgl Wall -40,000 Gal          
+CZCH           	Petroleum Stg Tank - Coated S -Dbl Wall -  550 Gal          
+CZCI           	Petroleum Stg Tank - Coated S -DblWall -1000 Gal            
+CZCJ           	Petroleum Stg Tank - Coated S -DblWall -2000 Gal            
+CZCK           	Petroleum Stg Tank - Coated S -Dbl Wall -3000 Gal           
+CZCL           	Petroleum Stg Tank - Coated S -Dbl Wall -4000 Gal           
+CZCM           	Petroleum Stg Tank - Coated S -Dbl Wall -5000 Gal           
+CZCN           	Petroleum Stg Tank - Coated S -Dbl Wall -6000 Gal           
+CZCO           	Petroleum Stg Tank - Coated S-Dbl Wall -8000 Gal            
+CZCP           	Petroleum Stg Tank - Coated S-Dbl Wall -10,000 Gal          
+CZCQ           	Petroleum Stg Tank - Coated S-Dbl Wall -12,000 Gal          
+CZCR           	Petroleum Stg Tank - Coated S-Dbl Wall -15,000 Gal          
+CZCS           	Petroleum Stg Tank - Coated S-DblWall -20,000 Gal           
+CZCT           	Petroleum Stg Tank - Coated S-Dbl Wall -25,000 Gal          
+CZCU           	Petroleum Stg Tank - Coated S-Dbl Wall -30,000 Gal          
+CZCV           	Petroleum Stg Tank - Coated S-Dbl Wall -50,000 Gal          
+CZF1           	Petroleum Stg Tank - F-glass -Sgl Wall -  550 Gal           
+CZF2           	Petroleum Stg Tank - F-glass -Sgl Wall -1000 Gal            
+CZF3           	Petroleum Stg Tank - F-glass -Sgl Wall -2000 Gal            
+CZF4           	Petroleum Stg Tank - F-glass -Sgl Wall -3000 Gal            
+CZF5           	Petroleum Stg Tank - F-glass -Sgl Wall -4000 Gal            
+CZF6           	Petroleum Stg Tank - F-glass -Sgl Wall -5000 Gal            
+CZF7           	Petroleum Stg Tank - F-glass -Sgl Wall -6000 Gal            
+CZF8           	Petroleum Stg Tank - F-glass -Sgl Wall -8000 Gal            
+CZF9           	Petroleum Stg Tank - F-glass -Sgl Wall -10,000 Gal          
+CZFA           	Petroleum Stg Tank - F-glass -Sgl Wall -12,000 Gal          
+CZFB           	Petroleum Stg Tank - F-glass -Sgl Wall -15,000 Gal          
+CZFC           	Petroleum Stg Tank - F-glass -Sgl Wall -20,000 Gal          
+CZFD           	Petroleum Stg Tank - F-glass -Sgl Wall -25,000 Gal          
+CZFE           	Petroleum Stg Tank - F-glass -Sgl Wall -30,000 Gal          
+CZFF           	Petroleum Stg Tank - F-glass -Sgl Wall -50,000 Gal          
+CZFG           	Petroleum Stg Tank - F-glass -Sgl Wall -40,000 Gal          
+CZFH           	Petroleum Stg Tank - F-glass -Dbl Wall -  550 Gal           
+CZFI           	Petroleum Stg Tank - F-glass -DblWall -1000 Gal             
+CZFJ           	Petroleum Stg Tank - F-glass -Dbl Wall -2000 Gal            
+CZFK           	Petroleum Stg Tank - F-glass -Dbl Wall -3000 Gal            
+CZFL           	Petroleum Stg Tank - F-glass -Dbl Wall -4000 Gal            
+CZFM           	Petroleum Stg Tank - F-glass -Dbl Wall -5000 Gal            
+CZFN           	Petroleum Stg Tank - F-glass -Dbl Wall -6000 Gal            
+CZFO           	Petroleum Stg Tank - F-glass -Dbl Wall -8000 Gal            
+CZFP           	Petroleum Stg Tank - F-glass -Dbl Wall -10,000 Gal          
+CZFQ           	Petroleum Stg Tank - F-glass -Dbl Wall -12,000 Gal          
+CZFR           	Petroleum Stg Tank - F-glass -Dbl Wall -15,000 Gal          
+CZFS           	Petroleum Stg Tank - F-glass -DblWall -20,000 Gal           
+CZFT           	Petroleum Stg Tank - F-glass -Dbl Wall -25,000 Gal          
+CZFU           	Petroleum Stg Tank - F-glass -Dbl Wall -30,000 Gal          
+CZFV           	Petroleum Stg Tank - F-glass -Dbl Wall -50,000 Gal          
+CZS0           	Petroleum Stg Tank - Steel -Sgl Wall -  300 Gal             
+CZS1           	Petroleum Stg Tank - Steel -Sgl Wall -  550 Gal             
+CZS2           	Petroleum Stg Tank - Steel -Sgl Wall -1000 Gal              
+CZS3           	Petroleum Stg Tank - Steel -Sgl Wall -2000 Gal              
+CZS4           	Petroleum Stg Tank - Steel -Sgl Wall -3000 Gal              
+CZS5           	Petroleum Stg Tank - Steel -Sgl Wall -4000 Gal              
+CZS6           	Petroleum Stg Tank - Steel -Sgl Wall -5000 Gal              
+CZS7           	Petroleum Stg Tank - Steel -Sgl Wall -6000 Gal              
+CZS8           	Petroleum Stg Tank - Steel -Sgl Wall -8000 Gal              
+CZS9           	Petroleum Stg Tank - Steel -Sgl Wall -10,000 Gal            
+CZSA           	Petroleum Stg Tank - Steel -Sgl Wall -12,000 Gal            
+CZSB           	Petroleum Stg Tank - Steel -Sgl Wall -15,000 Gal            
+CZSC           	Petroleum Stg Tank - Steel -Sgl Wall -20,000 Gal            
+CZSD           	Petroleum Stg Tank - Steel -Sgl Wall -25,000 Gal            
+CZSE           	Petroleum Stg Tank - Steel -Sgl Wall -30,000 Gal            
+CZSF           	Petroleum Stg Tank - Steel -Sgl Wall -50,000 Gal            
+CZSG           	Petroleum Stg Tank - Steel -Dbl Wall -     300 Gal          
+CZSH           	Petroleum Stg Tank - Steel -Dbl Wall -     550 Gal          
+CZSI           	Petroleum Stg Tank - Steel -Dbl Wall -  1,000 Gal           
+CZSJ           	Petroleum Stg Tank - Steel Dbl Wall -   2,000 Gal           
+CZSK           	Petroleum Stg Tank - Steel -Dbl Wall -  3,000 Gal           
+CZSL           	Petroleum Stg Tank - Steel Dbl Wall -   4,000 Gal           
+CZSM           	Petroleum Stg Tank - Steel -Dbl Wall -  5,000 Gal           
+CZSN           	Petroleum Stg Tank - Steel -Dbl Wall -  6,000 Gal           
+CZSO           	Petroleum Stg Tank - Steel -Dbl Wall -  8,000 Gal           
+CZSP           	Petroleum Stg Tank - Steel -Dbl Wall -10,000 Gal            
+CZSQ           	Petroleum Stg Tank - Steel -Dbl Wall -12,000 Gal            
+CZSR           	Petroleum Stg Tank - Steel -Dbl Wall -15,000 Gal            
+CZSS           	Petroleum Stg Tank - Steel -Dbl Wall -20,000 Gal            
+CZST           	Petroleum Stg Tank - Steel -Dbl Wall -25,000 Gal            
+CZSU           	Petroleum Stg Tank - Steel -Dbl Wall -30,000 Gal            
+CZSV           	Petroleum Stg Tank - Steel -Dbl Wall -50,000 Gal            
+ICPL           	Industrial Chemical Plant                                   
+IRGF           	Industrial Refinery General Facility                        
+IRPR           	Industrial Refinery Process                                 
+MZ11           	Apartment                                                   
+MZ12           	Hotel                                                       
+MZ25           	Dwelling Conversion, Office/Sales                           
+MZ27           	Residential                                                 
+MZ31           	Restaurant                                                  
+MZ33           	Discount Store/ Display Mezzanine                           
+MZ34           	Retail Store / Display Mezzanine                            
+MZ35           	Tavern/Bar                                                  
+MZ36           	Bar/Lounge                                                  
+MZ37           	Cafeteria                                                   
+MZ39           	Mall Shop                                                   
+MZ41           	Mini-Warehouse                                              
+MZ43           	Manufacturing                                               
+MZ44           	Light Manufacturing                                         
+MZ45           	Warehouse                                                   
+MZ46           	Auto Showroom/Office                                        
+MZ47           	Auto Parts/Service                                          
+MZ48           	Tennis Club                                                 
+MZ49           	Racquet Ball Court                                          
+MZ51           	Bank/Savings Institution                                    
+MZ52           	Medical/Medical and Dental Center                           
+MZ53           	Office                                                      
+MZ55           	School                                                      
+MZ57           	Library                                                     
+MZ61           	Auditorium/Theater / Open Mezzanine                         
+MZ62           	Cinema Balcony                                              
+MZ63           	Religious Institution                                       
+MZ64           	Social/Fraternal Hall                                       
+MZ65           	Office Lobby . Open Mezzanine                               
+MZ81           	Multi-Use, Living Area                                      
+MZ82           	Multi-Use, Office                                           
+MZ83           	Multi-Use, Sales                                            
+MZ84           	Multi-Use, Storage Low Cost                                 
+MZ85           	Enclosure (Economic Rent Not Generated)                     
+MZ86           	Support Area                                                
+MZ87           	Support Area w/ Rent (Not In Use)                           
+MZ88           	Restroom/Locker Facility                                    
+MZ89           	Health Club                                                 
+MZ90           	Parking Garage                                              
+MZ91           	Low Cost Utility Storage Area                               
+MZ96           	Fast Food                                                   
+MZ97           	Restaurant                                                  
+RAB1           	Bank Barn                                                   
+RAB2           	Flat Barn                                                   
+RAC1           	Wood Corn Crib                                              
+RAC2           	Welded Wire Corn Crib                                       
+RAD1           	Dairy or Horse Barns                                        
+RAG1           	Steel Grain Bin w/o drying bin                              
+RAG2           	Steel Grain Bin with drying bin                             
+RAH1           	1s frame or metal Poultry House                             
+RAH2           	2s frame or metal Poultry House                             
+RAH3           	3s frame or metal Poultry House                             
+RAH4           	1s concrete blockl Poultry House                            
+RAL1           	1s Lean-To                                                  
+RAM3           	Detached Concrete Block Milk House                          
+RAO1           	Potato Storage - underground                                
+RAP1           	4 Side closed Metal Pole Barn                               
+RAP2           	4 Side closed Wood Pole Barn                                
+RAP3           	1 Side Open Metal Pole Barn                                 
+RAP4           	1 Side Open Wood Pole Barn                                  
+RAP5           	4 Sides open Metal Pole Barn                                
+RAP6           	4 Sides open Wood Pole Barn                                 
+RAS1           	Concrete Stave Silo with Roof                               
+RAS4           	Porcelain Silo                                              
+RAS5           	Prefab Steel Silo                                           
+RCI1           	Paving - Light Concrete                                     
+RCI2           	Paving - Heavy Concrete                                     
+RCS0           	Cracked Beam - Crawl Repaired                               
+RCS1           	Cracked Slab                                                
+RCS2           	Cracked Beam - Crawlspace                                   
+RCS9           	Foundation Repaired                                         
+RGH1           	Wood Frame Glass Walls Detached Green Ho                    
+RGH2           	Pipe/Mtl Frame Glass Walls Detached Gree                    
+RGH3           	Wood Frame Plastic Covered Detached Gree                    
+RMP4           	Mobile Home Space Low Cost                                  
+RMP6           	Mobile Home Space Average                                   
+RMP8           	Mobile Home Space Good                                      
+ROGV           	Residential Other Gross Value                               
+ROK1           	Basic Outdoor Kitchen                                       
+ROK2           	Custom Outdoor Kitchen                                      
+RRB1           	Frame or Concrete Block Boathouse                           
+RRB2           	Masonry Boathouse                                           
+RRC1           	Carport - Residential                                       
+RRC2           	Canopy - Residential                                        
+RRC3           	Res Carport with Quarters Above                             
+RRD1           	Light Wood Deck Lt Posts Boat Dock                          
+RRD2           	Med Wood Deck Boat Dock                                     
+RRD3           	Heavy Wood deck Hvy Piling Boat Dock                        
+RRG1           	Frame Detached Garage                                       
+RRG2           	Brick or Stone Detached Garage                              
+RRG3           	Frame Detached Garage w/living area abov                    
+RRG4           	Brick or Stone Detached Garage w/living                     
+RRP1           	Plastic Liner Pool                                          
+RRP2           	Prefab Vinyl Pool                                           
+RRP3           	Reinforced Concrete Pool                                    
+RRP4           	Fiberglass Pool                                             
+RRP5           	Gunite Pool                                                 
+RRP8           	Pool Heater only                                            
+RRP9           	Pool SPA with Heater                                        
+RRS1           	Frame Utility Shed                                          
+RRS2           	Metal Utility Shed                                          
+RRS5           	Utility Building - Frame                                    
+RRS6           	Utility Building - Metal                                    
+RRS7           	Utility Building - Masonry                                  
+RRSL           	Dwelling Foundation Only                                    
+RSM1           	Screened Porch Att to M/H                                   
+RSM2           	Wood/Metal and Glass Addition Enc Porch                     
+RSM3           	Covered Patio or Carport Att to M/H                         
+RSM4           	Skirting Att to M/H                                         
+RSM5           	Wood Deck Att to M/H                                        
+RSM6           	Attached 1s Frame Att to M/H                                
+RSM7           	Open Frame Porch Att to M/H                                 
+RSP1           	Solar Photovoltaic Panel                                    
+RTC1           	Asphalt Tennis Court - Residential                          
+RTC2           	Concrete Tennis Court - Residential                         
+RTC3           	Clay Tennis Court - Residential                             
+                                     
+                                     
+Exemption Codes	                   
+------          -----------------    
+Code            Description          
+------          -----------------    
+ABT            	Abatement                                                   
+APD            	Apportioned Partial Disability                              
+APO            	Apportioned Partial Over-65                                 
+APR            	Apportioned Partial Residential                             
+DIS            	Disability                                                  
+HIS            	Historical                                                  
+LIH            	Low Income Housing                                          
+OVR            	Over-65                                                     
+PAR            	Partial Residential Homestead                               
+PDS            	Partial Disability                                          
+PEX            	Partial Total                                               
+POL            	Pollution Control                                           
+POV            	Partial Over-65                                             
+PRO            	Prorated                                                    
+RES            	Residential Homestead                                       
+SOL            	Solar                                                       
+SSA            	Surviving Spouse Active Duty                                
+SSD            	Surviving Spouse Disability                                 
+STT            	Surviving Spouse Total Transfer                             
+STX            	Surviving Spouse Vet Disability Total Exemption             
+SUR            	Surviving Spouse Over-65                                    
+TOT            	Total                                                       
+V11            	Vet Disability #1 10-29 pct                                 
+V12            	Vet Disability #1 30-49 pct                                 
+V13            	Vet Disability #1 50-69 pct                                 
+V14            	Vet Disability #1 70-100 pct                                
+V21            	Vet Disability #2 10-29 pct                                 
+V22            	Vet Disability #2 30-49 pct                                 
+V23            	Vet Disability #2 50-69 pct                                 
+V24            	Vet Disability #2 70-100 pct                                
+VCH            	Vet Charitable Disability                                   
+VS1            	Vet Survivor 10-29 pct                                      
+VS2            	Vet Survivor 30-49 pct                                      
+VS3            	Vet Survivor 50-69 pct                                      
+VS4            	Vet Survivor 70-100 pct                                     
+VTX            	Vet Disability Total Exemption                              
+ABT            	Abatement                                                   
+APD            	Apportioned Partial Disability                              
+APO            	Apportioned Partial Over-65                                 
+APR            	Apportioned Partial Residential                             
+DIS            	Disability                                                  
+HIS            	Historical                                                  
+LIH            	Low Income Housing                                          
+OVR            	Over-65                                                     
+PAR            	Partial Residential Homestead                               
+PDS            	Partial Disability                                          
+PEX            	Partial Total                                               
+POL            	Pollution Control                                           
+POV            	Partial Over-65                                             
+PRO            	Prorated                                                    
+RES            	Residential Homestead                                       
+SOL            	Solar                                                       
+SSA            	Surviving Spouse Active Duty                                
+SSD            	Surviving Spouse Disability                                 
+STT            	Surviving Spouse Total Transfer                             
+STX            	Surviving Spouse Vet Disability Total Exemption             
+SUR            	Surviving Spouse Over-65                                    
+TOT            	Total                                                       
+V11            	Vet Disability #1 10-29 pct                                 
+V12            	Vet Disability #1 30-49 pct                                 
+V13            	Vet Disability #1 50-69 pct                                 
+V14            	Vet Disability #1 70-100 pct                                
+V21            	Vet Disability #2 10-29 pct                                 
+V22            	Vet Disability #2 30-49 pct                                 
+V23            	Vet Disability #2 50-69 pct                                 
+V24            	Vet Disability #2 70-100 pct                                
+VCH            	Vet Charitable Disability                                   
+VS1            	Vet Survivor 10-29 pct                                      
+VS2            	Vet Survivor 30-49 pct                                      
+VS3            	Vet Survivor 50-69 pct                                      
+VS4            	Vet Survivor 70-100 pct                                     
+VTX            	Vet Disability Total Exemption                              
+                                     
+                                     
+Jurisdiction Type                  
+------          -----------------    
+Code            Description    
+------          -----------------    
+A              	Water District Defined Area                                 
+C              	City                                                        
+D              	Drainage District                                           
+E              	Emergency Services D                                        
+F              	Fire District                                               
+I              	Independent School D                                        
+J              	Junior/Community Col                                        
+M              	Management District                                         
+N              	Industrial Dist                                             
+T              	County                                                      
+W              	Water Supply/Utility                                        
+X              	Inactive                                                    
+Z              	TIRZ / TIFS                                                 
+          
+          
+Permit Status 	                   
+------          -----------------    
+Code            Description          
+------          -----------------    
+A               Assigned               
+C               Complete               
+I               Imported               
+M               Incomplete             
+P               Pending                
+S               Submitted              
+V               Void                   
+                                           
+                                           
+Special Codes 	                         
+------          -----------------          
+Code            Description                
+------          -----------------          
+C               Prorations                   
+B               Custom Bond                  
+G               Green Coffee / Raw Cocoa     
+I               Interstate-Foreign Commerce  
+P               TCEQ                         
+R               Abatements                   
+T               Foreign Trade Zone           
+          
+          
+HISD section 	                    
+------          -----------------     
+Code            Neighborhood Group    
+------          -----------------     
+1A               100 to 199          
+1B               200 to 299          
+1C               300 to 399          
+1D               400 to 499          
+1E               500 to 599          
+1F               600 to 699          
+1G               700 to 799          
+1H               800 to 899          
+          
+          
+Agent Roles 	                   
+------          -----------------    
+Code            Description    
+------          -----------------    
+01             	FILE NOTICES OF PROTEST AND PRESENT PROTESTS BEFORE THE ARB 
+02             	RECEIVE CONFIDENTIAL INFORMATION                            
+03             	NEGOTIATE AND RESOLVE DISPUTED TAX MATTERS                  
+04             	ALL COMMUNICATIONS FROM THE CHIEF APPRAISER                 
+05             	ALL ORDERS, NOTICES, AND OTHER COMMUNICATIONS FROM THE ARB  
+06             	ALL TAX BILLS AND NOTICES FROM HCAD-SERVED TAXING ENTITIES  
+07             	OTHER ACTION                                                
+99             	KEEP AGENT DATA STATIC FOR THIS TAX YEAR                    
+          
+          
+Conclusion Code 	               
+------          -----------------    
+Code            Description          
+------          -----------------    
+A1             	ARB ORDER - CLERICAL ERROR                                  
+A2             	ARB ORDER - MULT APPRAISAL                                  
+A3             	ARB ORDER - IMPS DON'T EXIST                                
+A4             	ARB ORDER - IMPS EXIST                                      
+AD             	AG VALUE DENIED                                             
+AD             	RESIDENTIAL EXEMPTION DENIED - AFFIDAVIT                    
+AD             	TOTAL EXEMPTION DENIED - AFFIDAVIT                          
+AG             	AG VALUE GRANTED                                            
+AG             	RESIDENTIAL EXEMPTION GRANTED - AFFIDAVIT                   
+AG             	TOTAL EXEMPTION GRANTED - AFFIDAVIT                         
+AH             	iSettle Appraiser HCAD Offer Accepted                       
+AM             	RESIDENTIAL EXEMPTION MODIFIED - AFFIDAVIT                  
+AM             	TOTAL EXEMPTION MODIFIED - AFFIDAVIT                        
+AO             	iSettle Appraiser Owner Opinion Accepted                    
+AS             	iSettle Appraiser Settled                                   
+AV             	iSettle Appraiser Valued                                    
+AW             	ACAD WAIVER                                                 
+BD             	HEARING DENIED                                              
+BD             	VALUE HEARING DENIED                                        
+CB             	CSD ACTION PENDING - CALL P/O                               
+CD             	CUSTOMS BOND EXEMPTION DENIED                               
+CG             	CUSTOMS BOND EXEMPTION GRANTED                              
+CM             	CUSTOMS BOND EXEMPTION MODIFIED                             
+CN             	NO ERROR EXISTS - NO CHANGE                                 
+CS             	CSD ACTION REQUIRED                                         
+DC             	DISMISSED - PARTIES AGREE ON VALUE                          
+DD             	OFFSHORE DRILLING RIG EXEMPTION DENIED                      
+DG             	OFFSHORE DRILLING RIG EXEMPTION GRANTED                     
+DM             	OFFSHORE DRILLING RIG EXEMPTION MODIFIED                    
+DN             	DISMISSED - PARTIES AGREE ON NO CHANGE                      
+ED             	FREEPORT EXEMPTION DENIED                                   
+EG             	FREEPORT EXEMPTION GRANTED                                  
+EH             	iSettle Electronic HCAD O                                   
+EM             	FREEPORT EXEMPTION MODIFIED                                 
+EO             	iSettle Electronic Owner                                    
+FC             	FORMAL VALUE CHANGED                                        
+FD             	CUSTOMS BOND EXEMPTION DENIED - FORMAL                      
+FD             	FOREIGN TRADE ZONE EXEMPTION DENIED - FORMAL                
+FD             	FREEPORT EXEMPTION DENIED - FORMAL                          
+FD             	GOODS IN TRANSIT EXEMPTION DENIED - FORMAL                  
+FD             	GREEN COFFEE/COCOA EXEMPTION DENIED - FORMAL                
+FD             	INTERSTATE/FOREIGN COMMERCE EX DENIED - FORMAL              
+FD             	OFFSHORE DRILLING RIG EXEMPTION DENIED - FORMAL             
+FD             	POLLUTION CONTROL EXEMPTION DENIED - FORMAL                 
+FD             	RESIDENTIAL EXEMPTION DENIED - FORMAL                       
+FD             	TOTAL EXEMPTION DENIED - FORMAL                             
+FD             	VEH PERSONAL USE EXEMPTION DENIED - FORMAL                  
+FD             	VEH SOLE PROPRIETOR EXEMPTION DENIED - FORMAL               
+FG             	CUSTOMS BOND EXEMPTION GRANTED - FORMAL                     
+FG             	FOREIGN TRADE ZONE EXEMPTION GRANTED - FORMAL               
+FG             	FREEPORT EXEMPTION GRANTED - FORMAL                         
+FG             	GOODS IN TRANSIT EXEMPTION GRANTED - FORMAL                 
+FG             	GREEN COFFEE/COCOA EXEMPTION GRANTED - FORMAL               
+FG             	INTERSTATE/FOREIGN COMMERCE EX GRANTED - FORMAL             
+FG             	OFFSHORE DRILLING RIG EXEMPTION GRANTED - FORMAL            
+FG             	POLLUTION CONTROL EXEMPTION GRANTED - FORMAL                
+FG             	RESIDENTIAL EXEMPTION GRANTED - FORMAL                      
+FG             	TOTAL EXEMPTION GRANTED - FORMAL                            
+FG             	VEH PERSONAL USE EXEMPTION GRANTED - FORMAL                 
+FG             	VEH SOLE PROPRIETOR EXEMPTION GRANTED - FORMAL              
+FH             	FIELD CHECK                                                 
+FM             	CUSTOMS BOND EXEMPTION MODIFIED - FORMAL                    
+FM             	FOREIGN TRADE ZONE EXEMPTION MODIFIED - FORMAL              
+FM             	FREEPORT EXEMPTION MODIFIED - FORMAL                        
+FM             	GOODS IN TRANSIT EXEMPTION MODIFIED - FORMAL                
+FM             	GREEN COFFEE/COCOA EXEMPTION MODIFIED - FORMAL              
+FM             	INTERSTATE/FOREIGN COMMERCE EX MODIFIED - FORMAL            
+FM             	OFFSHORE DRILLING RIG EXEMPTION MODIFIED - FORMAL           
+FM             	POLLUTION CONTROL EXEMPTION MODIFIED - FORMAL               
+FM             	RESIDENTIAL EXEMPTION MODIFIED - FORMAL                     
+FM             	TOTAL EXEMPTION MODIFIED - FORMAL                           
+FM             	VEH PERSONAL USE EXEMPTION MODIFIED - FORMAL                
+FM             	VEH SOLE PROPRIETOR EXEMPTION MODIFIED - FORMAL             
+FN             	FORMAL VALUE NOT CHANGED                                    
+GC             	GOOD CAUSE                                                  
+GD             	GREEN COFFEE/COCOA EXEMPTION DENIED                         
+GG             	GREEN COFFEE/COCOA EXEMPTION GRANTED                        
+GM             	GREEN COFFEE/COCOA EXEMPTION MODIFIED                       
+H1             	HCAD AGREED - CLERICAL ERROR                                
+H2             	HCAD AGREED - MULT APPRAISAL                                
+H3             	HCAD AGREED - IMPS DON'T EXIST                              
+H4             	HCAD AGREED - IMPS EXIST                                    
+IC             	INFORMAL VALUE CHANGED                                      
+ID             	GOODS IN TRANSIT EXEMPTION DENIED                           
+IG             	GOODS IN TRANSIT EXEMPTION GRANTED                          
+IM             	GOODS IN TRANSIT EXEMPTION MODIFIED                         
+IN             	INFORMAL VALUE NOT CHANGED                                  
+LC             	LEGAL REVIEW CHANGED                                        
+LD             	POLLUTION CONTROL EXEMPTION DENIED                          
+LG             	POLLUTION CONTROL EXEMPTION GRANTED                         
+LM             	POLLUTION CONTROL EXEMPTION MODIFIED                        
+LN             	LEGAL REVIEW NOT CHANGED                                    
+LR             	LEGAL REVIEW                                                
+MD             	TIMBER VALUE DENIED                                         
+MG             	TIMBER VALUE GRANTED                                        
+MH             	iSettle Mail HCAD Offer Accepted                            
+MO             	iSettle Mail Owner Opinion Accepted                         
+ND             	NOMINAL VALUE DENIED                                        
+NG             	NOMINAL VALUE GRANTED                                       
+NH             	NO HEARING                                                  
+NN             	NO SHOW - NO CHANGE                                         
+NN             	NO-SHOW / NO CHANGE                                         
+NN             	NO-SHOW VALUE NOT CHANGED                                   
+NP             	NON-PAYMENT DISMISSAL                                       
+OD             	INTERSTATE/FOREIGN COMMERCE EX DENIED                       
+OG             	INTERSTATE/FOREIGN COMMERCE EX GRANTED                      
+OM             	INTERSTATE/FOREIGN COMMERCE EX MODIFIED                     
+PA             	PENDING ARB - NOT TODAY                                     
+PC             	PHONE HEARING CHANGED                                       
+PD             	PANEL DISMISSAL                                             
+PE             	PENDING EQUITY                                              
+PE             	PENDING EQUITY RULING                                       
+PF             	PENDING ARB - TODAY                                         
+PF             	PENDING FORMAL - TODAY                                      
+PH             	PHONE HEARING PENDING                                       
+PN             	PRESCHEDULED NOT SETTLED                                    
+PR             	RESCHEDULE                                                  
+PT             	PHONE HEARING NOT CHANGED                                   
+RD             	RESIDENTIAL EXEMPTION DENIED                                
+RF             	RECESS FORMAL                                               
+RG             	RESIDENTIAL EXEMPTION GRANTED                               
+RL             	REMOVE LTD HOMESTEAD VALUE                                  
+RM             	RESIDENTIAL EXEMPTION MODIFIED                              
+SA             	SUBPOENA APPROVED                                           
+SC             	SUB ERROR CHANGE                                            
+SD             	SUBPOENA DENIED                                             
+SF             	SYSTEM FORMAL                                               
+SN             	SUB ERROR NOT OVER 1/3                                      
+TD             	TOTAL EXEMPTION DENIED                                      
+TG             	TOTAL EXEMPTION GRANTED                                     
+TM             	TOTAL EXEMPTION MODIFIED                                    
+UD             	VEH SOLE PROPRIETOR EXEMPTION DENIED                        
+UG             	VEH SOLE PROPRIETOR EXEMPTION GRANTED                       
+UM             	VEH SOLE PROPRIETOR EXEMPTION MODIFIED                      
+UN             	UNSCHEDULED - NOT SETTLED                                   
+UN             	UNSCHEDULED NOT SETTLED                                     
+VD             	VEH PERSONAL USE EXEMPTION DENIED                           
+VG             	VEH PERSONAL USE EXEMPTION GRANTED                          
+VM             	VEH PERSONAL USE EXEMPTION MODIFIED                         
+WD             	PROTEST WITHDRAWN                                           
+WD             	REQUEST WITHDRAWN                                           
+WN             	WAIVER DENIED                                               
+WR             	WAIVER HEARING RECESSED                                     
+WY             	WAIVER GRANTED                                              
+ZD             	FOREIGN TRADE ZONE EXEMPTION DENIED                         
+ZG             	FOREIGN TRADE ZONE EXEMPTION GRANTED                        
+ZM             	FOREIGN TRADE ZONE EXEMPTION MODIFIED                       
