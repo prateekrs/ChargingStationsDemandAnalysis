@@ -4,12 +4,6 @@ import argparse
 import textwrap
 
 
-
-
-
-
-
-
 class checkFile:
 
 	def __init__(self,res,other, features):
@@ -32,21 +26,31 @@ class checkFile:
 		for num in range(len(self.features)):
 
 			prop_id = self.features[num]['properties']["HCAD_NUM"]
+			p = self.match_property(prop_id, self.res)
 
-			p = self.match_property(prop_id)
+			if p == False:
+				print "trying other"
+				p = self.match_property(prop_id, self.other)
 
-	def match_property(self, prop_id):
+
+	def match_property(self, prop_id, filename):
 		p = None
 		print 'called'
-		self.res.seek(0)
-		for prop in self.res:
-			p = prop.split('\t')
+		filename.seek(0)
 
-			print prop_id, p[0].replace(' ','')
+		in_list = False
+
+		for prop in filename:
+			p = prop.split('\t')
+			print p[0], prop_id
+
 			if p[0].replace(' ','') == prop_id:
-				print p[0], prop_id
+				
+				
+				in_list = True
 				break
-		return p
+		
+		return in_list
 
 
 
