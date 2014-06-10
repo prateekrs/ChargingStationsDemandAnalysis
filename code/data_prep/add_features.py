@@ -26,31 +26,44 @@ class checkFile:
 		for num in range(len(self.features)):
 
 			prop_id = self.features[num]['properties']["HCAD_NUM"]
-			p = self.match_property(prop_id, self.res)
 
-			if p == False:
+			
+			p = self.match_property(prop_id, self.res)
+			if p[0] == True:
+				self.write_to_json(p[1])
+
+
+			elif p[0] == False:
 				print "trying other"
 				p = self.match_property(prop_id, self.other)
 
 
 	def match_property(self, prop_id, filename):
 		p = None
-		print 'called'
 		filename.seek(0)
 
 		in_list = False
 
 		for prop in filename:
 			p = prop.split('\t')
-			print p[0], prop_id
+			
 
 			if p[0].replace(' ','') == prop_id:
-				
-				
+				print p[0], prop_id
 				in_list = True
 				break
 		
-		return in_list
+		return in_list, p
+
+
+	def write_to_json_res(self, data):
+
+		
+
+		print data
+
+
+
 
 
 
