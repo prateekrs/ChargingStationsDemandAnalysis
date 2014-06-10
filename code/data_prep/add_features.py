@@ -30,7 +30,7 @@ class checkFile:
 			
 			p = self.match_property(prop_id, self.res)
 			if p[0] == True:
-				self.write_to_json(p[1])
+				self.write_to_json_res(p[1])
 
 
 			elif p[0] == False:
@@ -58,9 +58,11 @@ class checkFile:
 
 	def write_to_json_res(self, data):
 
-		
+		data[0]
 
-		print data
+
+
+		print len(data)
 
 
 
