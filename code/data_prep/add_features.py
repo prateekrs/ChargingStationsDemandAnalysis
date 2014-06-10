@@ -4,6 +4,9 @@ import argparse
 import textwrap
 
 
+
+
+
 class checkFile:
 
 	def __init__(self,res,other, features):
@@ -22,20 +25,24 @@ class checkFile:
 
 
 	def run_features(self):
-		print "running"
-		for num in range(len(self.features)):
+
+		for num in range(len(self.features))[:10]:
 
 			prop_id = self.features[num]['properties']["HCAD_NUM"]
 
 			
 			p = self.match_property(prop_id, self.res)
 			if p[0] == True:
-				self.write_to_json_res(p[1])
+				self.write_to_json_res(num, p[1])
 
-
+		
 			elif p[0] == False:
 				print "trying other"
 				p = self.match_property(prop_id, self.other)
+
+		self.write_json('stuff.json', self.features)
+
+
 
 
 	def match_property(self, prop_id, filename):
@@ -56,13 +63,15 @@ class checkFile:
 		return in_list, p
 
 
-	def write_to_json_res(self, data):
-
-		data[0]
-
-
+	def write_to_json_res(self, num, data):
+		self.features[num]['properties']['USE_CODE'] = data[2]
 
 		print len(data)
+
+	def write_json(self, filename, dictionary):
+		print "writing file: ", filename
+		with open(filename, 'wb') as fp:
+			json.dump(dictionary, fp, indent=4, sort_keys=True)
 
 
 
