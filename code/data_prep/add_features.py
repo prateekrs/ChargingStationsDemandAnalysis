@@ -26,10 +26,9 @@ class checkFile:
 
 	def run_features(self):
 
-		for num in range(len(self.features))[:10]:
+		for num in range(len(self.features)):
 
 			prop_id = self.features[num]['properties']["HCAD_NUM"]
-
 			
 			p = self.match_property(prop_id, self.res)
 			if p[0] == True:
@@ -41,7 +40,6 @@ class checkFile:
 				p = self.match_property(prop_id, self.other)
 
 		self.write_json('stuff.json', self.features)
-
 
 
 
@@ -65,6 +63,9 @@ class checkFile:
 
 	def write_to_json_res(self, num, data):
 		self.features[num]['properties']['USE_CODE'] = data[2]
+		self.features[num]['properties']['renting'] = data[3]
+
+
 
 		print len(data)
 
