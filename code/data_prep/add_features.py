@@ -4,14 +4,13 @@ import textwrap
 
 
 
-
-
 class checkFile:
 
 	def __init__(self,res,other, features):
 		self.res = self.open_file(res)
 		self.other = self.open_file(other)
 		self.features = self.open_json(features)
+		self.count = 0
 
 
 	def open_file(self, file_name):
@@ -37,12 +36,13 @@ class checkFile:
 
 		
 			elif p[0] == False:
-				print "trying other"
 				p = self.match_property(prop_id, self.other)
 				if p[0] == True:
 					self.write_to_json_other(num, p[1])
 				if p[0] == False:
 					print "not found!!"	
+
+				print self.count
 
 		self.write_json('stuff.json', self.features)
 
@@ -59,7 +59,7 @@ class checkFile:
 			
 
 			if p[0].replace(' ','') == prop_id:
-				print p[0], prop_id
+
 				in_list = True
 				break
 		
@@ -99,7 +99,9 @@ class checkFile:
 		self.features[num]['properties']['RCNLD'] = data[28]
 		self.features[num]['properties']['SIZE-INDEX'] = data[29]
 		self.features[num]['properties']['LUMP_SUM_ADJ'] = data[30]
-		print len(data)
+
+		self.count += 1
+
 
 	def write_to_json_other(self, num, data):
 		self.features[num]['properties']['FILE_ORG'] = 'OTHER'
@@ -139,7 +141,8 @@ class checkFile:
 		self.features[num]['properties']['LEASE_RATE'] = data[34]
 		self.features[num]['properties']['OCCUPANCY_RATE'] = data[35]
 		self.features[num]['properties']['TOTAL_INCOME'] = data[36]
-		print len(data)
+
+		self.count += 1
 
 	def write_json(self, filename, dictionary):
 		print "writing file: ", filename
@@ -147,13 +150,13 @@ class checkFile:
 			json.dump(dictionary, fp, indent=4, sort_keys=True)
 
 def main():
-#	other = '/Users/mattstringer/research/Houston_analysis/data/text_folder/building_other.txt'
-#	res = '/Users/mattstringer/research/Houston_analysis/data/text_folder/building_res.txt'
-#	features = '/Users/mattstringer/research/Houston_analysis/houston_short.json'
+	other = '/Users/mattstringer/research/Houston_analysis/data/text_folder/building_other.txt'
+	res = '/Users/mattstringer/research/Houston_analysis/data/text_folder/building_res.txt'
+	features = '/Users/mattstringer/research/Houston_analysis/houston_short.json'
 
-	other = 'C:/Users/Prateek Raj/Desktop/houston_analysis/data/building_other.txt'
-	res = 'C:/Users/Prateek Raj/Desktop/houston_analysis/data/building_res.txt'
-	features = 'C:/Users/Prateek Raj/Desktop/houston_analysis/houston_short.json'
+	# other = 'C:/Users/Prateek Raj/Desktop/houston_analysis/data/building_other.txt'
+	# res = 'C:/Users/Prateek Raj/Desktop/houston_analysis/data/building_res.txt'
+	# features = 'C:/Users/Prateek Raj/Desktop/houston_analysis/houston_short.json'
 
 
 
