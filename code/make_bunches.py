@@ -142,8 +142,6 @@ def fetch_installer_distributions(county_name, data_home=None):
 	datadir, resultsdir = get_directories()
 
 	if not exists(join(datadir, 'bunches', DATA_ARCHIVE_NAME)):
-		datadir, resultsdir = get_directories()
-
 
 		installers = load_json(datadir + '/companies/companies_by_county.json')
 		installers = installers[county_name].keys()

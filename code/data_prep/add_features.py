@@ -25,7 +25,7 @@ class checkFile:
 	def run_features(self):
 
 
-		for num in range(len(self.features))[:2000]:
+		for num in range(len(self.features)):
 
 
 			prop_id = self.features[num]['properties']["HCAD_NUM"]
@@ -152,7 +152,7 @@ class checkFile:
 def main():
 	other = '/Users/mattstringer/research/Houston_analysis/data/text_folder/building_other.txt'
 	res = '/Users/mattstringer/research/Houston_analysis/data/text_folder/building_res.txt'
-	features = '/Users/mattstringer/research/Houston_analysis/houston_short.json'
+	features = '/Users/mattstringer/research/Houston_analysis/houston.json'
 
 	# other = 'C:/Users/Prateek Raj/Desktop/houston_analysis/data/building_other.txt'
 	# res = 'C:/Users/Prateek Raj/Desktop/houston_analysis/data/building_res.txt'
