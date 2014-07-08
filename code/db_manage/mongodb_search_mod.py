@@ -2,19 +2,34 @@ import multiprocessing
 import pymongo
 import os
 
-client = pymongo.MongoClient("localhost")
-db=client["houston_analysis_final"]
+# client = pymongo.MongoClient("localhost")
+# db=client["houston_analysis_final"]
 
-print db.collection_names()
-db.impcodes.ensure_index('Ac')
+# # print db.collection_names()
+# db.impcodes.ensure_index('Ac')
 count=0
 
 def main():
     num_of_workers = multiprocessing.cpu_count()
     print num_of_workers
-    search()
+    pool = multiprocessing.Pool(num_of_workers)
+
+    # pool.map(function, data)
+    for data in pool.map(check_squares_par, points_list):
+        print data
+
+    # search()
     
 def search():
+
+    global count
+    count += 1
+
+    if (count % 1000) == 0:
+        print count * 8
+
+
+
     for rec in db.houston.find(timeout=False):
         count=count+1
         ac=rec['properties']['HCAD_NUM']
