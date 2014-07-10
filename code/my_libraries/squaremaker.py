@@ -1,13 +1,12 @@
 import os, sys
-import geojson
+#import geojson
 from pyproj import Proj, transform
-from shapely.geometry import shape, Point, MultiPoint, LineString
+#from shapely.geometry import shape, Point, MultiPoint, LineString
 import numpy as np
 
-from descartes.patch import PolygonPatch
+#from descartes.patch import PolygonPatch
 
 import matplotlib.pyplot as plt
-from shapely.geometry import shape, Point, MultiPoint, LineString
 from filemanage import get_directories
 
 
@@ -77,8 +76,10 @@ def make_grid(grid_size, features):
     tot_maxy=0.0
     
 
-    for num in range(len(features)):
-        x, y = features[num]['geometry']["coordinates"]
+    for feature in features:
+
+
+        x, y = feature['geometry']["coordinates"]
 
         if x < tot_minx:
             tot_minx = x
@@ -94,6 +95,8 @@ def make_grid(grid_size, features):
 
     xgrid = np.arange(tot_minx, tot_maxx, grid_size)
     ygrid = np.arange(tot_miny, tot_maxy, grid_size)
+
+    print "made squares"
 
     return xgrid, ygrid
 

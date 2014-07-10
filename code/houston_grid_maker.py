@@ -8,8 +8,11 @@ import pymongo
 # import addtional code from my_libraries
 sys.path.append('my_libraries')
 from squaremaker import make_grid
+from filemanage import load_json
 
-
+cwd = os.path.dirname(os.path.abspath(__file__))
+datadir = os.path.join(os.path.split(cwd)[0], 'data')
+resultsdir = os.path.join(os.path.split(cwd)[0], 'results')
 
 
 
@@ -64,18 +67,26 @@ class GridMaker(object):
 		self.dct = {}
 		self.grid_dct = {}
 
-		self.raster_maker()
+		self.property_codes = load_json(datadir + '/property_types_json/building_to_types.json')
+
+		self.missed_types = []
+
+		
 		
 
 	def check_grid(self):
-		for num in range(len(self.features)):
-			x, y = self.features[num]['geometry']["coordinates"]
+		features = extract_data()
+		for feature in features:
+			
+			x, y = feature['geometry']["coordinates"]
 			ix = np.searchsorted(self.xgrid, x)
 			iy = np.searchsorted(self.ygrid, y)
 			hash_location = 'x' + str(ix) +'_y'+ str(iy)
 
 			if hash_location not in self.dct:
-				self.dct[hash_location] = 	{'num_buildings':[], 
+				self.dct[hash_location] = 	{'num_buildings':[],
+											'num_condos': [],
+
 										   		'num_residential': [], 
 										   		'num_offices': [], 
 										   		'num_industrial': [], 
@@ -101,25 +112,43 @@ class GridMaker(object):
 										   		'num_telephone': []
 										   		}
 
-			self.dct[hash_location]['num_buildings'].append(self.features[num]['properties']['HCAD_NUM'])
+			self.dct[hash_location]['num_buildings'].append(feature['properties']['HCAD_NUM'])
+			bt = feature['properties']['BT']
 
-			
-			if self.features[num]['properties']['CONDO_FLAG'] == "1":
-				self.dct[hash_location]['num_condos'].append(self.features[num]['properties']['HCAD_NUM'])
+			try:
+			 	prop_type = self.property_codes[bt]
+
+			 	if prop_type == 'Residential':
+			 		self.dct[hash_location]['num_residential'].append(feature['properties']['HCAD_NUM'])
+			 	if prop_type == 'Office':
+			 		self.dct[hash_location]['num_offices'].append(feature['properties']['HCAD_NUM'])
+
+			except KeyError as e:
+				self.missed_types.append(bt)
+
+
+			if feature['properties']['CONDO_FLAG'] == "1":
+				self.dct[hash_location]['num_condos'].append(feature['properties']['HCAD_NUM'])
+
+
+		print self.missed_types
 
 	def calculate_grid(self):
 		for key, value in sorted(self.dct.iteritems()):
 			num_buildings = len(value['num_buildings'])
+			num_condos = len(value['num_condos'])
+			num_residential = len(value['num_residential'])
+			num_offices= len(value['num_offices'])
 
 
-			self.grid_dct[key] = {'tot_num_buildings': num_buildings}
+			self.grid_dct[key] = {'tot_num_buildings': num_buildings, 'tot_num_condos': num_condos, 'tot_num_residential': num_residential,'tot_num_offices':num_offices}
 
 
 	def adjust_grid(self):
 		
 		for key in self.possible_grids:
 			if key not in self.grid_dct.keys():
-				self.grid_dct[key] = {'tot_num_buildings': -9999, 'tot_num_condos': -9999}
+				self.grid_dct[key] = {'tot_num_buildings': -9999, 'tot_num_condos': -9999, 'tot_num_residential': -9999, 'tot_num_offices':-9999}
 
 	def raster_maker(self):
 		self.check_grid()
@@ -163,15 +192,23 @@ def main(sys_args):
 	county_name = args.county_name
 	square_size = float(args.square_size)
 
-	features = # This needs to be pulling data from Pymongo.
+	features = extract_data()
 
 	grid = GridMaker(square_size, county_name, features)
+	grid.raster_maker()
 
 
 
 	print('Done.')	
 
+def extract_data():
+    client = pymongo.MongoClient("localhost")
+    db=client["houston_analysis_final1"]
 
+    print db.collection_names()
+    
+
+    return db.houston.find().limit(10000)
 
 
 if __name__ == '__main__':
