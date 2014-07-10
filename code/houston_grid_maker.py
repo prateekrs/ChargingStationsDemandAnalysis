@@ -75,7 +75,31 @@ class GridMaker(object):
 			hash_location = 'x' + str(ix) +'_y'+ str(iy)
 
 			if hash_location not in self.dct:
-				self.dct[hash_location] = {'num_buildings':[], 'num_condos': []}
+				self.dct[hash_location] = 	{'num_buildings':[], 
+										   		'num_residential': [], 
+										   		'num_offices': [], 
+										   		'num_industrial': [], 
+										   		'num_warehouse': [], 
+										   		'num_restaurant': [],
+										   		'num_amusementpark': [],
+										   		'num_recreation': [],
+										   		'num_theatres': [],
+										   		'num_shopping': [], 
+										   		'num_medical' : [],
+										   		'num_social': [],
+										   		'num_transport': [],
+										   		'num_library': [],
+										   		'num_postoffice':[],
+										   		'num_religious': [],
+										   		'num_emergencystation': [],
+										   		'num_correctional': [],
+										   		'num_cardealership': [],
+										   		'num_gascompany': [],
+										   		'num_electriccompany': [],
+										   		'num_railroad': [],
+										   		'num_pipeline':[],
+										   		'num_telephone': []
+										   		}
 
 			self.dct[hash_location]['num_buildings'].append(self.features[num]['properties']['HCAD_NUM'])
 
@@ -86,9 +110,9 @@ class GridMaker(object):
 	def calculate_grid(self):
 		for key, value in sorted(self.dct.iteritems()):
 			num_buildings = len(value['num_buildings'])
-			num_condos = len(value['num_condos'])
 
-			self.grid_dct[key] = {'tot_num_buildings': num_buildings, 'tot_num_condos': num_condos}
+
+			self.grid_dct[key] = {'tot_num_buildings': num_buildings}
 
 
 	def adjust_grid(self):
@@ -138,7 +162,7 @@ def main(sys_args):
 
 	county_name = args.county_name
 	square_size = float(args.square_size)
-	
+
 	features = # This needs to be pulling data from Pymongo.
 
 	grid = GridMaker(square_size, county_name, features)
