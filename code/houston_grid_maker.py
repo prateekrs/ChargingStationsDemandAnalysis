@@ -95,6 +95,7 @@ class GridMaker(object):
 										   		'num_amusementpark': [],
 										   		'num_recreation': [],
 										   		'num_theatres': [],
+										   		'num_banks': [],
 										   		'num_shopping': [], 
 										   		'num_medical' : [],
 										   		'num_social': [],
@@ -117,11 +118,29 @@ class GridMaker(object):
 
 			try:
 			 	prop_type = self.property_codes[bt]
+			 	self.add_types(feature, hash_location, prop_type, desc='Residential', dict_location='num_residential')
+			 	self.add_types(feature, hash_location, prop_type, desc='Office', dict_location='num_offices')
+			 	self.add_types(feature, hash_location, prop_type, desc='Industrial', dict_location='num_industrial')
+			 	self.add_types(feature, hash_location, prop_type, desc='Warehouse', dict_location='num_warehouse')
+			 	self.add_types(feature, hash_location, prop_type, desc='Restaurants', dict_location='num_offices')
+			 	self.add_types(feature, hash_location, prop_type, desc='AmusementPark', dict_location='num_restaurant')
+			 	self.add_types(feature, hash_location, prop_type, desc='Theatres', dict_location='num_theatres')
+			 	self.add_types(feature, hash_location, prop_type, desc='Shopping', dict_location='num_shopping')
+			 	self.add_types(feature, hash_location, prop_type, desc='Social', dict_location='num_social')
+			 	self.add_types(feature, hash_location, prop_type, desc='Medical', dict_location='num_medical')
+			 	self.add_types(feature, hash_location, prop_type, desc='Banks', dict_location='num_banks')
+			 	self.add_types(feature, hash_location, prop_type, desc='Transport', dict_location='num_transport')
+			 	self.add_types(feature, hash_location, prop_type, desc='Library', dict_location='num_library')
+			 	self.add_types(feature, hash_location, prop_type, desc='PostOffice', dict_location='num_postoffice')
+			 	self.add_types(feature, hash_location, prop_type, desc='EmergencyStation', dict_location='num_emergencystation')
+			 	self.add_types(feature, hash_location, prop_type, desc='Correctional', dict_location='num_correctional')
+			 	self.add_types(feature, hash_location, prop_type, desc='CarDealerships', dict_location='num_cardealership')
+			 	self.add_types(feature, hash_location, prop_type, desc='GasCompany', dict_location='num_gascompany')
+			 	self.add_types(feature, hash_location, prop_type, desc='ElectricCompany', dict_location='num_electriccompany')
+			 	self.add_types(feature, hash_location, prop_type, desc='Railroad', dict_location='num_railroad')
+			 	self.add_types(feature, hash_location, prop_type, desc='Pipeline', dict_location='num_pipeline')
+			 	self.add_types(feature, hash_location, prop_type, desc='Telephone', dict_location='num_telephone')
 
-			 	if prop_type == 'Residential':
-			 		self.dct[hash_location]['num_residential'].append(feature['properties']['HCAD_NUM'])
-			 	if prop_type == 'Office':
-			 		self.dct[hash_location]['num_offices'].append(feature['properties']['HCAD_NUM'])
 
 			except KeyError as e:
 				self.missed_types.append(bt)
@@ -133,22 +152,53 @@ class GridMaker(object):
 
 		print self.missed_types
 
+	def add_types(self, feature, hash_location, prop_type, desc, dict_location):
+		if prop_type == desc:
+			self.dct[hash_location][dict_location].append(feature['properties']['HCAD_NUM'])
+
+
 	def calculate_grid(self):
 		for key, value in sorted(self.dct.iteritems()):
 			num_buildings = len(value['num_buildings'])
 			num_condos = len(value['num_condos'])
 			num_residential = len(value['num_residential'])
 			num_offices= len(value['num_offices'])
+			num_industrial = len(value['num_industrial'])
+
+			num_warehouse = len(value['num_warehouse'])
+			num_restaurant = len(value['num_restaurant'])
+			num_amusementpark = len(value['num_amusementpark'])
+			num_recreation = len(value['num_recreation'])
+			num_theatres = len(value['num_theatres'])
+			num_banks = len(value['num_banks'])
+			num_shopping = len(value['num_shopping'])
+			num_medical = len(value['num_medical'])
+			num_social = len(value['num_social'])
+			num_transport = len(value['num_transport'])
+			num_library = len(value['num_library'])
+			num_postoffice = len(value['num_postoffice'])
+			num_religious = len(value['num_religious'])
+			num_emergencystation = len(value['num_emergencystation'])
+			num_correctional = len(value['num_correctional'])
+			num_cardealership = len(value['num_cardealership'])
+			num_gascompany = len(value['num_gascompany'])
+			num_electriccompany = len(value['num_electriccompany'])
+			num_railroad = len(value['num_railroad'])
+			num_pipeline = len(value['num_pipeline'])
+			num_telephone = len(value['num_telephone'])
 
 
-			self.grid_dct[key] = {'tot_num_buildings': num_buildings, 'tot_num_condos': num_condos, 'tot_num_residential': num_residential,'tot_num_offices':num_offices}
+			
+
+
+			self.grid_dct[key] = {'tot_num_buildings': num_buildings, 'tot_num_condos': num_condos, 'tot_num_residential': num_residential,'tot_num_offices':num_offices, 'tot_num_industrial': num_industrial, 'tot_num_warehouse': num_warehouse, 'tot_num_restaurant': num_restaurant,'tot_num_amusementpark': num_amusementpark, 'tot_num_recreation': num_recreation, 'tot_num_theatres': num_theatres,'tot_num_banks': num_banks, 'tot_num_shopping': num_shopping, 'tot_num_medical': num_medical, 'tot_num_social': num_social, 'tot_num_transport': num_transport, 'tot_num_library': num_library, 'tot_num_postoffice': num_postoffice, 'tot_num_religious': num_religious, 'tot_num_emergencystation': num_emergencystation, 'tot_num_correctional': num_correctional,'tot_num_cardealership':  num_cardealership,'tot_num_gascompany': num_gascompany, 'tot_num_electriccompany': num_electriccompany,'tot_num_railroad': num_railroad, 'tot_num_pipeline': num_pipeline,'tot_num_telephone': num_telephone}
 
 
 	def adjust_grid(self):
 		
 		for key in self.possible_grids:
 			if key not in self.grid_dct.keys():
-				self.grid_dct[key] = {'tot_num_buildings': -9999, 'tot_num_condos': -9999, 'tot_num_residential': -9999, 'tot_num_offices':-9999}
+				self.grid_dct[key] = {'tot_num_buildings': -9999, 'tot_num_condos': -9999, 'tot_num_residential': -9999, 'tot_num_offices':-9999, 'tot_num_industrial': -9999, 'tot_num_warehouse': -9999, 'tot_num_restaurant': -9999,'tot_num_amusementpark': -9999, 'tot_num_recreation': -9999, 'tot_num_theatres': -9999,'tot_num_banks': -9999, 'tot_num_shopping': -9999, 'tot_num_medical': -9999, 'tot_num_social': -9999, 'tot_num_transport': -9999, 'tot_num_library': -9999, 'tot_num_postoffice': -9999, 'tot_num_religious': -9999, 'tot_num_emergencystation': -9999, 'tot_num_correctional': -9999,'tot_num_cardealership':  -9999,'tot_num_gascompany': -9999, 'tot_num_electriccompany': -9999,'tot_num_railroad': -9999, 'tot_num_pipeline': -9999,'tot_num_telephone': -9999}
 
 	def raster_maker(self):
 		self.check_grid()
