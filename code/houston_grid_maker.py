@@ -2,8 +2,14 @@ import argparse
 import textwrap
 import sys, os
 import json
-
 import numpy as np
+import pymongo
+
+# import addtional code from my_libraries
+sys.path.append('my_libraries')
+from squaremaker import make_grid
+
+
 
 
 
@@ -24,12 +30,6 @@ def _build_parser(prog):
             type=int,
             help='county grid size - enter as an integer')
 
-    parser.add_argument(
-            '--json_file',
-            required=True,
-            type=str,
-            help= 'location of json file')
-
     return parser
 
 def get_directories(path):
@@ -37,33 +37,6 @@ def get_directories(path):
     dir_location = os.path.join(os.path.split(cwd)[0], path)
     return dir_location
 
-
-def make_grid(grid_size, features):
-	tot_minx=float("inf")
-	tot_miny=float("inf")
-	tot_maxx=0.0
-	tot_maxy=0.0
-	
-
-	for num in range(len(features)):
-		x, y = features[num]['geometry']["coordinates"]
-
-		if x < tot_minx:
-			tot_minx = x
-
-		if y < tot_miny:
-			tot_miny = y
-
-		if x > tot_maxx:
-			tot_maxx = x
-
-		if y > tot_maxy:
-			tot_maxy = y
-
-	xgrid = np.arange(tot_minx, tot_maxx, grid_size)
-	ygrid = np.arange(tot_miny, tot_maxy, grid_size)
-
-	return xgrid, ygrid
 
 
 def make_possible_grids(xgrid, ygrid):
@@ -83,11 +56,15 @@ class GridMaker(object):
 	def __init__(self, square_size, county_name, features):
 		self.square_size = square_size
 		self.county_name = county_name
+
 		self.features = features
 
 		self.xgrid, self.ygrid = make_grid(self.square_size, self.features)
+		self.possible_grids = make_possible_grids(self.xgrid, self.ygrid)
 		self.dct = {}
 		self.grid_dct = {}
+
+		self.raster_maker()
 		
 
 	def check_grid(self):
@@ -115,12 +92,16 @@ class GridMaker(object):
 
 
 	def adjust_grid(self):
-		possible_grids = make_possible_grids(self.xgrid, self.ygrid)
-		for key in possible_grids:
+		
+		for key in self.possible_grids:
 			if key not in self.grid_dct.keys():
 				self.grid_dct[key] = {'tot_num_buildings': -9999, 'tot_num_condos': -9999}
 
 	def raster_maker(self):
+		self.check_grid()
+		self.calculate_grid()
+		self.adjust_grid()
+	
 
 		for item in self.grid_dct[self.grid_dct.keys()[0]]:
 
@@ -157,15 +138,11 @@ def main(sys_args):
 
 	county_name = args.county_name
 	square_size = float(args.square_size)
-	features = json.load(open(args.json_file, 'r'))
-
-	# features = json.load(open('/Users/mattstringer/research/Houston_analysis/houston.json', 'r'))
+	
+	features = # This needs to be pulling data from Pymongo.
 
 	grid = GridMaker(square_size, county_name, features)
-	grid.check_grid()
-	grid.calculate_grid()
-	grid.adjust_grid()
-	grid.raster_maker()
+
 
 
 	print('Done.')	
