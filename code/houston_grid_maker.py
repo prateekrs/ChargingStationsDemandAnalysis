@@ -258,7 +258,7 @@ def extract_data():
     print db.collection_names()
     
 
-    return db.houston.find().limit(10000)
+    return db.houston.find()
 
 
 if __name__ == '__main__':
