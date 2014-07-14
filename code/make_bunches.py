@@ -1,28 +1,40 @@
+
+import sys, os
 from io import BytesIO
 from os import makedirs
 from os.path import join
 from os.path import exists
-from filemanage import *
+
 import glob
-from filemanage import *
+
 import random
 from pyproj import Proj, transform
 
 import numpy as np
 
-from database import query
+
 
 from sklearn.datasets.base import get_data_home, Bunch
 from sklearn.externals import joblib
 
+sys.path.append('my_libraries')
+from database import query
+from filemanage import render_file_style
 
 
 
-cap = Proj('+datum=NAD83 +lat_0=32.10 +lat_1=33.53 '
-    '+lat_2=32.47 +lon_0=-116.15 +no_defs +proj=lcc +units=us-ft '
-    '+x_0=2000000 +y_0=500000', preserve_units=True)
+cap = Proj('+datum=NAD83 +lat_0=27.50 +lat_1=30.17 '
+    '+lat_2=28.23 +lon_0=-99.0 +no_defs +proj=lcc +units=us-ft '
+    '+x_0=600000 +y_0=4000000', preserve_units=True)
 
 wgs84 = Proj(init='epsg:4326')
+
+
+def get_directories():
+    cwd = os.path.dirname(os.path.abspath(__file__))
+    datadir = os.path.join(os.path.split(cwd)[0], 'data')
+    resultsdir = os.path.join(os.path.split(cwd)[0], 'results')
+    return datadir, resultsdir
 
 def construct_grids(batch):
     """Construct the map grid from the batch object
@@ -97,35 +109,49 @@ def _load_csv(F):
 
     return rec
 
-def make_test_train_split(file_location, installers):
+def make_test_train_split(file_location):
 
 	if os.path.isfile(file_location + '/train.csv') == False:
 		print('writing training sets')
+		print file_location + '/train.csv'
 
-		query_results = query(county_name)
 
 		f1 = open(file_location + '/train.csv', 'w')
-		f1.write("installer,x,y\n")
+		f1.write("location,x,y\n")
 		f2 = open(file_location + '/test.csv', 'w')
-		f2.write("installer,x,y\n")
+		f2.write("location,x,y\n")
 
 		train = []
 		test = []
 
-		for i in query_results:
-			if i[0] in installers:
+		f = open(file_location + "/charging_stations_lat-lon.csv", 'r')
+		data = f.readlines()
+		print "yeps"
 
-				x, y = transform(wgs84, cap, i[2], i[1])
-				tuple_items = (i[0], x,y)
+
+
+		for row in data:
+
+			row = row.split('\r')
+			for items in row[1:]:
+
+				i = items.split(',')
+
+				location = i[0]
+				lat = i[1]
+				lon = i[2]
+
+				x, y = transform(wgs84, cap, lon, lat)
+				tuple_items = (location, x,y)
 				rand = random.random()
 
 				if rand > 0.2:
 					train.append(tuple_items)
-					f1.write(i[0].replace(',', '').replace('  ', ' ') + "," + str(x) + ","+ str(y) + '\n')
+					f1.write(location + "," + str(x) + ","+ str(y) + '\n')
 
 	   			elif rand < 0.2:
 					test.append(tuple_items)
-					f2.write(i[0].replace(',', '').replace('  ', ' ') + "," + str(x) + ","+ str(y) + '\n')
+					f2.write(location + "," + str(x) + ","+ str(y) + '\n')
 
 		f1.close()
 		f2.close()
@@ -137,17 +163,17 @@ def make_test_train_split(file_location, installers):
 
 def fetch_installer_distributions(county_name, data_home=None):
 	# make into a complete if else statement
-	DATA_ARCHIVE_NAME = render_file_style(county_name)  + "_installation_coverage.pkz"
+	DATA_ARCHIVE_NAME = "data_coverage.pkz"
 
 	datadir, resultsdir = get_directories()
+	print datadir
 
 	if not exists(join(datadir, 'bunches', DATA_ARCHIVE_NAME)):
 
-		installers = load_json(datadir + '/companies/companies_by_county.json')
-		installers = installers[county_name].keys()
 
-		file_location = datadir + '/installations/' + render_file_style(county_name)
-		make_test_train_split(file_location, installers)
+		file_location = datadir + '/charging_stations/' + render_file_style(county_name) 
+
+		make_test_train_split(file_location)
 
 		train = _load_csv(file_location + '/train.csv')
 		test = _load_csv(file_location + '/test.csv')
@@ -188,5 +214,6 @@ def fetch_installer_distributions(county_name, data_home=None):
 
 
 if __name__ == '__main__':
-	county_name = 'San Diego'
+	county_name = 'harris'
+
 	fetch_installer_distributions(county_name)
