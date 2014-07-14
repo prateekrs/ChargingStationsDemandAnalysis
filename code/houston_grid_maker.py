@@ -113,10 +113,11 @@ class GridMaker(object):
 										   		'num_telephone': []
 										   		}
 
+					
 			self.dct[hash_location]['num_buildings'].append(feature['properties']['HCAD_NUM'])
-			bt = feature['properties']['BT']
-
+				
 			try:
+				bt = feature['properties']['BT']
 			 	prop_type = self.property_codes[bt]
 			 	self.add_types(feature, hash_location, prop_type, desc='Residential', dict_location='num_residential')
 			 	self.add_types(feature, hash_location, prop_type, desc='Office', dict_location='num_offices')
@@ -150,7 +151,10 @@ class GridMaker(object):
 				self.dct[hash_location]['num_condos'].append(feature['properties']['HCAD_NUM'])
 
 
-		print self.missed_types
+		print "unique missed variables"
+		print set(self.missed_types)
+		print "total number of missed variables"
+		print len(self.missed_types)
 
 	def add_types(self, feature, hash_location, prop_type, desc, dict_location):
 		if prop_type == desc:
@@ -188,7 +192,7 @@ class GridMaker(object):
 			num_telephone = len(value['num_telephone'])
 
 
-			
+		
 
 
 			self.grid_dct[key] = {'tot_num_buildings': num_buildings, 'tot_num_condos': num_condos, 'tot_num_residential': num_residential,'tot_num_offices':num_offices, 'tot_num_industrial': num_industrial, 'tot_num_warehouse': num_warehouse, 'tot_num_restaurant': num_restaurant,'tot_num_amusementpark': num_amusementpark, 'tot_num_recreation': num_recreation, 'tot_num_theatres': num_theatres,'tot_num_banks': num_banks, 'tot_num_shopping': num_shopping, 'tot_num_medical': num_medical, 'tot_num_social': num_social, 'tot_num_transport': num_transport, 'tot_num_library': num_library, 'tot_num_postoffice': num_postoffice, 'tot_num_religious': num_religious, 'tot_num_emergencystation': num_emergencystation, 'tot_num_correctional': num_correctional,'tot_num_cardealership':  num_cardealership,'tot_num_gascompany': num_gascompany, 'tot_num_electriccompany': num_electriccompany,'tot_num_railroad': num_railroad, 'tot_num_pipeline': num_pipeline,'tot_num_telephone': num_telephone}
@@ -253,12 +257,12 @@ def main(sys_args):
 
 def extract_data():
     client = pymongo.MongoClient("localhost")
-    db=client["houston_analysis_final1"]
+    db=client["full_houston"]
 
     print db.collection_names()
     
 
-    return db.houston.find().limit(100000)
+    return db.houston.find()
 
 if __name__ == '__main__':
 	sys.exit(main(sys.argv))
