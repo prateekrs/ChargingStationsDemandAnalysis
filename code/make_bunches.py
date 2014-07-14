@@ -128,7 +128,7 @@ def make_test_train_split(file_location):
 		data = f.readlines()
 		print "yeps"
 
-
+		locations = []
 
 		for row in data:
 
@@ -140,10 +140,12 @@ def make_test_train_split(file_location):
 				location = i[0]
 				lat = i[1]
 				lon = i[2]
+				locations.append(location)
 
 				x, y = transform(wgs84, cap, lon, lat)
 				tuple_items = (location, x,y)
 				rand = random.random()
+
 
 				if rand > 0.2:
 					train.append(tuple_items)
@@ -155,7 +157,11 @@ def make_test_train_split(file_location):
 
 		f1.close()
 		f2.close()
+
+		locations = list(set(locations))
 		print  float(len(train)) / float(len(train) + len(test))
+		print locations
+		return locations
 	
 	else:
 		print "test train sets written"
@@ -172,7 +178,7 @@ def fetch_installer_distributions(county_name, data_home=None):
 
 		file_location = datadir + '/charging_stations/' + render_file_style(county_name) 
 
-		make_test_train_split(file_location)
+		locations = make_test_train_split(file_location)
 
 		train = _load_csv(file_location + '/train.csv')
 		test = _load_csv(file_location + '/test.csv')
@@ -198,7 +204,7 @@ def fetch_installer_distributions(county_name, data_home=None):
 	                        Ny=header['nrows'],
 	                        grid_size=header['cellsize'])
 
-		bunch = Bunch(coverages=coverages, test=test, train=train, **extra_params)
+		bunch = Bunch(coverages=coverages, test=test, train=train, locations=locations, **extra_params)
 		joblib.dump(bunch, join(datadir, 'bunches', DATA_ARCHIVE_NAME), compress=9)
 		bunch = joblib.load(join(datadir, 'bunches', DATA_ARCHIVE_NAME))
 		return bunch

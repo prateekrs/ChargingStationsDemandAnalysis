@@ -1,6 +1,7 @@
+from __future__ import print_function
 import argparse
 import textwrap
-from __future__ import print_function
+
 
 from time import time
 import os
@@ -82,6 +83,8 @@ def create_installers_bunch(installer, train, test, coverages, xgrid, ygrid):
 
     for label, pts in points.iteritems():
 
+        print(pts)
+
 
         # choose points associated with the desired species
         pts = pts[pts['installer'] == installer]
@@ -112,20 +115,19 @@ def main(county_name, square_size):
     # Set up the data grid
     xgrid, ygrid = construct_grids(data)
 
-    print (max(xgrid), min(xgrid))
-    print (max(ygrid), min(ygrid))
+    charging_stations = data.locations
 
-    installers = load_json(datadir + '/companies/companies_by_county.json')
-    installers = installers[county_name].keys()
-    print(installers)
-    num_installers = len(installers)
+    print(data)
+
+
+    num_stations = len(charging_stations)
 
     X, Y = np.meshgrid(xgrid, ygrid[::-1])
 
 
-    f, axarr = plt.subplots(2, num_installers, figsize=(22, 4))
+    f, axarr = plt.subplots(2, num_stations, figsize=(22, 4))
 
-    bunches = make_bunches(installers, data, xgrid, ygrid)
+    bunches = make_bunches(charging_stations, data, xgrid, ygrid)
 
     # BV_bunch = create_installers_bunch(installers[2], data.train, data.test, data.coverages, xgrid, ygrid)
     # MM_bunch = create_installers_bunch(installers[1], data.train, data.test, data.coverages, xgrid, ygrid)
