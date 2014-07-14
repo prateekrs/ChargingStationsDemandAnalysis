@@ -163,10 +163,9 @@ def make_test_train_split(file_location):
 
 def fetch_installer_distributions(county_name, data_home=None):
 	# make into a complete if else statement
-	DATA_ARCHIVE_NAME = "data_coverage.pkz"
+	DATA_ARCHIVE_NAME = county_name + "_data_coverage.pkz"
 
 	datadir, resultsdir = get_directories()
-	print datadir
 
 	if not exists(join(datadir, 'bunches', DATA_ARCHIVE_NAME)):
 
@@ -179,7 +178,7 @@ def fetch_installer_distributions(county_name, data_home=None):
 		test = _load_csv(file_location + '/test.csv')
 
 		file_county = render_file_style(county_name)
-		coverage_files_dir = datadir + '/environment_coverage/' + file_county + "/*.asc"
+		coverage_files_dir = datadir + '/raster_files/' + file_county + "/*.asc"
 
 		dtype = np.int16
 
@@ -191,6 +190,7 @@ def fetch_installer_distributions(county_name, data_home=None):
 			coverages.append(cov)
 
 		coverages = np.asarray(coverages, dtype=dtype)
+
 
 		extra_params = dict(x_left_lower_corner=header['xllcorner'],
 	                        Nx=header['ncols'],
@@ -207,7 +207,7 @@ def fetch_installer_distributions(county_name, data_home=None):
 
 		bunch = joblib.load(join(datadir, 'bunches', DATA_ARCHIVE_NAME))
 		return bunch
-	# joblib.dump(bunch, join(data_home, DATA_ARCHIVE_NAME), compress=9)
+	
 
 
 

@@ -1,4 +1,5 @@
-
+import argparse
+import textwrap
 from __future__ import print_function
 
 from time import time
@@ -12,14 +13,10 @@ import matplotlib.pyplot as plt
 
 from make_bunches import fetch_installer_distributions, construct_grids
 from sklearn.datasets.base import Bunch
-
 from sklearn import svm, metrics
-
 from database import Database
 import json
-
 from filemanage import *
-
 import random
 from squaremaker import make_study_area_map, make_county_map, plot_polygon
 
@@ -42,9 +39,21 @@ datadir = os.path.join(os.path.split(cwd)[0], 'data')
 resultsdir = os.path.join(os.path.split(cwd)[0], 'results')
 
 
+def _build_parser(prog):
+    parser = argparse.ArgumentParser(prog=prog, description=USAGE)
+    parser.add_argument(
+            '--county_name',
+            required=True,
+            type=str,
+            help='Name of county that you are currently matching, \n example is "San Diego"')
 
+    parser.add_argument(
+            '--square_size',
+            required=True,
+            type=int,
+            help='county grid size - enter as an integer')
 
-
+    return parser
 
 def make_bunches(installers, data, xgrid, ygrid):
     bunches = []
@@ -224,7 +233,7 @@ def main(county_name, square_size):
 
 
 if __name__ == '__main__':
-    county_name = 'San Diego'
+    county_name = 'harris'
     square_size = 10000
     main(county_name, square_size)
 
