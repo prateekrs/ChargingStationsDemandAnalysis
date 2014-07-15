@@ -7,7 +7,6 @@ from os.path import exists
 
 import glob
 
-import random
 from pyproj import Proj, transform
 
 import numpy as np
@@ -31,6 +30,15 @@ wgs84 = Proj(init='epsg:4326')
 
 
 def get_directories():
+    """Gets the path along with the data directory and results
+
+
+    Returns
+    -------
+    datadir (path)
+    resultsdir (path)
+    """
+
     cwd = os.path.dirname(os.path.abspath(__file__))
     datadir = os.path.join(os.path.split(cwd)[0], 'data')
     resultsdir = os.path.join(os.path.split(cwd)[0], 'results')
@@ -103,105 +111,107 @@ def _load_csv(F):
         F = open(F)
         names = F.readline().strip().split(',')
 
-    rec = np.loadtxt(F, skiprows=1, delimiter=',',
-                     dtype='a22,f4,f4')
+
+
+
+    rec = np.loadtxt(F, skiprows=1, delimiter=',', dtype='a22,i4,i4,f4,f4')
     rec.dtype.names = names
+
+
 
     return rec
 
 def make_test_train_split(file_location):
 
-	if os.path.isfile(file_location + '/prep.csv') == False:
-		print('writing training sets')
+
+	f1 = open(file_location + '/prep.csv', 'w')
+	f1.write("id_num,usage,time,x,y\n")
+
+
+	prep = []
+
+
+	f = open(file_location + "/DC_charging_stations_MonthlyDemand.csv", 'r')
+	data = f.readlines()
+
+
+	locations = []
 
 
 
-		f1 = open(file_location + '/prep.csv', 'w')
-		f1.write("location,x,y\n")
+        for row in data[1:]:
+            i = row.split(',')
+            id_num = i[1]
+            time = i[2]
+            usage = i[3]
+
+            lat = i[4]
+            lon = i[5]
+            
+            locations.append(id_num)
+
+            x, y = transform(wgs84, cap, lon, lat)
+            tuple_items = (id_num, time, usage, x, y)
+            prep.append(tuple_items)
+            f1.write(id_num + "," + str(usage) + "," + str(time)  + "," + str(x) + ","+ str(y) + '\n')
 
 
-		prep = []
+	f1.close()
 
 
-		f = open(file_location + "/charging_stations_lat-lon.csv", 'r')
-		data = f.readlines()
-
-		locations = []
-
-		for row in data:
-
-			row = row.split('\r')
-			for items in row[1:]:
-
-				i = items.split(',')
-
-				location = i[0]
-				lat = i[1]
-				lon = i[2]
-				locations.append(location)
-
-				x, y = transform(wgs84, cap, lon, lat)
-				tuple_items = (location, x,y)
-				rand = random.random()
+	locations = list(set(locations))
+	return locations
 
 
-				prep.append(tuple_items)
-				f1.write(location + "," + str(x) + ","+ str(y) + '\n')
-
-		f1.close()
-
-
-		locations = list(set(locations))
-		# print  float(len(train)) / float(len(train) + len(test))
-		return locations
-	
-	else:
-		print "test train sets written"
 
 
 def fetch_installer_distributions(county_name, data_home=None):
+    """
+    Loads data to make bunches
+
+    Returns
+    --------
+    bunch (bunch object)
+
+
+    """
 	# make into a complete if else statement
-	DATA_ARCHIVE_NAME = county_name + "_data_coverage.pkz"
+    DATA_ARCHIVE_NAME = county_name + "_data_coverage.pkz"
 
-	datadir, resultsdir = get_directories()
+    datadir, resultsdir = get_directories()
 
-	if not exists(join(datadir, 'bunches', DATA_ARCHIVE_NAME)):
+    if not exists(join(datadir, 'bunches', DATA_ARCHIVE_NAME)):
+        file_location = datadir + '/charging_stations/' + render_file_style(county_name) 
 
+        locations = make_test_train_split(file_location)
+        prep = _load_csv(file_location + '/prep.csv')
 
-		file_location = datadir + '/charging_stations/' + render_file_style(county_name) 
+        file_county = render_file_style(county_name)
+        coverage_files_dir = datadir + '/raster_files/' + file_county + "/*.asc"
 
-		locations = make_test_train_split(file_location)
+        dtype = np.int16
 
-		prep = _load_csv(file_location + '/prep.csv')
-
-
-		file_county = render_file_style(county_name)
-		coverage_files_dir = datadir + '/raster_files/' + file_county + "/*.asc"
-
-		dtype = np.int16
-
-		coverages = []
-		header = None
-		for f in glob.glob(coverage_files_dir):
-			cov, header = _load_coverage(f)
-			header = header
-			coverages.append(cov)
-
-		coverages = np.asarray(coverages, dtype=dtype)
+        coverages = []
+        header = None
+        for f in glob.glob(coverage_files_dir):
+            cov, header = _load_coverage(f)
+            coverages.append(cov)
 
 
-		extra_params = dict(x_left_lower_corner=header['xllcorner'],
+        coverages = np.asarray(coverages, dtype=dtype)
+
+        extra_params = dict(x_left_lower_corner=header['xllcorner'],
 	                        Nx=header['ncols'],
 	                        y_left_lower_corner=header['yllcorner'],
 	                        Ny=header['nrows'],
 	                        grid_size=header['cellsize'])
 
-		bunch = Bunch(coverages=coverages, test=test, train=train, locations=locations, **extra_params)
-		joblib.dump(bunch, join(datadir, 'bunches', DATA_ARCHIVE_NAME), compress=9)
-		bunch = joblib.load(join(datadir, 'bunches', DATA_ARCHIVE_NAME))
-		return bunch
+        bunch = Bunch(coverages=coverages, stations=prep, locations=locations, **extra_params)
+        joblib.dump(bunch, join(datadir, 'bunches', DATA_ARCHIVE_NAME), compress=9)
+        bunch = joblib.load(join(datadir, 'bunches', DATA_ARCHIVE_NAME))
+        return bunch
 
-	else:
+    else:
 
 		bunch = joblib.load(join(datadir, 'bunches', DATA_ARCHIVE_NAME))
 		return bunch
