@@ -60,6 +60,9 @@ def make_bunches(installers, data, xgrid, ygrid):
     bunches = []
 
     for i in range(len(installers)):
+        print(installers[i])
+
+
         bunch = create_installers_bunch(installers[i], data.train, data.test, data.coverages, xgrid, ygrid)
         bunches.append(bunch)
 
@@ -83,16 +86,20 @@ def create_installers_bunch(installer, train, test, coverages, xgrid, ygrid):
 
     for label, pts in points.iteritems():
 
+        print(label)
+
         print(pts)
 
 
         # choose points associated with the desired species
-        pts = pts[pts['installer'] == installer]
+        # pts = pts[pts['installer'] == installer]
 
         pts = pts[pts['x'] > min(xgrid)]
         pts = pts[pts['x'] < max(xgrid)]
         pts = pts[pts['y'] > min(ygrid)]
         pts = pts[pts['y'] < max(ygrid)]
+
+        print(pts)
 
         bunch['pts_%s' % label] = pts
 
@@ -114,17 +121,10 @@ def main(county_name, square_size):
 
     # Set up the data grid
     xgrid, ygrid = construct_grids(data)
-
-    charging_stations = data.locations
-
-    print(data)
-
-
-    num_stations = len(charging_stations)
-
     X, Y = np.meshgrid(xgrid, ygrid[::-1])
 
-
+    charging_stations = data.locations
+    num_stations = len(charging_stations)
     f, axarr = plt.subplots(2, num_stations, figsize=(22, 4))
 
     bunches = make_bunches(charging_stations, data, xgrid, ygrid)

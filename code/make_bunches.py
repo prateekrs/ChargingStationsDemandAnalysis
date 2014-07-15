@@ -111,22 +111,20 @@ def _load_csv(F):
 
 def make_test_train_split(file_location):
 
-	if os.path.isfile(file_location + '/train.csv') == False:
+	if os.path.isfile(file_location + '/prep.csv') == False:
 		print('writing training sets')
-		print file_location + '/train.csv'
 
 
-		f1 = open(file_location + '/train.csv', 'w')
+
+		f1 = open(file_location + '/prep.csv', 'w')
 		f1.write("location,x,y\n")
-		f2 = open(file_location + '/test.csv', 'w')
-		f2.write("location,x,y\n")
 
-		train = []
-		test = []
+
+		prep = []
+
 
 		f = open(file_location + "/charging_stations_lat-lon.csv", 'r')
 		data = f.readlines()
-		print "yeps"
 
 		locations = []
 
@@ -147,20 +145,14 @@ def make_test_train_split(file_location):
 				rand = random.random()
 
 
-				if rand > 0.2:
-					train.append(tuple_items)
-					f1.write(location + "," + str(x) + ","+ str(y) + '\n')
-
-	   			elif rand < 0.2:
-					test.append(tuple_items)
-					f2.write(location + "," + str(x) + ","+ str(y) + '\n')
+				prep.append(tuple_items)
+				f1.write(location + "," + str(x) + ","+ str(y) + '\n')
 
 		f1.close()
-		f2.close()
+
 
 		locations = list(set(locations))
-		print  float(len(train)) / float(len(train) + len(test))
-		print locations
+		# print  float(len(train)) / float(len(train) + len(test))
 		return locations
 	
 	else:
@@ -180,8 +172,8 @@ def fetch_installer_distributions(county_name, data_home=None):
 
 		locations = make_test_train_split(file_location)
 
-		train = _load_csv(file_location + '/train.csv')
-		test = _load_csv(file_location + '/test.csv')
+		prep = _load_csv(file_location + '/prep.csv')
+
 
 		file_county = render_file_style(county_name)
 		coverage_files_dir = datadir + '/raster_files/' + file_county + "/*.asc"

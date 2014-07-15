@@ -17,9 +17,22 @@ resultsdir = os.path.join(os.path.split(cwd)[0], 'results')
 
 
 USAGE = textwrap.dedent("""\
-	Create a dense data matrix from raw mixed features.""")
+	Create a dense data matrix from raw mixed features. U""")
 
 def _build_parser(prog):
+	"""
+	Used in main function. Allows items to be entered from the command line. It elminaates
+	the use of hard coded items in the code.
+
+	Args:
+      county_name (string): The county name for the study area. Necessary for saving the files in the appropriate locations
+      square_size (int): Used to 
+
+    Returns:
+      parser
+
+	"""
+
     parser = argparse.ArgumentParser(prog=prog, description=USAGE)
     parser.add_argument(
             '--county_name',
@@ -36,6 +49,19 @@ def _build_parser(prog):
     return parser
 
 def get_directories(path):
+	"""
+	Gets the directory specified. The path needs to exist in the directory. The get_directories
+	function only goes down only one spot in the directory.
+
+	** Possible addition: make it go down multiple directories.
+
+	Args:
+	  path (str): folder name given 
+
+	Returns:
+	  dir_location (str): sends path to the specified directory
+	"""
+
     cwd = os.path.dirname(os.path.abspath(__file__))
     dir_location = os.path.join(os.path.split(cwd)[0], path)
     return dir_location
@@ -43,6 +69,9 @@ def get_directories(path):
 
 
 def make_possible_grids(xgrid, ygrid):
+	"""
+
+	"""
 
 	possible_grids = []
 
@@ -55,6 +84,22 @@ def make_possible_grids(xgrid, ygrid):
 
 
 class GridMaker(object):
+	"""Aggregates variables to make a grid.
+
+
+
+    Attributes:
+      square_size (int): 
+      county_name (str):
+      features (Cursor): data removed from mongodb
+      self.xgrid, self.ygrid (lists of floats):
+      self.property_codes (dict): property codes as defined in file....
+      dct (dict):
+	  grid_dct (dict):
+
+
+
+    """
 
 	def __init__(self, square_size, county_name, features):
 		self.square_size = square_size
@@ -75,6 +120,19 @@ class GridMaker(object):
 		
 
 	def check_grid(self):
+
+		"""
+		Takes features from grid and hashes to an x and y grid according to their geospatial location, starting from index 0.
+		An example of a hash is "x20_y10". The feature is in x box 20 and y box 10. Once this is completed it counts the number of 
+		variables append for each type.
+
+		Note: 
+		  All features are hard coded. This can be improved by adding a for loop and an external file that specifies the features.
+
+		Note2:
+		  There is a try-except for key errors.
+
+		"""
 		features = extract_data()
 		for feature in features:
 			
@@ -157,11 +215,34 @@ class GridMaker(object):
 		print len(self.missed_types)
 
 	def add_types(self, feature, hash_location, prop_type, desc, dict_location):
+		"""
+		This checks to see if the property type matches the specified type
+
+		Note:
+		  called in the method check_grid. 
+
+		Args:
+          feature, 
+          hash_location
+          prop_type
+          desc
+          dict_location
+       
+		"""
+
 		if prop_type == desc:
 			self.dct[hash_location][dict_location].append(feature['properties']['HCAD_NUM'])
 
 
 	def calculate_grid(self):
+		"""
+		Takes the features in check_grid and sums them and makes new dictionary for the aggregated data
+
+		Note:
+		  This can also be improved.
+
+		"""
+
 		for key, value in sorted(self.dct.iteritems()):
 			num_buildings = len(value['num_buildings'])
 			num_condos = len(value['num_condos'])
@@ -199,12 +280,19 @@ class GridMaker(object):
 
 
 	def adjust_grid(self):
+
+		"""
+		add a null value (-9999) to the grid location that fall outside the study area.
+		"""
 		
 		for key in self.possible_grids:
 			if key not in self.grid_dct.keys():
 				self.grid_dct[key] = {'tot_num_buildings': -9999, 'tot_num_condos': -9999, 'tot_num_residential': -9999, 'tot_num_offices':-9999, 'tot_num_industrial': -9999, 'tot_num_warehouse': -9999, 'tot_num_restaurant': -9999,'tot_num_amusementpark': -9999, 'tot_num_recreation': -9999, 'tot_num_theatres': -9999,'tot_num_banks': -9999, 'tot_num_shopping': -9999, 'tot_num_medical': -9999, 'tot_num_social': -9999, 'tot_num_transport': -9999, 'tot_num_library': -9999, 'tot_num_postoffice': -9999, 'tot_num_religious': -9999, 'tot_num_emergencystation': -9999, 'tot_num_correctional': -9999,'tot_num_cardealership':  -9999,'tot_num_gascompany': -9999, 'tot_num_electriccompany': -9999,'tot_num_railroad': -9999, 'tot_num_pipeline': -9999,'tot_num_telephone': -9999}
 
 	def raster_maker(self):
+		"""
+		
+		"""
 		self.check_grid()
 		self.calculate_grid()
 		self.adjust_grid()
