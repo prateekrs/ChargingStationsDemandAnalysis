@@ -59,7 +59,7 @@ def _build_parser(prog):
 
 
     
-def create_bunch(stations, coverages, xgrid, ygrid):
+def create_bunch(stations, coverages, xgrid, ygrid, independent_vars):
     """
     create a bunch with information about a particular organism
 
@@ -72,12 +72,13 @@ def create_bunch(stations, coverages, xgrid, ygrid):
 
     points = dict(stations=stations)
 
+    i_title = ','.join(str(e) for e in independent_vars)
+
+
     f1 = open(datadir + '/regression/regression_file.csv', 'w')
-    f1.write("id_num,usage,time,x,y\n")
+    f1.write("id_num,time,usage," + i_title + "\n")
 
     for label, pts in points.iteritems():
-
-
 
 
         # choose points that fall with study area
@@ -86,12 +87,8 @@ def create_bunch(stations, coverages, xgrid, ygrid):
         pts = pts[pts['y'] > min(ygrid)]
         pts = pts[pts['y'] < max(ygrid)]
 
-
-
         ix = np.searchsorted(xgrid, pts['x'])
         iy = np.searchsorted(ygrid, pts['y'])
-
-
 
         time = pts['time']
         id_num = pts['id_num']
@@ -103,14 +100,10 @@ def create_bunch(stations, coverages, xgrid, ygrid):
 
         strs= ''.join(str(e) for e in c_f)
 
-
-
-
-        # for item in zip(time, id_num, usage, c_f[0], c_f[1], c_f[2], c_f[3], c_f[4], c_f[5], c_f[6], c_f[7], c_f[8], c_f[9], c_f[10], c_f[11], c_f[12], c_f[13], c_f[14], c_f[15], c_f[16], c_f[17], c_f[18], c_f[19], c_f[20], c_f[21], c_f[22], c_f[23], c_f[24], c_f[25], c_f[17]):
         for item in zip(time, id_num, usage, c_f):
             independent = ','.join(str(e) for e in item[3])
 
-            f1.write(str(item[0]) + ',' + str(item[1]) + ',' + str(item[2]) + "," +  independent + "\n")
+            f1.write(str(item[1])  + ',' + str(item[0])  + ',' + str(item[2]) + "," +  independent + "\n")
 
     f1.close()
 
@@ -120,122 +113,21 @@ def create_bunch(stations, coverages, xgrid, ygrid):
 
 def main(county_name, square_size):
 
-
     data = fetch_installer_distributions(county_name)
 
     # Set up the data grid
     xgrid, ygrid = construct_grids(data)
     X, Y = np.meshgrid(xgrid, ygrid[::-1])
 
+    independent_vars = data.features
+
     charging_stations = data.locations
     num_stations = len(charging_stations)
-    # f, axarr = plt.subplots(2, num_stations, figsize=(22, 4))
-    create_bunch(data.stations, data.coverages, xgrid, ygrid)
+
+    create_bunch(data.stations, data.coverages, xgrid, ygrid, independent_vars)
 
 
 
-
-
-    np.random.seed(13)
-    
-    # background_points = np.c_[np.random.randint(low=0, high=data.Ny,
-    #                                             size=10000),
-    #                           np.random.randint(low=0, high=data.Nx,
-    #                                             size=10000)].T
-
-
-    # geometry, geo_limit = make_county_map(county_name)
-    # Fit, predict, and plot for each species.
-    # for i, installer in enumerate(bunches):
-    #     # if i != 0:
-    #     try:
-    #         print("_" * 80)
-    #         print("Modeling distribution of species '%s'" % installer.name)
-
-    #         # Standardize features
-
-    #         mean = installer.cov_train.mean(axis=0)
-    #         std = installer.cov_train.std(axis=0)
-    #         train_cover_std = (installer.cov_train - mean) / std
-
-    #         # Fit OneClassSVM
-    #         print(" - fit OneClassSVM ... ", end='')
-    #         clf = svm.OneClassSVM(nu=0.1, kernel="rbf", gamma=0.5)
-    #         clf.fit(train_cover_std)
-    #         print("done.")
-
-    #         print(" - plot coastlines from coverage")
-
-
-
-    #         axarr[0][i].contour(X, Y, land_reference, levels=[-9999], colors="k", linestyles="solid")
-    #         # plot_polygon(axarr[i], geometry, color='w', alpha=0.5)
-
-    #         axarr[0][i].axes.get_xaxis().set_visible(False)
-    #         axarr[0][i].axes.get_yaxis().set_visible(False)
-
-    #         Z = np.ones((data.Ny, data.Nx), dtype=np.float64)
-
-    #         # We'll predict only for the land points.
-    #         idx = np.where(land_reference > -9999)
-    #         coverages_land = data.coverages[:, idx[0], idx[1]].T
-
-    #         pred = clf.decision_function((coverages_land - mean) / std)[:, 0]
-
-    #         Z *= pred.min()
-    #         Z[idx[0], idx[1]] = pred
-
-    #         levels = np.linspace(Z.min(), Z.max(), 25)
-    #         Z[land_reference == -9999] = -9999
-    #         axarr[0][i].scatter(installer.pts_train['x'], installer.pts_train['y'], s=2 ** 2, c='black', marker='^', label='train')
-    #         axarr[0][i].scatter(installer.pts_test['x'], installer.pts_test['y'], s=2 ** 2, c='black', marker='x', label='test')
-
-
-    #         # plot contours of the prediction
-    #         axarr[0][i].contourf(X, Y, Z, levels=levels, cmap=plt.cm.Reds)
-            
-    #         # axarr[count].colorbar(format='%.2f')
-
-
-    #         axarr[0][i].legend()
-    #         axarr[0][i].set_title(installer.name)
-    #         axarr[0][i].axis('equal')
-
-
-    #         # Compute AUC w.r.t. background points
-    #         pred_background = Z[background_points[0], background_points[1]]
-    #         pred_test = clf.decision_function((installer.cov_test - mean) / std)[:, 0]
-
-    #         scores = np.r_[pred_test, pred_background]
-    #         y = np.r_[np.ones(pred_test.shape), np.zeros(pred_background.shape)]
-    #         axarr[1][i].set_aspect(2)
-
-    #         # Plot ROC curve
-
-
-    #         fpr, tpr, thresholds = metrics.roc_curve(y, scores)
-    #         roc_auc = metrics.auc(fpr, tpr)
-
-
-    #         axarr[1][i].plot(fpr, tpr, label='ROC curve (area = %0.2f)' % roc_auc)
-    #         axarr[1][i].plot([0, 1], [0, 1], 'k--')
-    #         # axarr[1][i].xlim([0.0, 1.0])
-    #         # axarr[1][i].ylim([0.0, 1.0])
-    #         axarr[1][i].xlabel('False Positive Rate')
-    #         axarr[1][i].ylabel('True Positive Rate')
-    #         # axarr[2][i].title('Receiver operating characteristic example')
-    #         axarr[1][i].legend(loc="lower right")
-
-
-
-    #         print("\nArea under the ROC curve : %f" % roc_auc)
-
-    #     except Exception as e:
-    #         print(e)
-
-
-
-    plt.show()
 
 
 if __name__ == '__main__':

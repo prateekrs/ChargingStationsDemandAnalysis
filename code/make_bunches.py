@@ -71,26 +71,37 @@ def construct_grids(batch):
     return (xgrid, ygrid)
 
 
-def _load_coverage(F, header_length=6, dtype=np.int16):
+def _load_coverage(F, header_length=7, dtype=np.int16):
     """
     load a coverage file.
     This will return a numpy array of the given dtype
     """
     try:
         header = [F.readline() for i in range(header_length)]
+
     except:
         F = open(F)
         header = [F.readline() for i in range(header_length)]
 
+    headers = {}
 
-    make_tuple = lambda t: (t.split()[0], float(t.split()[1]))
-    header = dict([make_tuple(line) for line in header])
+    for i, t in enumerate(header):
+        item = t.split()[0]
+        var = t.split()[1]
 
+
+        if i == 0:
+            var = str(var)
+        else:
+            var = float(var)
+
+        headers[item] = var
+    
     M = np.loadtxt(F, dtype=dtype)
-    nodata = header['NODATA_value']
+    nodata = headers['NODATA_value']
     if nodata != -9999:
         M[nodata] = -9999
-    return M, header
+    return M, headers
 
 def _load_csv(F):
     """Load csv file.
@@ -193,9 +204,12 @@ def fetch_installer_distributions(county_name, data_home=None):
 
         coverages = []
         header = None
+        features = []
+
         for f in glob.glob(coverage_files_dir):
             cov, header = _load_coverage(f)
             coverages.append(cov)
+            features.append(header['feature'])
 
 
         coverages = np.asarray(coverages, dtype=dtype)
@@ -206,7 +220,7 @@ def fetch_installer_distributions(county_name, data_home=None):
 	                        Ny=header['nrows'],
 	                        grid_size=header['cellsize'])
 
-        bunch = Bunch(coverages=coverages, stations=prep, locations=locations, **extra_params)
+        bunch = Bunch(coverages=coverages, stations=prep, locations=locations, features=features, **extra_params)
         joblib.dump(bunch, join(datadir, 'bunches', DATA_ARCHIVE_NAME), compress=9)
         bunch = joblib.load(join(datadir, 'bunches', DATA_ARCHIVE_NAME))
         return bunch
