@@ -18,9 +18,10 @@ X_ <- cbind(tot_num_buildings, tot_num_cardealership, tot_num_condos, tot_num_em
 
 pdata <- plm.data(mydata, index=c("id_num", "time"))
 
-
+sink(file='ols.txt')
 model_results <- lm(Y_ ~ X_, data=mydata)
 summary(model_results)
+sink(NULL)
 
 sink(file='pooling.txt')
 model_results <- plm(Y_ ~ X_, data=pdata, model="pooling")
