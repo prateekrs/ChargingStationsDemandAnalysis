@@ -13,326 +13,326 @@ from filemanage import load_json, get_directories, get_specific_dir
 
 
 USAGE = textwrap.dedent("""\
-        Create a dense data matrix from raw mixed features. U""")
+		Create a dense data matrix from raw mixed features. U""")
 
 def _build_parser(prog):
-        """
-        Used in main function. Allows items to be entered from the command line. It elminaates
-        the use of hard coded items in the code.
+		"""
+		Used in main function. Allows items to be entered from the command line. It elminaates
+		the use of hard coded items in the code.
 
-        Args:
-      county_name (string): The county name for the study area. Necessary for saving the files in the appropriate locations
-      square_size (int): Used to 
+		Args:
+	  county_name (string): The county name for the study area. Necessary for saving the files in the appropriate locations
+	  square_size (int): Used to 
 
-    Returns:
-      parser
+	Returns:
+	  parser
 
-        """
+		"""
 
-        parser = argparse.ArgumentParser(prog=prog, description=USAGE)
-        parser.add_argument(
-            '--county_name',
-            required=True,
-            type=str,
-            help='Name of county that you are currently matching, \n example is "San Diego"')
+		parser = argparse.ArgumentParser(prog=prog, description=USAGE)
+		parser.add_argument(
+			'--county_name',
+			required=True,
+			type=str,
+			help='Name of county that you are currently matching, \n example is "San Diego"')
 
-        parser.add_argument(
-            '--square_size',
-            required=True,
-            type=int,
-            help='county grid size - enter as an integer')
+		parser.add_argument(
+			'--square_size',
+			required=True,
+			type=int,
+			help='county grid size - enter as an integer')
 
-        return parser
+		return parser
 
 
 
 
 
 def make_possible_grids(xgrid, ygrid):
-        """
+		"""
 
-        """
+		"""
 
-        possible_grids = []
+		possible_grids = []
 
-        for x in range(len(xgrid)):
-                for y in range(len(ygrid)):
-                        hash_location = 'x' + str(x+1) +'_y'+ str(y+1)
-                        possible_grids.append(hash_location)
+		for x in range(len(xgrid)):
+				for y in range(len(ygrid)):
+						hash_location = 'x' + str(x+1) +'_y'+ str(y+1)
+						possible_grids.append(hash_location)
 
-        return possible_grids
+		return possible_grids
 
 
 class GridMaker(object):
-        """Aggregates variables to make a grid.
+		"""Aggregates variables to make a grid.
 
 
 
-    Attributes:
-      square_size (int): 
-      county_name (str):
-      features (Cursor): data removed from mongodb
-      self.xgrid, self.ygrid (lists of floats):
-      self.property_codes (dict): property codes as defined in file....
-      dct (dict):
-          grid_dct (dict):
+	Attributes:
+	  square_size (int): 
+	  county_name (str):
+	  features (Cursor): data removed from mongodb
+	  self.xgrid, self.ygrid (lists of floats):
+	  self.property_codes (dict): property codes as defined in file....
+	  dct (dict):
+		  grid_dct (dict):
 
 
 
-    """
+	"""
 
-        def __init__(self, square_size, county_name, features):
-                self.square_size = square_size
-                self.county_name = county_name
+		def __init__(self, square_size, county_name, features):
+				self.square_size = square_size
+				self.county_name = county_name
 
-                self.features = features
+				self.features = features
 
-                self.xgrid, self.ygrid = make_grid(self.square_size, self.features)
-                self.possible_grids = make_possible_grids(self.xgrid, self.ygrid)
-                self.dct = {}
-                self.grid_dct = {}
+				self.xgrid, self.ygrid = make_grid(self.square_size, self.features)
+				self.possible_grids = make_possible_grids(self.xgrid, self.ygrid)
+				self.dct = {}
+				self.grid_dct = {}
 
-                self.property_codes = load_json(datadir + '/property_types_json/building_to_types.json')
+				self.property_codes = load_json(datadir + '/property_types_json/building_to_types.json')
 
-                self.missed_types = []
+				self.missed_types = []
 
-                
-                
+				
+				
 
-        def check_grid(self):
+		def check_grid(self):
 
-                """
-                Takes features from grid and hashes to an x and y grid according to their geospatial location, starting from index 0.
-                An example of a hash is "x20_y10". The feature is in x box 20 and y box 10. Once this is completed it counts the number of 
-                variables append for each type.
+				"""
+				Takes features from grid and hashes to an x and y grid according to their geospatial location, starting from index 0.
+				An example of a hash is "x20_y10". The feature is in x box 20 and y box 10. Once this is completed it counts the number of 
+				variables append for each type.
 
-                Note: 
-                  All features are hard coded. This can be improved by adding a for loop and an external file that specifies the features.
+				Note: 
+				  All features are hard coded. This can be improved by adding a for loop and an external file that specifies the features.
 
-                Note2:
-                  There is a try-except for key errors.
+				Note2:
+				  There is a try-except for key errors.
 
-                """
-                features = extract_data()
-                for feature in features:
-                        
-                        x, y = feature['geometry']["coordinates"]
-                        ix = np.searchsorted(self.xgrid, x)
-                        iy = np.searchsorted(self.ygrid, y)
-                        hash_location = 'x' + str(ix) +'_y'+ str(iy)
+				"""
+				features = extract_data()
+				for feature in features:
+						
+						x, y = feature['geometry']["coordinates"]
+						ix = np.searchsorted(self.xgrid, x)
+						iy = np.searchsorted(self.ygrid, y)
+						hash_location = 'x' + str(ix) +'_y'+ str(iy)
 
-                        if hash_location not in self.dct:
-                                self.dct[hash_location] =       {'num_buildings':[],
-                                                                                        'num_condos': [],
+						if hash_location not in self.dct:
+								self.dct[hash_location] =       {'num_buildings':[],
+																						'num_condos': [],
 
-                                                                                                'num_residential': [], 
-                                                                                                'num_offices': [], 
-                                                                                                'num_industrial': [], 
-                                                                                                'num_warehouse': [], 
-                                                                                                'num_restaurant': [],
-                                                                                                'num_amusementpark': [],
-                                                                                                'num_recreation': [],
-                                                                                                'num_theatres': [],
-                                                                                                'num_banks': [],
-                                                                                                'num_shopping': [], 
-                                                                                                'num_medical' : [],
-                                                                                                'num_social': [],
-                                                                                                'num_transport': [],
-                                                                                                'num_library': [],
-                                                                                                'num_postoffice':[],
-                                                                                                'num_religious': [],
-                                                                                                'num_emergencystation': [],
-                                                                                                'num_correctional': [],
-                                                                                                'num_cardealership': [],
-                                                                                                'num_gascompany': [],
-                                                                                                'num_electriccompany': [],
-                                                                                                'num_railroad': [],
-                                                                                                'num_pipeline':[],
-                                                                                                'num_telephone': []
-                                                                                                }
+																								'num_residential': [], 
+																								'num_offices': [], 
+																								'num_industrial': [], 
+																								'num_warehouse': [], 
+																								'num_restaurant': [],
+																								'num_amusementpark': [],
+																								'num_recreation': [],
+																								'num_theatres': [],
+																								'num_banks': [],
+																								'num_shopping': [], 
+																								'num_medical' : [],
+																								'num_social': [],
+																								'num_transport': [],
+																								'num_library': [],
+																								'num_postoffice':[],
+																								'num_religious': [],
+																								'num_emergencystation': [],
+																								'num_correctional': [],
+																								'num_cardealership': [],
+																								'num_gascompany': [],
+																								'num_electriccompany': [],
+																								'num_railroad': [],
+																								'num_pipeline':[],
+																								'num_telephone': []
+																								}
 
-                                        
-                        self.dct[hash_location]['num_buildings'].append(feature['properties']['HCAD_NUM'])
-                                
-                        try:
-                                bt = feature['properties']['BT']
-                                prop_type = self.property_codes[bt]
-                                self.add_types(feature, hash_location, prop_type, desc='Residential', dict_location='num_residential')
-                                self.add_types(feature, hash_location, prop_type, desc='Office', dict_location='num_offices')
-                                self.add_types(feature, hash_location, prop_type, desc='Industrial', dict_location='num_industrial')
-                                self.add_types(feature, hash_location, prop_type, desc='Warehouse', dict_location='num_warehouse')
-                                self.add_types(feature, hash_location, prop_type, desc='Restaurants', dict_location='num_offices')
-                                self.add_types(feature, hash_location, prop_type, desc='AmusementPark', dict_location='num_restaurant')
-                                self.add_types(feature, hash_location, prop_type, desc='Theatres', dict_location='num_theatres')
-                                self.add_types(feature, hash_location, prop_type, desc='Shopping', dict_location='num_shopping')
-                                self.add_types(feature, hash_location, prop_type, desc='Social', dict_location='num_social')
-                                self.add_types(feature, hash_location, prop_type, desc='Medical', dict_location='num_medical')
-                                self.add_types(feature, hash_location, prop_type, desc='Banks', dict_location='num_banks')
-                                self.add_types(feature, hash_location, prop_type, desc='Transport', dict_location='num_transport')
-                                self.add_types(feature, hash_location, prop_type, desc='Library', dict_location='num_library')
-                                self.add_types(feature, hash_location, prop_type, desc='PostOffice', dict_location='num_postoffice')
-                                self.add_types(feature, hash_location, prop_type, desc='EmergencyStation', dict_location='num_emergencystation')
-                                self.add_types(feature, hash_location, prop_type, desc='Correctional', dict_location='num_correctional')
-                                self.add_types(feature, hash_location, prop_type, desc='CarDealerships', dict_location='num_cardealership')
-                                self.add_types(feature, hash_location, prop_type, desc='GasCompany', dict_location='num_gascompany')
-                                self.add_types(feature, hash_location, prop_type, desc='ElectricCompany', dict_location='num_electriccompany')
-                                self.add_types(feature, hash_location, prop_type, desc='Railroad', dict_location='num_railroad')
-                                self.add_types(feature, hash_location, prop_type, desc='Pipeline', dict_location='num_pipeline')
-                                self.add_types(feature, hash_location, prop_type, desc='Telephone', dict_location='num_telephone')
-
-
-                        except KeyError as e:
-                                self.missed_types.append(bt)
+										
+						self.dct[hash_location]['num_buildings'].append(feature['properties']['HCAD_NUM'])
+								
+						try:
+								bt = feature['properties']['BT']
+								prop_type = self.property_codes[bt]
+								self.add_types(feature, hash_location, prop_type, desc='Residential', dict_location='num_residential')
+								self.add_types(feature, hash_location, prop_type, desc='Office', dict_location='num_offices')
+								self.add_types(feature, hash_location, prop_type, desc='Industrial', dict_location='num_industrial')
+								self.add_types(feature, hash_location, prop_type, desc='Warehouse', dict_location='num_warehouse')
+								self.add_types(feature, hash_location, prop_type, desc='Restaurants', dict_location='num_offices')
+								self.add_types(feature, hash_location, prop_type, desc='AmusementPark', dict_location='num_restaurant')
+								self.add_types(feature, hash_location, prop_type, desc='Theatres', dict_location='num_theatres')
+								self.add_types(feature, hash_location, prop_type, desc='Shopping', dict_location='num_shopping')
+								self.add_types(feature, hash_location, prop_type, desc='Social', dict_location='num_social')
+								self.add_types(feature, hash_location, prop_type, desc='Medical', dict_location='num_medical')
+								self.add_types(feature, hash_location, prop_type, desc='Banks', dict_location='num_banks')
+								self.add_types(feature, hash_location, prop_type, desc='Transport', dict_location='num_transport')
+								self.add_types(feature, hash_location, prop_type, desc='Library', dict_location='num_library')
+								self.add_types(feature, hash_location, prop_type, desc='PostOffice', dict_location='num_postoffice')
+								self.add_types(feature, hash_location, prop_type, desc='EmergencyStation', dict_location='num_emergencystation')
+								self.add_types(feature, hash_location, prop_type, desc='Correctional', dict_location='num_correctional')
+								self.add_types(feature, hash_location, prop_type, desc='CarDealerships', dict_location='num_cardealership')
+								self.add_types(feature, hash_location, prop_type, desc='GasCompany', dict_location='num_gascompany')
+								self.add_types(feature, hash_location, prop_type, desc='ElectricCompany', dict_location='num_electriccompany')
+								self.add_types(feature, hash_location, prop_type, desc='Railroad', dict_location='num_railroad')
+								self.add_types(feature, hash_location, prop_type, desc='Pipeline', dict_location='num_pipeline')
+								self.add_types(feature, hash_location, prop_type, desc='Telephone', dict_location='num_telephone')
 
 
-                        if feature['properties']['CONDO_FLAG'] == "1":
-                                self.dct[hash_location]['num_condos'].append(feature['properties']['HCAD_NUM'])
+						except KeyError as e:
+								self.missed_types.append(bt)
 
 
-                print "unique missed variables"
-                print set(self.missed_types)
-                print "total number of missed variables"
-                print len(self.missed_types)
-
-        def add_types(self, feature, hash_location, prop_type, desc, dict_location):
-                """
-                This checks to see if the property type matches the specified type
-
-                Note:
-                  called in the method check_grid. 
-
-                Args:
-          feature, 
-          hash_location
-          prop_type
-          desc
-          dict_location
-       
-                """
-
-                if prop_type == desc:
-                        self.dct[hash_location][dict_location].append(feature['properties']['HCAD_NUM'])
+						if feature['properties']['CONDO_FLAG'] == "1":
+								self.dct[hash_location]['num_condos'].append(feature['properties']['HCAD_NUM'])
 
 
-        def calculate_grid(self):
-                """
-                Takes the features in check_grid and sums them and makes new dictionary for the aggregated data
+				print "unique missed variables"
+				print set(self.missed_types)
+				print "total number of missed variables"
+				print len(self.missed_types)
 
-                Note:
-                  This can also be improved.
+		def add_types(self, feature, hash_location, prop_type, desc, dict_location):
+				"""
+				This checks to see if the property type matches the specified type
 
-                """
+				Note:
+				  called in the method check_grid. 
 
-                for key, value in sorted(self.dct.iteritems()):
-                        num_buildings = len(value['num_buildings'])
-                        num_condos = len(value['num_condos'])
-                        num_residential = len(value['num_residential'])
-                        num_offices= len(value['num_offices'])
-                        num_industrial = len(value['num_industrial'])
+				Args:
+		  feature, 
+		  hash_location
+		  prop_type
+		  desc
+		  dict_location
+	   
+				"""
 
-                        num_warehouse = len(value['num_warehouse'])
-                        num_restaurant = len(value['num_restaurant'])
-                        num_amusementpark = len(value['num_amusementpark'])
-                        num_recreation = len(value['num_recreation'])
-                        num_theatres = len(value['num_theatres'])
-                        num_banks = len(value['num_banks'])
-                        num_shopping = len(value['num_shopping'])
-                        num_medical = len(value['num_medical'])
-                        num_social = len(value['num_social'])
-                        num_transport = len(value['num_transport'])
-                        num_library = len(value['num_library'])
-                        num_postoffice = len(value['num_postoffice'])
-                        num_religious = len(value['num_religious'])
-                        num_emergencystation = len(value['num_emergencystation'])
-                        num_correctional = len(value['num_correctional'])
-                        num_cardealership = len(value['num_cardealership'])
-                        num_gascompany = len(value['num_gascompany'])
-                        num_electriccompany = len(value['num_electriccompany'])
-                        num_railroad = len(value['num_railroad'])
-                        num_pipeline = len(value['num_pipeline'])
-                        num_telephone = len(value['num_telephone'])
+				if prop_type == desc:
+						self.dct[hash_location][dict_location].append(feature['properties']['HCAD_NUM'])
 
 
-                
+		def calculate_grid(self):
+				"""
+				Takes the features in check_grid and sums them and makes new dictionary for the aggregated data
+
+				Note:
+				  This can also be improved.
+
+				"""
+
+				for key, value in sorted(self.dct.iteritems()):
+						num_buildings = len(value['num_buildings'])
+						num_condos = len(value['num_condos'])
+						num_residential = len(value['num_residential'])
+						num_offices= len(value['num_offices'])
+						num_industrial = len(value['num_industrial'])
+
+						num_warehouse = len(value['num_warehouse'])
+						num_restaurant = len(value['num_restaurant'])
+						num_amusementpark = len(value['num_amusementpark'])
+						num_recreation = len(value['num_recreation'])
+						num_theatres = len(value['num_theatres'])
+						num_banks = len(value['num_banks'])
+						num_shopping = len(value['num_shopping'])
+						num_medical = len(value['num_medical'])
+						num_social = len(value['num_social'])
+						num_transport = len(value['num_transport'])
+						num_library = len(value['num_library'])
+						num_postoffice = len(value['num_postoffice'])
+						num_religious = len(value['num_religious'])
+						num_emergencystation = len(value['num_emergencystation'])
+						num_correctional = len(value['num_correctional'])
+						num_cardealership = len(value['num_cardealership'])
+						num_gascompany = len(value['num_gascompany'])
+						num_electriccompany = len(value['num_electriccompany'])
+						num_railroad = len(value['num_railroad'])
+						num_pipeline = len(value['num_pipeline'])
+						num_telephone = len(value['num_telephone'])
 
 
-                        self.grid_dct[key] = {'tot_num_buildings': num_buildings, 'tot_num_condos': num_condos, 'tot_num_residential': num_residential,'tot_num_offices':num_offices, 'tot_num_industrial': num_industrial, 'tot_num_warehouse': num_warehouse, 'tot_num_restaurant': num_restaurant,'tot_num_amusementpark': num_amusementpark, 'tot_num_recreation': num_recreation, 'tot_num_theatres': num_theatres,'tot_num_banks': num_banks, 'tot_num_shopping': num_shopping, 'tot_num_medical': num_medical, 'tot_num_social': num_social, 'tot_num_transport': num_transport, 'tot_num_library': num_library, 'tot_num_postoffice': num_postoffice, 'tot_num_religious': num_religious, 'tot_num_emergencystation': num_emergencystation, 'tot_num_correctional': num_correctional,'tot_num_cardealership':  num_cardealership,'tot_num_gascompany': num_gascompany, 'tot_num_electriccompany': num_electriccompany,'tot_num_railroad': num_railroad, 'tot_num_pipeline': num_pipeline,'tot_num_telephone': num_telephone}
+				
 
 
-        def adjust_grid(self):
+						self.grid_dct[key] = {'tot_num_buildings': num_buildings, 'tot_num_condos': num_condos, 'tot_num_residential': num_residential,'tot_num_offices':num_offices, 'tot_num_industrial': num_industrial, 'tot_num_warehouse': num_warehouse, 'tot_num_restaurant': num_restaurant,'tot_num_amusementpark': num_amusementpark, 'tot_num_recreation': num_recreation, 'tot_num_theatres': num_theatres,'tot_num_banks': num_banks, 'tot_num_shopping': num_shopping, 'tot_num_medical': num_medical, 'tot_num_social': num_social, 'tot_num_transport': num_transport, 'tot_num_library': num_library, 'tot_num_postoffice': num_postoffice, 'tot_num_religious': num_religious, 'tot_num_emergencystation': num_emergencystation, 'tot_num_correctional': num_correctional,'tot_num_cardealership':  num_cardealership,'tot_num_gascompany': num_gascompany, 'tot_num_electriccompany': num_electriccompany,'tot_num_railroad': num_railroad, 'tot_num_pipeline': num_pipeline,'tot_num_telephone': num_telephone}
 
-                """
-                add a null value (-9999) to the grid location that fall outside the study area.
-                """
-                
-                for key in self.possible_grids:
-                        if key not in self.grid_dct.keys():
-                                self.grid_dct[key] = {'tot_num_buildings': -9999, 'tot_num_condos': -9999, 'tot_num_residential': -9999, 'tot_num_offices':-9999, 'tot_num_industrial': -9999, 'tot_num_warehouse': -9999, 'tot_num_restaurant': -9999,'tot_num_amusementpark': -9999, 'tot_num_recreation': -9999, 'tot_num_theatres': -9999,'tot_num_banks': -9999, 'tot_num_shopping': -9999, 'tot_num_medical': -9999, 'tot_num_social': -9999, 'tot_num_transport': -9999, 'tot_num_library': -9999, 'tot_num_postoffice': -9999, 'tot_num_religious': -9999, 'tot_num_emergencystation': -9999, 'tot_num_correctional': -9999,'tot_num_cardealership':  -9999,'tot_num_gascompany': -9999, 'tot_num_electriccompany': -9999,'tot_num_railroad': -9999, 'tot_num_pipeline': -9999,'tot_num_telephone': -9999}
 
-        def raster_maker(self):
-                """
-                
-                """
-                self.check_grid()
-                self.calculate_grid()
-                self.adjust_grid()
-        
+		def adjust_grid(self):
 
-                for item in self.grid_dct[self.grid_dct.keys()[0]]:
+				"""
+				add a null value (-9999) to the grid location that fall outside the study area.
+				"""
+				
+				for key in self.possible_grids:
+						if key not in self.grid_dct.keys():
+								self.grid_dct[key] = {'tot_num_buildings': -9999, 'tot_num_condos': -9999, 'tot_num_residential': -9999, 'tot_num_offices':-9999, 'tot_num_industrial': -9999, 'tot_num_warehouse': -9999, 'tot_num_restaurant': -9999,'tot_num_amusementpark': -9999, 'tot_num_recreation': -9999, 'tot_num_theatres': -9999,'tot_num_banks': -9999, 'tot_num_shopping': -9999, 'tot_num_medical': -9999, 'tot_num_social': -9999, 'tot_num_transport': -9999, 'tot_num_library': -9999, 'tot_num_postoffice': -9999, 'tot_num_religious': -9999, 'tot_num_emergencystation': -9999, 'tot_num_correctional': -9999,'tot_num_cardealership':  -9999,'tot_num_gascompany': -9999, 'tot_num_electriccompany': -9999,'tot_num_railroad': -9999, 'tot_num_pipeline': -9999,'tot_num_telephone': -9999}
 
-                        grid = []
+		def raster_maker(self):
+				"""
+				
+				"""
+				self.check_grid()
+				self.calculate_grid()
+				self.adjust_grid()
+		
 
-                        for y in reversed(range(len(self.ygrid))):
-                                row = []
-                                for x in range(len(self.xgrid)):
-                                        value = self.grid_dct['x'+str(x+1) +'_y'+str(y+1)][item]
-                                        row.append(value)
+				for item in self.grid_dct[self.grid_dct.keys()[0]]:
 
-                                grid.append(row)
+						grid = []
 
-                        grid_array = np.array(grid)
-                        
-                        header =  "feature %s\n" %item
-                        header +=  "ncols     %s\n" % grid_array.shape[1]
-                        header += "nrows    %s\n" % grid_array.shape[0]
-                        header += "xllcorner %s\n" % self.xgrid[0]
-                        header += "yllcorner %s\n" % self.ygrid[0]
-                        header += "cellsize %s\n" % self.square_size
-                        header += "NODATA_value -9999"
+						for y in reversed(range(len(self.ygrid))):
+								row = []
+								for x in range(len(self.xgrid)):
+										value = self.grid_dct['x'+str(x+1) +'_y'+str(y+1)][item]
+										row.append(value)
 
-                        #remove hard coding.
+								grid.append(row)
 
-                        file_name = get_specific_dir('data/raster_files/harris/') + item + ".asc"
+						grid_array = np.array(grid)
+						
+						header =  "feature %s\n" %item
+						header +=  "ncols     %s\n" % grid_array.shape[1]
+						header += "nrows    %s\n" % grid_array.shape[0]
+						header += "xllcorner %s\n" % self.xgrid[0]
+						header += "yllcorner %s\n" % self.ygrid[0]
+						header += "cellsize %s\n" % self.square_size
+						header += "NODATA_value -9999"
 
-                        np.savetxt(file_name, grid_array, header=header, fmt="%1.2f", comments='')
-                        print('Saved grid.')
+
+
+						file_name = get_specific_dir('data/raster_files/harris/') + item + ".asc"
+
+						np.savetxt(file_name, grid_array, header=header, fmt="%1.2f", comments='')
+						print('Saved grid.')
 
 
 def main(sys_args):
-        parser = _build_parser(sys_args[0])
-        args = parser.parse_args(sys_args[1:])
+		parser = _build_parser(sys_args[0])
+		args = parser.parse_args(sys_args[1:])
 
-        county_name = args.county_name
-        square_size = float(args.square_size)
+		county_name = args.county_name
+		square_size = float(args.square_size)
 
-        features = extract_data()
+		features = extract_data()
 
-        grid = GridMaker(square_size, county_name, features)
-        grid.raster_maker()
+		grid = GridMaker(square_size, county_name, features)
+		grid.raster_maker()
 
 
 
-        print('Done.')  
+		print('Done.')  
 
 def extract_data():
-    client = pymongo.MongoClient("localhost")
-    db=client["full_houston"]
+	client = pymongo.MongoClient("localhost")
+	db=client["full_houston"]
 
-    print db.collection_names()
-    
+	print db.collection_names()
+	
 
-    return db.houston.find()
+	return db.houston.find()
 
 if __name__ == '__main__':
-        sys.exit(main(sys.argv))
-        
+		sys.exit(main(sys.argv))
+		
