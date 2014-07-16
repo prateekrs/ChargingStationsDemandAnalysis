@@ -8,11 +8,7 @@ import pymongo
 # import addtional code from my_libraries
 sys.path.append('my_libraries')
 from squaremaker import make_grid
-from filemanage import load_json
-
-cwd = os.path.dirname(os.path.abspath(__file__))
-datadir = os.path.join(os.path.split(cwd)[0], 'data')
-resultsdir = os.path.join(os.path.split(cwd)[0], 'results')
+from filemanage import load_json, get_directories, get_specific_dir
 
 
 
@@ -48,23 +44,7 @@ def _build_parser(prog):
 
         return parser
 
-def get_directories(path):
-        """
-        Gets the directory specified. The path needs to exist in the directory. The get_directories
-        function only goes down only one spot in the directory.
 
-        ** Possible addition: make it go down multiple directories.
-
-        Args:
-          path (str): folder name given 
-
-        Returns:
-          dir_location (str): sends path to the specified directory
-        """
-
-        cwd = os.path.dirname(os.path.abspath(__file__))
-        dir_location = os.path.join(os.path.split(cwd)[0], path)
-        return dir_location
 
 
 
@@ -322,7 +302,7 @@ class GridMaker(object):
 
                         #remove hard coding.
 
-                        file_name = get_directories('data/raster_files/harris/') + item + ".asc"
+                        file_name = get_specific_dir('data/raster_files/harris/') + item + ".asc"
 
                         np.savetxt(file_name, grid_array, header=header, fmt="%1.2f", comments='')
                         print('Saved grid.')

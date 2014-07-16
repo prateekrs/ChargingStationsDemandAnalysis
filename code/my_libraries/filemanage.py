@@ -2,11 +2,45 @@ import os
 import json
 import cPickle as pickle
 
-def get_directories():
+
+def get_specific_dir(path):
+    """
+    Gets the directory specified. The path needs to exist in the directory. The get_directories
+    function only goes down only one spot in the directory.
+
+    ** Possible addition: make it go down multiple directories.
+
+    Args:
+      path (str): folder name given 
+
+    Returns:
+      dir_location (str): sends path to the specified directory
+    """
+
     cwd = os.path.dirname(os.path.abspath(__file__))
-    datadir = os.path.join(os.path.split(cwd)[0], 'data')
-    resultsdir = os.path.join(os.path.split(cwd)[0], 'results')
-    return datadir, resultsdir
+    dir_location = os.path.join(os.path.split(cwd)[0], path)
+    return dir_location
+
+
+def get_directories():
+	"""
+	Gets the directory specified. The path needs to exist in the directory. The get_directories
+	function only goes down only one spot in the directory.
+
+	** Possible addition: make it go down multiple directories.
+
+	Args:
+	  path (str): folder name given 
+
+	Returns:
+	  datdir (str): sends path to the specified directory
+	"""
+
+	cwd = os.path.dirname(os.path.abspath(__file__))
+	root = '/'.join(cwd.split(os.sep)[:-2])
+	datadir = os.path.join(root, 'data')
+	resultsdir = os.path.join(root, 'results')
+	return datadir, resultsdir
 
 
 def serialize_object(obj,filename):

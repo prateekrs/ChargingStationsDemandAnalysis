@@ -1,9 +1,22 @@
 Data Processing Scripts 
 ============
 Below is a list of files and the order they should be ran.
-1. houston_grid_maker.py - runs geoJSON file for Houston converting each feature into a separate raster file. Theses files are stored in /data/raster_files. The file houston_grid_maker2.py can be alternatively used if there are problems running from the command line.
+1. houston_grid_maker.py - runs pymongo file for Houston converting each feature into a separate raster file. Theses files are stored in /data/raster_files. 
+
+
+```bash
+python houston_grid_maker.py 
+```
+
+
+
 2. make_bunches.py - opens all relevant files used in the model and puts these files in a numpy arrays in a bunch (an sklearn data type.)
-3. [grid]svm.py - runs the SVM model and outputs a graph.
+3. model.py - runs the SVM model and outputs a graph.
+
+
+My Libraries
+============
+
 
 - filemanage.py - is an ancillary file that manages loading and saving data files in various formats
 - squaremaker.py - defines the spatial x and y limits for the study area. There are also functions for making a map in matplotlib.
