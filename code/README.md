@@ -10,32 +10,32 @@ $ python grid_maker.py --county_name "(name of county being analyzed - string)" 
 ```
 
 List of Raster Files made to 
-    - tot_num_amusementpark.asc
-    - tot_num_banks.asc
-    ─ tot_num_buildings.asc
-    ─ tot_num_cardealership.asc
-    ─ tot_num_condos.asc
-    ─ tot_num_correctional.asc
-    ─ tot_num_electriccompany.asc
-    ─ tot_num_emergencystation.asc
-    ─ tot_num_gascompany.asc
-    ─ tot_num_industrial.asc
-    ─ tot_num_library.asc
-    ─ tot_num_medical.asc
-    ─ tot_num_offices.asc
-    ─ tot_num_pipeline.asc
-    ─ tot_num_postoffice.asc
-    ─ tot_num_railroad.asc
-    ─ tot_num_recreation.asc
-    ─ tot_num_religious.asc
-    ─ tot_num_residential.asc
-    ─ tot_num_restaurant.asc
-    ─ tot_num_shopping.asc
-    ─ tot_num_social.asc
-    ─ tot_num_telephone.asc
-    ─ tot_num_theatres.asc
-    ─ tot_num_transport.asc
-    ─ tot_num_warehouse.asc
+- tot_num_amusementpark.asc
+- tot_num_banks.asc
+─ tot_num_buildings.asc
+─ tot_num_cardealership.asc
+─ tot_num_condos.asc
+─ tot_num_correctional.asc
+─ tot_num_electriccompany.asc
+─ tot_num_emergencystation.asc
+─ tot_num_gascompany.asc
+─ tot_num_industrial.asc
+─ tot_num_library.asc
+─ tot_num_medical.asc
+─ tot_num_offices.asc
+─ tot_num_pipeline.asc
+─ tot_num_postoffice.asc
+─ tot_num_railroad.asc
+─ tot_num_recreation.asc
+─ tot_num_religious.asc
+─ tot_num_residential.asc
+─ tot_num_restaurant.asc
+─ tot_num_shopping.asc
+─ tot_num_social.asc
+─ tot_num_telephone.asc
+─ tot_num_theatres.asc
+─ tot_num_transport.asc
+─ tot_num_warehouse.asc
 
 
 
