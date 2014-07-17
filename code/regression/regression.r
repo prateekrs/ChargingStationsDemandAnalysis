@@ -23,6 +23,16 @@ model_results <- lm(Y_ ~ X_, data=mydata)
 summary(model_results)
 sink(NULL)
 
+sink(file='model_results.txt')
+stargazer(model_results, title="Regression Results")
+sink(NULL)
+
+
+file_name <-"lm_regression.tex"
+location <- file.path(dir, "explanation-files", "all_county_regression", file_name)
+sink(file=location)
+
+
 sink(file='pooling.txt')
 model_results <- plm(Y_ ~ X_, data=pdata, model="pooling")
 summary(model_results)
