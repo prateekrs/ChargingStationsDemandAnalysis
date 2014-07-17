@@ -18,7 +18,7 @@ from sklearn.externals import joblib
 
 sys.path.append('my_libraries')
 from database import query
-from filemanage import render_file_style
+from filemanage import render_file_style, get_directories
 
 
 
@@ -28,47 +28,9 @@ cap = Proj('+datum=NAD83 +lat_0=27.50 +lat_1=30.17 '
 
 wgs84 = Proj(init='epsg:4326')
 
-
-def get_directories():
-    """Gets the path along with the data directory and results
+datadir, resultsdir=get_directories()
 
 
-    Returns
-    -------
-    datadir (path)
-    resultsdir (path)
-    """
-
-    cwd = os.path.dirname(os.path.abspath(__file__))
-    datadir = os.path.join(os.path.split(cwd)[0], 'data')
-    resultsdir = os.path.join(os.path.split(cwd)[0], 'results')
-    return datadir, resultsdir
-
-def construct_grids(batch):
-    """Construct the map grid from the batch object
-
-    Parameters
-    ----------
-    batch : Batch object
-        The object returned by :func:`fetch_species_distributions`
-
-    Returns
-    -------
-    (xgrid, ygrid) : 1-D arrays
-        The grid corresponding to the values in batch.coverages
-    """
-    # x,y coordinates for corner cells
-    xmin = batch.x_left_lower_corner + batch.grid_size
-    xmax = xmin + (batch.Nx * batch.grid_size)
-    ymin = batch.y_left_lower_corner + batch.grid_size
-    ymax = ymin + (batch.Ny * batch.grid_size)
-
-    # x coordinates of the grid cells
-    xgrid = np.arange(xmin, xmax, batch.grid_size)
-    # y coordinates of the grid cells
-    ygrid = np.arange(ymin, ymax, batch.grid_size)
-
-    return (xgrid, ygrid)
 
 
 def _load_coverage(F, header_length=7, dtype=np.int16):
@@ -133,7 +95,7 @@ def _load_csv(F):
     return rec
 
 def make_test_train_split(file_location):
-
+#
 
 	f1 = open(file_location + '/prep.csv', 'w')
 	f1.write("id_num,usage,time,x,y\n")
