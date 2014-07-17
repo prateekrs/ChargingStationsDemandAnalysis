@@ -17,9 +17,9 @@ from sklearn.datasets.base import Bunch
 from sklearn import svm, metrics
 from database import Database
 import json
-from filemanage import *
+sys.path.append('my_libraries')
 import random
-from squaremaker import make_study_area_map, make_county_map, plot_polygon
+from squaremaker import make_study_area_map, make_county_map, plot_polygon,construct_grids
 
 from filemanage import serialize_object
 from pyproj import Proj, transform
