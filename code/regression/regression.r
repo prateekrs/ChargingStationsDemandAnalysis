@@ -38,6 +38,10 @@ model_results <- plm(Y_ ~ X_, data=pdata, model="pooling")
 summary(model_results)
 sink(NULL)
 
+sink(file='pooled_results.tex')
+stargazer(model_results, title="Regression Results")
+sink(NULL)
+
 sink(file='between.txt')
 model_results <- plm(Y_ ~ X_, data=pdata, model="between")
 summary(model_results)
