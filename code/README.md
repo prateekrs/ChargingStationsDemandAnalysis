@@ -86,6 +86,7 @@ The geoJSON files for all the building is this format
 {
     "geometry": {
         "coordinates": [
+            #x,y
             3055694.437321233, 
             13812156.730583059
         ], 

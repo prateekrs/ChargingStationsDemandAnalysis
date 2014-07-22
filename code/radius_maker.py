@@ -43,7 +43,7 @@ def _build_parser(prog):
             '--radius_size',
             required=True,
             type=float,
-            help='county grid size - enter as an integer')
+            help='charging station radius(in ft) size - enter a number')
 
         return parser
 
@@ -56,19 +56,22 @@ def make_charging_station_dict(charging_stations):
 
     for row in data[1:]:
         i = row.split(',')
-        id_num = i[1]
-        time = i[2]
-        usage = i[3]
-        lat = float(i[4])
-        lon = float(i[5].replace('\n', ""))
+             
+        id_num = i[0]
+        lon = float(i[3])
+        lat = float(i[4].replace('\n', ""))
 
         charge_dict[id_num] = (lon, lat)
 
     return charge_dict
 
 
+def extract_data():
+    client = pymongo.MongoClient("localhost")
+    db=client["full_houston"]
 
-
+    print db.collection_names()
+    return db.houston.find()
 
 
 
@@ -95,10 +98,11 @@ class RadiusMaker(object):
                 self.features = features
 
                 self.dct = {}
+                
                 self.grid_dct = {}
 
                 self.property_codes = load_json(datadir + '/property_types_json/building_to_types.json')
-
+                self.missed_types=[]    
                 self.charging_stations = charging_stations
                 self.count_in_buffer()
 
@@ -109,14 +113,91 @@ class RadiusMaker(object):
 
         def count_in_buffer(self):
 
-            for station in self.charging_stations:
-                x, y =  self.charging_stations[station]
+            for station in self.charging_stations.keys()[1:2]:
 
-                point = Point(x, y)
-                
-                buffered_point = self.buffer_point(point)
-                
+                print station
+
+                a,b =  self.charging_stations[station]
+
+                #x_min, x_max = x - self.radius_size + x, self.rad
+
+                #point = Point(x, y)
+            
+                #buffered_point = self.buffer_point(point)
+
+
+
+
+                prop_vals = set(self.property_codes.values())
+
+                self.dct[station] =  dict([ ("num_" + p.lower(),  []) for p in prop_vals])
+
+                for feature in self.features[1:1000]:
+
+                    x,y = feature['geometry']['coordinates']
+                    #print "x=",x, "y=",y
+                    #print "a=",a
+                    #print "b=",b
+                    #print ((x-a)**2+(y-b)**2)
+                    #print self.radius_size**2
+                    #print ((x-a)**2+(y-b)**2)<=self.radius_size**2
+                    if ((x-a)**2+(y-b)**2)<=self.radius_size**2:
+                        #print "inside Loop"
+                        try: 
+                            #print "try"
+                            bt = feature['properties']['BT']
+                            prop_type = self.property_codes[bt]
+                            #print bt, prop_type, '\n'
+                            for p_val in prop_vals:
+                                #if p_val == prop_type:
+                                    #print p_val, prop_type
+                                self.add_types(feature, station, prop_type, desc=p_val, dict_location="num_" + p_val.lower())
+
+
+
+                        except KeyError as e:
+                            #print "error"
+                            self.missed_types.append(bt)
+                            
+
+
+#                        if feature['properties']['CONDO_FLAG'] == "1":
+#                                self.dct[station]['num_condos'].append(feature['properties']['HCAD_NUM'])
+
+                print self.dct
+#                print "unique missed variables"
+#                print set(self.missed_types)
+#                print "total number of missed variables"
+#                print len(self.missed_types)
+
+
+                        
+
                 # return len([p for p in points.geoms if buffered_point.contains(p)])
+
+
+        def add_types(self, feature, hash_location, prop_type, desc, dict_location): 
+            """
+            This checks to see if the property type matches the specified type
+
+                Note:
+                  called in the method check_grid. 
+
+                Args:
+          feature, 
+          hash_location
+          prop_type
+          desc
+          dict_location
+            """
+            #print "prop_type == desc",prop_type == desc
+
+            if prop_type == desc:
+                #print feature['properties']['HCAD_NUM']
+                self.dct[hash_location][dict_location].append(feature['properties']['HCAD_NUM'])
+
+
+
 
 
 
@@ -131,9 +212,9 @@ def main(sys_args):
 
         radius_size = args.radius_size
         county_name = args.county_name
-        features = load_json('/Users/mattstringer/research/Houston_analysis/houston_short.json')
+        features = extract_data()
 
-        charging_stations = join(datadir, 'charging_stations', render_file_style(county_name), 'DC_charging_stations_MonthlyDemand.csv')
+        charging_stations = join(datadir, 'charging_stations', render_file_style(county_name), 'prep.csv')
 
         if exists(charging_stations):
             charging_stations = make_charging_station_dict(charging_stations)
@@ -143,6 +224,10 @@ def main(sys_args):
 
 
         print('Done.')  
+
+
+
+
 
 
 
