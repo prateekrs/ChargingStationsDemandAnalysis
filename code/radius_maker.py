@@ -100,11 +100,16 @@ class RadiusMaker(object):
                 self.dct = {}
                 
                 self.grid_dct = {}
+                self.radius_dct = {}
 
                 self.property_codes = load_json(datadir + '/property_types_json/building_to_types.json')
+
+                self.prop_vals = set(self.property_codes.values())
                 self.missed_types=[]    
                 self.charging_stations = charging_stations
-                self.count_in_buffer()
+
+                self.radius_maker()
+                
 
         def buffer_point(self, point):
             buffer = point.buffer(self.radius_size)
@@ -128,27 +133,22 @@ class RadiusMaker(object):
 
 
 
-                prop_vals = set(self.property_codes.values())
+                
 
-                self.dct[station] =  dict([ ("num_" + p.lower(),  []) for p in prop_vals])
+                self.dct[station] =  dict([ ("num_" + p.lower(),  []) for p in self.prop_vals])
 
                 for feature in self.features[1:1000]:
 
                     x,y = feature['geometry']['coordinates']
-                    #print "x=",x, "y=",y
-                    #print "a=",a
-                    #print "b=",b
-                    #print ((x-a)**2+(y-b)**2)
-                    #print self.radius_size**2
-                    #print ((x-a)**2+(y-b)**2)<=self.radius_size**2
-                    if ((x-a)**2+(y-b)**2)<=self.radius_size**2:
+
+                    if ((x-a)**2 + (y-b)**2) <= self.radius_size**2:
                         #print "inside Loop"
                         try: 
                             #print "try"
                             bt = feature['properties']['BT']
                             prop_type = self.property_codes[bt]
                             #print bt, prop_type, '\n'
-                            for p_val in prop_vals:
+                            for p_val in self.prop_vals:
                                 #if p_val == prop_type:
                                     #print p_val, prop_type
                                 self.add_types(feature, station, prop_type, desc=p_val, dict_location="num_" + p_val.lower())
@@ -159,21 +159,7 @@ class RadiusMaker(object):
                             #print "error"
                             self.missed_types.append(bt)
                             
-
-
-#                        if feature['properties']['CONDO_FLAG'] == "1":
-#                                self.dct[station]['num_condos'].append(feature['properties']['HCAD_NUM'])
-
-                print self.dct
-#                print "unique missed variables"
-#                print set(self.missed_types)
-#                print "total number of missed variables"
-#                print len(self.missed_types)
-
-
-                        
-
-                # return len([p for p in points.geoms if buffered_point.contains(p)])
+            
 
 
         def add_types(self, feature, hash_location, prop_type, desc, dict_location): 
@@ -197,12 +183,41 @@ class RadiusMaker(object):
                 self.dct[hash_location][dict_location].append(feature['properties']['HCAD_NUM'])
 
 
+        def calculate_values(self):
+
+            for key, value in sorted(self.dct.iteritems()):
+                for p_val in self.prop_vals:
+                    self.radius_dct[key] = dict([ ("tot_num_" + p_val.lower(),  len(value[ "num_" + p_val.lower()])) for p_val in self.prop_vals])
+
+        def write_to_file(self):
+            f = open(self.charging_stations, 'r')
+
+            data = f.readlines()
 
 
+            for row in data[1:]:
+                i = row.split(',')
+                id_num = i[1]
+                time = i[2]
+                usage = i[3]
+
+                lat = i[4]
+                lon = i[5]
+
+                indep_vas = self.radius_dct[id_num].values()
+
+                independent = ','.join(str(e) for e in indep_vas)
 
 
+                f.write(id_num + "," + str(usage) + "," + str(time)  + ","+ str(lon)  + "," + str(lat) + "," + independent + '\n')
 
+            f.close()
 
+        def radius_maker(self):
+
+            self.count_in_buffer()
+            self.calculate_values()
+            self.write_to_file()
 
 
 
