@@ -118,11 +118,11 @@ class RadiusMaker(object):
 
         def count_in_buffer(self):
 
-            for station in self.charging_stations.keys()[1:2]:
+            #for station in self.charging_stations:
+            for feature in self.features[1:10000]:
+                #print station
 
-                print station
-
-                a,b =  self.charging_stations[station]
+                #a,b =  self.charging_stations[station]
 
                 #x_min, x_max = x - self.radius_size + x, self.rad
 
@@ -135,9 +135,14 @@ class RadiusMaker(object):
 
                 
 
-                self.dct[station] =  dict([ ("num_" + p.lower(),  []) for p in self.prop_vals])
+                #self.dct[station] =  dict([ ("num_" + p.lower(),  []) for p in self.prop_vals])
 
-                for feature in self.features[1:1000]:
+                #for feature in self.features[1:10000]:
+                for station in self.charging_stations:
+                    if station not in self.dct: 
+                        self.dct[station] =  dict([ ("num_" + p.lower(),  []) for p in self.prop_vals])
+                    
+                    a,b =  self.charging_stations[station]
 
                     x,y = feature['geometry']['coordinates']
 
@@ -188,21 +193,29 @@ class RadiusMaker(object):
             for key, value in sorted(self.dct.iteritems()):
                 for p_val in self.prop_vals:
                     self.radius_dct[key] = dict([ ("tot_num_" + p_val.lower(),  len(value[ "num_" + p_val.lower()])) for p_val in self.prop_vals])
+            
 
         def write_to_file(self):
-            f = open(self.charging_stations, 'r')
+            #print datadir, '/regression/'+ render_file_style(self.county_name)+'/radiusregression.csv'
+            =
+            f = open(join(datadir,"regression", render_file_style(self.county_name),"radiusregression.csv"),'w')
+            charging_stations = join(datadir, 'charging_stations', render_file_style(self.county_name), 'prep.csv')
+            f1= open(charging_stations,'r')            
+            
+            data = f1.readlines()
 
-            data = f.readlines()
-
+            header=self.dct['HOUA103DC1'].keys()
+            h = ','.join(str(e) for e in header)
+            f.write('idnum,usage,time,lat,long,'+h+'\n')
 
             for row in data[1:]:
                 i = row.split(',')
-                id_num = i[1]
-                time = i[2]
-                usage = i[3]
+                id_num = i[0]
+                time = i[1]
+                usage = i[2]
 
-                lat = i[4]
-                lon = i[5]
+                lat = i[3].replace('\n','')
+                lon = i[4].replace('\n','')
 
                 indep_vas = self.radius_dct[id_num].values()
 
@@ -212,6 +225,7 @@ class RadiusMaker(object):
                 f.write(id_num + "," + str(usage) + "," + str(time)  + ","+ str(lon)  + "," + str(lat) + "," + independent + '\n')
 
             f.close()
+            f1.close()
 
         def radius_maker(self):
 
@@ -230,7 +244,7 @@ def main(sys_args):
         features = extract_data()
 
         charging_stations = join(datadir, 'charging_stations', render_file_style(county_name), 'prep.csv')
-
+        print charging_stations
         if exists(charging_stations):
             charging_stations = make_charging_station_dict(charging_stations)
 
