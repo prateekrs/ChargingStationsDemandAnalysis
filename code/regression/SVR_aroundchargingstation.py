@@ -17,7 +17,7 @@ import sklearn
 from sklearn import svm
 import csv
 import random
-f = open("C:/Users/Prateek Raj/Desktop/houston_analysis/data/regression/regression_file_without_anomalous112and114stations.csv","rU")
+f = open("C:/Users/Prateek Raj/Desktop/houston_analysis/data/regression/harris/radiusregression1000.csv","rU")
 data = csv.reader(f)
 data=[row for row in data]
 #rowdata=data.split('\r')
@@ -25,16 +25,24 @@ header=data[0]
 data=data[1:]
 print "\n\n\n\n",data[0][0]
 usage=[]
-
+print header
 for row in data[:]:
     usage.append(row[2])
 
 for row in data[:]:
+    #print row[3]
+    #print row[4]
+    row.remove(row[21])
+    row.remove(row[4])
+    row.remove(row[3])
     row.remove(row[2])
     row.remove(row[0])
     
 for i in range(len(data)):
+    #print i, data[i][1]
     for j in range(len(data[i])):
+        #print "i="
+        #print data[i][j]
         data[i][j]=int(data[i][j])
 #        print 'i=',i
 #        print 'j=',j
@@ -45,7 +53,6 @@ for i in range(20):
 
 test_data=[]
 test_values=[]
-
 for i in random_list:
     test_data.append(data.pop(i))    
     test_values.append(int(usage.pop(i)))
@@ -76,23 +83,19 @@ print "C_list=", C_list
 print "gamma list=", gamma_list
 
 clf = svm.SVR(C=32,gamma=0.03125)
-#clf = svm.SVR(kernel='linear')
 clf.fit(data, usage)
 print "coeff="
 print clf.dual_coef_[0][0]
 
-print len(header)
-"""
-for i in range(len(header)-3):
-    #print header[i+3],
-    print header[i], clf.coef_[0][i+1]
-   """ 
+for i in range(len(header)):
+    print header[i],clf.dual_coef_[0][i]
+    
 print header
 
 pred_values=clf.predict(test_data)
        # print 'pred_values=',pred_values
 r2=sklearn.metrics.r2_score(test_values,pred_values)
-print clf.score(data, usage)
+print clf.score(test_values,pred_values)
 print r2
 """"
 for c in C_list:

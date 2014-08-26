@@ -119,7 +119,7 @@ class RadiusMaker(object):
         def count_in_buffer(self):
 
             #for station in self.charging_stations:
-            for feature in self.features[1:10000]:
+            for feature in self.features:
                 #print station
 
                 #a,b =  self.charging_stations[station]
@@ -197,16 +197,16 @@ class RadiusMaker(object):
 
         def write_to_file(self):
             #print datadir, '/regression/'+ render_file_style(self.county_name)+'/radiusregression.csv'
-            =
-            f = open(join(datadir,"regression", render_file_style(self.county_name),"radiusregression.csv"),'w')
+            
+            f = open(join(datadir,"regression", render_file_style(self.county_name),"radiusregression"+str(int(self.radius_size))+".csv"),'w')
             charging_stations = join(datadir, 'charging_stations', render_file_style(self.county_name), 'prep.csv')
             f1= open(charging_stations,'r')            
             
             data = f1.readlines()
 
-            header=self.dct['HOUA103DC1'].keys()
+            header = self.radius_dct['HOUA103DC1'].keys()
             h = ','.join(str(e) for e in header)
-            f.write('idnum,usage,time,lat,long,'+h+'\n')
+            f.write('idnum,usage,time,lat,long,' + h + '\n')
 
             for row in data[1:]:
                 i = row.split(',')
@@ -218,9 +218,7 @@ class RadiusMaker(object):
                 lon = i[4].replace('\n','')
 
                 indep_vas = self.radius_dct[id_num].values()
-
                 independent = ','.join(str(e) for e in indep_vas)
-
 
                 f.write(id_num + "," + str(usage) + "," + str(time)  + ","+ str(lon)  + "," + str(lat) + "," + independent + '\n')
 
